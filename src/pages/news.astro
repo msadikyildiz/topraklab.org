@@ -1,0 +1,51 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import media from '../data/media.json';
+---
+
+<PageLayout title="News | Toprak Lab" description="Media coverage and news mentions of the Toprak Lab's research.">
+  <section class="section">
+    <div class="container">
+      <SectionHeading text="News in the Media" />
+
+      <ul class="media-list">
+        {media.map((m) => (
+          <li class="media-item">
+            <span class="media-item__outlet">{m.outlet}</span>
+            {m.description && (
+              <span class="media-item__desc"> &mdash; {m.description}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .media-list {
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  .media-item {
+    padding: 0.75rem 0 0.75rem 0.75rem;
+    border-left: 2px solid transparent;
+    transition: border-color 0.2s;
+    font-size: var(--size-base);
+  }
+
+  .media-item:hover {
+    border-left-color: var(--color-accent);
+  }
+
+  .media-item__outlet {
+    font-weight: 600;
+    color: var(--color-gray-900);
+  }
+
+  .media-item__desc {
+    color: var(--color-gray-600);
+  }
+</style>

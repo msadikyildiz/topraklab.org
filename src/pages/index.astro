@@ -1,0 +1,51 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Carousel from '../components/Carousel.astro';
+
+import carousel1 from '../assets/images/carousel/carousel-1.png';
+import carousel2 from '../assets/images/carousel/carousel-2.png';
+import carousel3 from '../assets/images/carousel/carousel-3.png';
+import carousel4 from '../assets/images/carousel/carousel-4.png';
+import carousel5 from '../assets/images/carousel/carousel-5.png';
+import carousel6 from '../assets/images/carousel/carousel-6.jpg';
+import carousel7 from '../assets/images/carousel/carousel-7.png';
+
+const slides = [
+  { src: carousel1, alt: 'Lab research image 1' },
+  { src: carousel2, alt: 'Lab research image 2' },
+  { src: carousel3, alt: 'Lab research image 3' },
+  { src: carousel4, alt: 'Lab research image 4' },
+  { src: carousel5, alt: 'Lab research image 5' },
+  { src: carousel6, alt: 'Lab research image 6' },
+  { src: carousel7, alt: 'Lab research image 7' },
+];
+---
+
+<PageLayout title="Toprak Lab | UT Southwestern" description="Toprak Lab at UT Southwestern Medical Center — investigating genetic and molecular basis of phenotypic diversity using whole genome sequencing, fluidics, and evolution experiments.">
+  <section class="section">
+    <div class="container">
+      <Carousel images={slides} />
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container home-mission">
+      <p>
+        Understanding the source and extent of phenotypic diversity in nature is a fundamental question in biology and many questions concerning the extent of this variability and its underlying causes remain open. In our research group, we investigate genetic and molecular basis of phenotypic diversity observed in nature by using a range of methodologies such as whole genome sequencing, fluidics, long-term evolution experiments, and large-scale combinatorial mutagenesis.
+      </p>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .home-mission {
+    max-width: 720px;
+    text-align: center;
+  }
+
+  .home-mission p {
+    font-size: var(--size-md);
+    line-height: 1.8;
+    color: var(--color-gray-600);
+  }
+</style>

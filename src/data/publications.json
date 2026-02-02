@@ -1,0 +1,253 @@
+{
+  "systemsBiology": [
+    {
+      "authors": "Ilona K Gaszek, Muhammed Sadik Yildiz, Zhaoxu Meng, Jose Alberto de la Paz, Sophia Maria Alvarez, Faruck Morcos, Milo M Lin, Erdal Toprak",
+      "title": "Higher-order epistasis drives evolutionary unpredictability toward novel antibiotic resistance",
+      "journal": "Biorxiv",
+      "year": 2025,
+      "url": "https://www.biorxiv.org/content/10.1101/2025.07.08.663783v1.abstract"
+    },
+    {
+      "authors": "Adam Lyon, Mohammed Sadik Yildiz, Erdal Toprak",
+      "title": "Context-dependent evolutionary dynamics toward bacterial survival during sequential antibiotic treatment",
+      "journal": "Biorxiv",
+      "year": 2025,
+      "url": "https://www.biorxiv.org/content/10.1101/2025.04.08.647880v2.abstract"
+    },
+    {
+      "authors": "FS Coskun, J Quick, E Toprak",
+      "title": "A Simple, Low-Cost, and Efficient Protocol for Rapid Isolation of Pathogenic Bacteria from Human Blood",
+      "journal": "Biorxiv",
+      "year": 2025,
+      "url": "https://www.biorxiv.org/content/10.1101/2025.01.14.633023v1.abstract"
+    },
+    {
+      "authors": "F.N. Kalkan*, M.S. Yildiz*, E. Wood, M.F. Farid, M.K. McCoy, C.C. Zhang, B. Posner, S.S. Chung, E. Toprak",
+      "title": "Synergistic and antagonistic drug-drug interactions are prevalent but not conserved across acute myeloid leukemia cell lines",
+      "journal": "Scientific Reports",
+      "year": 2025,
+      "url": "https://www.nature.com/articles/s41598-025-03242-x"
+    },
+    {
+      "authors": "Kantarcioglu, I.K. Gaszek, T.F. Guclu, M.S. Yildiz, A.R. Atilgan, E. Toprak*, C. Atilgan*",
+      "title": "Elucidating TolC Protein Dynamics: Structural Shifts Facilitate Efflux Mediated \u03b2-lactam Resistance",
+      "journal": "Communications Biology",
+      "year": 2024,
+      "url": "https://www.nature.com/articles/s42003-024-06750-0"
+    },
+    {
+      "authors": "M. Rodrigues, P. Sabaeifard, M.S. Yildiz, L. Coughlin, S. Ahmed, N. Poulides, A.C. Toprak, C. Behrendt, X. Wang, M. Monogue, J. Kim, S. Gan, X. Zhan, L. Filkins, N.S. Williams, L. Hooper, A.Y. Koh*, E. Toprak*",
+      "title": "Susceptible bacteria can survive antibiotic treatment in the mammalian gastrointestinal tract without evolving resistance",
+      "journal": "Cell Host & Microbe",
+      "year": 2024,
+      "url": "https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(24)00016-7"
+    },
+    {
+      "authors": "E. Cetin, T.F. Guclu, I. Kantarcioglu, I.K. Gaszek, E. Toprak, A.R. Atilgan, B. Dedeoglu, C. Atilgan",
+      "title": "Kinetic Barrier to Enzyme Inhibition Is Manipulated by Dynamical Local Interactions in E. coli DHFR",
+      "journal": "J. Chem. Inf. Model.",
+      "year": 2023,
+      "url": "https://pubs.acs.org/doi/full/10.1021/acs.jcim.3c00818"
+    },
+    {
+      "authors": "M. Farid, M. Rodrigues, R. England, E. Toprak",
+      "title": "Label-Free Optical Detection of Pathogenic Bacteria and Fungi at Extremely Low Cell Densities for Rapid Antibiotic Susceptibility Testing",
+      "journal": "Frontiers in Bioengineering and Biotechnology",
+      "year": 2022,
+      "url": "https://www.frontiersin.org/articles/10.3389/fbioe.2022.884200/full"
+    },
+    {
+      "authors": "M.S. Manna, Y.T. Tamer, I.K. Gaszek, N. Poulides, A. Ahmed, X. Wang, F.C. Toprak, A.Y. Koh, N.S. Williams, D. Borek, A.R. Atilgan, J.D. Hulleman, C. Atilgan, U. Tambar, E. Toprak",
+      "title": "A trimethoprim derivative impedes antibiotic resistance evolution",
+      "journal": "Nature Communications",
+      "year": 2021,
+      "url": "https://www.nature.com/articles/s41467-021-23191-z"
+    },
+    {
+      "authors": "Y.T. Tamer, I.K. Gaszek, M. Rodrigues, F.S. Coskun, M. Farid, A.Y. Koh, W. Russ, E. Toprak",
+      "title": "The antibiotic efflux protein TolC is a highly evolvable target under colicin E1 and TLS phage selection",
+      "journal": "Molecular Biology and Evolution",
+      "year": 2021,
+      "url": "https://academic.oup.com/mbe/article/38/10/4493/6310175"
+    },
+    {
+      "authors": "H. Peng, V.Q. Chau, W. Phetsang, R.M. Sebastian, M.R.L. Stone, S. Datta, M. Renwick, Y.T. Tamer, E. Toprak, A.Y. Koh, M.A.T. Blaskovich, J.D. Hulleman",
+      "title": "Non-antibiotic small molecule regulation of dhfr-based destabilizing domains in vivo",
+      "journal": "Molecular Therapy - Methods & Clinical Development",
+      "year": 2019,
+      "url": "https://www.cell.com/molecular-therapy-family/methods/fulltext/S2329-0501(19)30082-8"
+    },
+    {
+      "authors": "M.F. Cansizoglu, Y.T. Tamer, M. Farid, A.Y. Koh, E. Toprak",
+      "title": "Rapid-Ultra-Sensitive-Detection (RUSD) platform for antimicrobial sensitivity testing",
+      "journal": "PLOS Biology",
+      "year": 2019,
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000291"
+    },
+    {
+      "authors": "Y.T. Tamer, I.K. Gaszek, H. Abdizadeh, T. Batur, K. Reynolds, A.R. Atilgan, C. Atilgan, E. Toprak",
+      "title": "High-order epistasis in catalytic power of dihydrofolate reductase gives rise to a rugged fitness landscape in the presence of trimethoprim selection",
+      "journal": "Molecular Biology and Evolution",
+      "year": 2019,
+      "url": "https://academic.oup.com/mbe/article/36/7/1533/5458069"
+    },
+    {
+      "authors": "Y.T. Tamer, E. Toprak",
+      "title": "On the Race to Starvation: How Do Bacteria Survive High Doses of Antibiotics?",
+      "journal": "Molecular Cell (Preview)",
+      "year": 2017,
+      "url": "https://www.cell.com/molecular-cell/pdf/S1097-2765(17)30932-2.pdf"
+    },
+    {
+      "authors": "M.F. Cansizoglu, E. Toprak",
+      "title": "Fighting against evolution of antibiotic resistance by utilizing evolvable antimicrobial drugs",
+      "journal": "Current Genetics (invited review)",
+      "year": 2017,
+      "url": "https://link.springer.com/article/10.1007/s00294-017-0703-x"
+    },
+    {
+      "authors": "H. Abdizadeh, Y.T. Tamer, O. Acar, E. Toprak, A.R. Atilgan, C. Atilgan",
+      "title": "Increased Substrate Affinity in the Escherichia Coli L28R Dihydrofolate Reductase Mutant Causes Trimethoprim Resistance",
+      "journal": "Physical Chemistry Chemical Physics",
+      "year": 2017,
+      "url": "https://pubs.rsc.org/en/content/articlelanding/2017/cp/c7cp01458a/unauth"
+    },
+    {
+      "authors": "D.H. Ayhan, Y.T. Tamer, M. Akbar, S.M. Bailey, M. Wong, S.M. Daly, D.E. Greenberg, E. Toprak",
+      "title": "Sequence-Specific Targeting of Bacterial Resistance Genes Increases Antibiotic Efficacy",
+      "journal": "PLOS Biology",
+      "year": 2016,
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002552"
+    },
+    {
+      "authors": "B. Okumus, D. Landgraf, G.C. Lai, S. Bakhsi, J.C. Arias-Castro, S. Yildiz, D. Huh, R. Fernandez-Lopez, C.N. Peterson, E. Toprak, M. El Karoui, J. Paulsson",
+      "title": "Mechanical slowing-down of cytoplasmic diffusion allows in vivo counting of proteins in individual cells",
+      "journal": "Nature Communications",
+      "year": 2016,
+      "url": "https://www.nature.com/articles/ncomms11641"
+    },
+    {
+      "authors": "G. Chevereau, M. Dravecka, T. Batur, A. Guvenek, D.H. Ayhan, E. Toprak, T. Bollenbach",
+      "title": "Quantifying the determinants of evolutionary dynamics leading to drug resistance",
+      "journal": "PLOS Biology",
+      "year": 2015,
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002299"
+    },
+    {
+      "authors": "A.C. Palmer*, E. Toprak*, M. Baym, S. Kim, A. Veres, S. Bershtein, R. Kishony",
+      "title": "Delayed commitment to evolutionary fate in antibiotic resistance fitness landscapes",
+      "journal": "Nature Communications",
+      "year": 2015,
+      "url": "https://www.nature.com/articles/ncomms8385"
+    },
+    {
+      "authors": "T. Oz, A. Guvenek, S. Yildiz, E. Karaboga, Y.T. Tamer, N. Mumcuyan, V.B. Ozan, G.H. Senturk, M. Cokol, P. Yeh, E. Toprak",
+      "title": "Selection strength contributes to the complexity of antibiotic resistance evolution",
+      "journal": "Molecular Biology and Evolution",
+      "year": 2014,
+      "url": "https://academic.oup.com/mbe/article/31/9/2387/2925782"
+    },
+    {
+      "authors": "B. Okumus, S. Yildiz, E. Toprak",
+      "title": "Fluidic and microfluidic tools for quantitative systems biology",
+      "journal": "Current Opinion in Biotechnology (invited review)",
+      "year": 2014,
+      "url": "https://www.sciencedirect.com/science/article/pii/S095816691300640X"
+    },
+    {
+      "authors": "E. Toprak*, A. Veres, S. Yildiz, J.M. Pedraza, R. Chait, J. Paulsson, R. Kishony*",
+      "title": "Building a Morbidostat: An automated high-throughput fluidic system for studying bacterial drug resistance in dynamically sustained drug environments",
+      "journal": "Nature Protocols",
+      "year": 2013,
+      "url": "https://www.nature.com/articles/nprot.2013.021"
+    },
+    {
+      "authors": "E. Toprak, A. Veres, J.B. Michel, R. Chait, D.L. Hartl, R. Kishony",
+      "title": "Evolutionary paths to strong antibiotic resistance under dynamically sustained drug selection",
+      "journal": "Nature Genetics",
+      "year": 2012,
+      "url": "https://www.nature.com/articles/ng.1034"
+    }
+  ],
+  "singleMolecule": [
+    {
+      "authors": "E. Toprak, C. Kural, P.R. Selvin",
+      "title": "Super-accuracy and super-resolution getting around the diffraction limit",
+      "journal": "Methods in Enzymology",
+      "year": 2010,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0076687910750011"
+    },
+    {
+      "authors": "E. Toprak, A. Yildiz, M.T. Hoffman, S.S. Rosenfeld, P.R. Selvin",
+      "title": "Why kinesin is so processive",
+      "journal": "PNAS",
+      "year": 2009,
+      "url": "https://www.pnas.org/doi/full/10.1073/pnas.0808396106"
+    },
+    {
+      "authors": "J.G. Reifenberger*, E. Toprak*, H. Kim, D. Safer, H.L. Sweeney, P.R. Selvin",
+      "title": "Myosin VI undergoes a 180\u00b0 Power stroke implying an uncoupling of the front lever arm",
+      "journal": "PNAS",
+      "year": 2009,
+      "url": "https://www.pnas.org/doi/full/10.1073/pnas.0900005106"
+    },
+    {
+      "authors": "E. Toprak, H. Balci, B.H. Blehm, P.R. Selvin",
+      "title": "3D Particle Tracking via Bifocal Imaging",
+      "journal": "Nano Letters",
+      "year": 2007,
+      "url": "https://pubs.acs.org/doi/full/10.1021/nl0709120"
+    },
+    {
+      "authors": "E. Toprak, P.R. Selvin",
+      "title": "New Fluorescent Tools for Watching Nanometer-Scale Conformational Changes of Single Molecules",
+      "journal": "Annual Review of Biophysics and Biomolecular Structure",
+      "year": 2007,
+      "url": "https://www.annualreviews.org/doi/full/10.1146/annurev.biophys.36.040306.132700"
+    },
+    {
+      "authors": "H. Park, E. Toprak, P.R. Selvin",
+      "title": "Single-molecule fluorescence to study molecular motors",
+      "journal": "Quarterly Reviews of Biophysics",
+      "year": 2007,
+      "url": null
+    },
+    {
+      "authors": "P.R. Selvin, T. Lougheed, M.T. Hoffman, H. Park, H. Balci, B.H. Blehm, E. Toprak",
+      "title": "In vitro & in vivo FIONA and other acronyms for watching molecular motors walk",
+      "journal": "Single Molecules: A Laboratory Manual, Cold Spring Harbor Press",
+      "year": 2007,
+      "url": null
+    },
+    {
+      "authors": "J. Enderlein, E. Toprak, P.R. Selvin",
+      "title": "Polarization effect on position accuracy of fluorophore localization",
+      "journal": "Optics Express",
+      "year": 2006,
+      "url": "https://opg.optica.org/oe/fulltext.cfm?uri=oe-14-18-8111"
+    },
+    {
+      "authors": "E. Toprak, J. Enderlein, S. Syed, S.A. McKinney, R.G. Petschek, T. Ha, Y.E. Goldman, P.R. Selvin",
+      "title": "Defocused Orientation and Position Imaging of Myosin V",
+      "journal": "PNAS",
+      "year": 2006,
+      "url": "https://www.pnas.org/doi/full/10.1073/pnas.0507134103"
+    }
+  ],
+  "theoreticalPhysics": [
+    {
+      "authors": "E. Toprak, O.T. Turgut",
+      "title": "Large N limit of SO(N) Scalar Gauge Theory",
+      "journal": "Journal of Mathematical Physics",
+      "year": 2002,
+      "url": null
+    },
+    {
+      "authors": "E. Toprak, O.T. Turgut",
+      "title": "Large N limit of SO(N) Gauge Theory of Fermions and Bosons",
+      "journal": "Journal of Mathematical Physics",
+      "year": 2002,
+      "url": null
+    }
+  ]
+}

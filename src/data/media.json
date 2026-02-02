@@ -1,0 +1,17 @@
+[
+  { "outlet": "BBC", "description": "Episode covering our Morbidostat work" },
+  { "outlet": "Illumina iCommunity Newsletter", "description": "Interview" },
+  { "outlet": "Nature Genetics", "description": "News and Views" },
+  { "outlet": "Genome Biology", "description": null },
+  { "outlet": "Science", "description": null },
+  { "outlet": "Faculty 1000", "description": null },
+  { "outlet": "Nature", "description": "Press Release" },
+  { "outlet": "Nature Medicine", "description": null },
+  { "outlet": "The Scientist", "description": null },
+  { "outlet": "PhysOrg", "description": null },
+  { "outlet": "New Scientist", "description": null },
+  { "outlet": "Scientific American", "description": null },
+  { "outlet": "Photonics", "description": null },
+  { "outlet": "Photometrics", "description": null },
+  { "outlet": "Biophotonics International", "description": null }
+]

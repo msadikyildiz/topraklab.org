@@ -1,0 +1,110 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  images: { src: ImageMetadata; alt: string }[];
+}
+
+const { images } = Astro.props;
+---
+
+<div class="gallery">
+  {images.map((img, i) => (
+    <a href={`#photo-${i}`} class="gallery__item" id={`thumb-${i}`}>
+      <Image src={img.src} alt={img.alt} width={400} height={300} />
+    </a>
+  ))}
+</div>
+
+{images.map((img, i) => (
+  <div class="lightbox" id={`photo-${i}`}>
+    <a href={`#thumb-${i}`} class="lightbox__close" aria-label="Close">&times;</a>
+    <div class="lightbox__content">
+      <Image src={img.src} alt={img.alt} width={960} height={720} />
+      <div class="lightbox__nav">
+        {i > 0 && <a href={`#photo-${i - 1}`} class="lightbox__prev">&lsaquo; Prev</a>}
+        {i < images.length - 1 && <a href={`#photo-${i + 1}`} class="lightbox__next">Next &rsaquo;</a>}
+      </div>
+    </div>
+  </div>
+))}
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery__item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .gallery__item:hover img {
+    opacity: 0.85;
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox:target {
+    display: flex;
+  }
+
+  .lightbox__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 201;
+  }
+
+  .lightbox__close:hover {
+    color: var(--color-gray-300);
+  }
+
+  .lightbox__content {
+    max-width: 90vw;
+    max-height: 90vh;
+    text-align: center;
+  }
+
+  .lightbox__content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+
+  .lightbox__nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .lightbox__prev,
+  .lightbox__next {
+    color: white;
+    font-family: var(--font-heading);
+    font-size: var(--size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .lightbox__prev:hover,
+  .lightbox__next:hover {
+    color: var(--color-accent);
+  }
+</style>

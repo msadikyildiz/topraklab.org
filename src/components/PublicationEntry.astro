@@ -1,0 +1,63 @@
+---
+interface Props {
+  authors: string;
+  title: string;
+  journal: string;
+  year: number;
+  url?: string | null;
+}
+
+const { authors, title, journal, year, url } = Astro.props;
+---
+
+<li class="pub-entry">
+  <p class="pub-entry__citation">
+    {url ? (
+      <a href={url} class="pub-entry__title" target="_blank" rel="noopener noreferrer">
+        {title}
+      </a>
+    ) : (
+      <span class="pub-entry__title">{title}</span>
+    )}
+    <br />
+    <span class="pub-entry__authors">{authors}</span>
+    <br />
+    <span class="pub-entry__journal">{journal}, {year}.</span>
+  </p>
+</li>
+
+<style>
+  .pub-entry {
+    padding: 0.75rem 0 0.75rem 0.75rem;
+    border-left: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .pub-entry:hover {
+    border-left-color: var(--color-accent);
+  }
+
+  .pub-entry__citation {
+    font-size: var(--size-sm);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .pub-entry__title {
+    font-weight: 600;
+    color: var(--color-gray-900);
+  }
+
+  a.pub-entry__title:hover {
+    color: var(--color-navy-light);
+  }
+
+  .pub-entry__authors {
+    color: var(--color-gray-600);
+  }
+
+  .pub-entry__journal {
+    font-style: italic;
+    color: var(--color-gray-300);
+  }
+</style>

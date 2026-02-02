@@ -1,0 +1,11 @@
+[
+  { "name": "Eric Jakobsson", "date": "March 2015", "image": "eric-jakobsson.jpg" },
+  { "name": "Fyodor Kondrashov", "date": "April 2015", "image": "fyodor-kondrashov.jpg" },
+  { "name": "Michael Lynch", "date": "May 2015", "image": "michael-lynch.jpg" },
+  { "name": "Jeff Gore", "date": "March 2016", "image": "jeff-gore.jpg" },
+  { "name": "Maitreya Dunham", "date": "March 2017", "image": "maitreya-dunham.jpg" },
+  { "name": "Dmitri Petrov", "date": "May 2017", "image": "dmitri-petrov.jpg" },
+  { "name": "Shelley Copley", "date": "November 2017", "image": "shelley-copley.jpg" },
+  { "name": "Ryland Young", "date": "September 2018", "image": "ryland-young.jpg" },
+  { "name": "Bree Aldridge", "date": "October 2018", "image": "bree-aldridge.jpg" }
+]

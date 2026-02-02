@@ -1,0 +1,67 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<PageLayout title="Morbidostat | Toprak Lab" description="Build your own morbidostat — an automated high-throughput fluidic system for studying bacterial drug resistance.">
+  <section class="section">
+    <div class="container">
+      <SectionHeading text="Morbidostat" />
+
+      <p class="morbidostat-intro">
+        The morbidostat is an automated high-throughput fluidic system for studying bacterial drug resistance in dynamically sustained drug environments. The protocol below describes how to build your own morbidostat, as published in <em>Nature Protocols</em>.
+      </p>
+
+      <div class="morbidostat-embed">
+        <iframe
+          src="https://www.nature.com/articles/nprot.2013.021"
+          title="Building a Morbidostat — Nature Protocols"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <p class="morbidostat-cite">
+        E. Toprak*, A. Veres, S. Yildiz, J.M. Pedraza, R. Chait, J. Paulsson, R. Kishony*, "Building a Morbidostat: An automated high-throughput fluidic system for studying bacterial drug resistance in dynamically sustained drug environments," <em>Nature Protocols</em>, 2013.
+        <a href="https://www.nature.com/articles/nprot.2013.021" target="_blank" rel="noopener noreferrer">View on Nature.com</a>
+      </p>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .morbidostat-intro {
+    max-width: 680px;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: var(--size-md);
+    line-height: 1.7;
+  }
+
+  .morbidostat-embed {
+    width: 100%;
+    aspect-ratio: 8.5 / 11;
+    max-height: 80vh;
+    margin-bottom: 2rem;
+  }
+
+  .morbidostat-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--color-gray-100);
+  }
+
+  .morbidostat-cite {
+    font-size: var(--size-sm);
+    color: var(--color-gray-300);
+    text-align: center;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  .morbidostat-cite a {
+    color: var(--color-navy-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+</style>

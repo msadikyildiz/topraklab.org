@@ -1,0 +1,74 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__dept">The Department of Pharmacology</p>
+    <p class="footer__address">
+      UT Southwestern Medical Center, ND6.202<br />
+      6001 Forest Park Blvd.<br />
+      Dallas, TX, USA 75390-8597
+    </p>
+    <p class="footer__email">
+      <a href="mailto:erdal.toprak@utsouthwestern.edu">erdal.toprak@utsouthwestern.edu</a>
+    </p>
+    <p class="footer__copy">
+      &copy; {year} Toprak Lab. This website reflects only the views of the author and is not a publication of UT Southwestern, which bears no responsibility for its content.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-navy);
+    color: var(--color-gray-300);
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+    font-size: var(--size-sm);
+    line-height: 1.7;
+  }
+
+  .footer__inner {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--side-padding);
+    text-align: center;
+  }
+
+  .footer__dept {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer__address {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer__email {
+    margin-bottom: 1.25rem;
+  }
+
+  .footer__email a {
+    color: var(--color-gray-300);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .footer__email a:hover {
+    color: var(--color-white);
+  }
+
+  .footer__copy {
+    font-size: var(--size-xs);
+    color: var(--color-gray-300);
+    opacity: 0.7;
+    max-width: 560px;
+    margin-inline: auto;
+  }
+</style>

@@ -1,0 +1,120 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<PageLayout title="Contact | Toprak Lab" description="Contact the Toprak Lab at UT Southwestern Medical Center. Information for prospective postdocs and graduate students.">
+  <section class="section">
+    <div class="container">
+      <SectionHeading text="Contact" />
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h2 class="contact-subheading">Get in Touch</h2>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:erdal.toprak@utsouthwestern.edu">erdal.toprak@utsouthwestern.edu</a>
+          </p>
+          <p>
+            <strong>Phone:</strong> +1 (214) 645-8128
+          </p>
+          <p>
+            The Department of Pharmacology<br />
+            UT Southwestern Medical Center, ND6.202<br />
+            6001 Forest Park Blvd.<br />
+            Dallas, TX, USA 75390-8597
+          </p>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <h2 class="contact-subheading">Send a Message</h2>
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="join-heading">Join Us</h2>
+
+      <div class="join-section">
+        <h3>Postdoctoral Fellows</h3>
+        <p>
+          We are always interested in working with talented postdocs. Please contact us via email if you are interested in joining us.
+        </p>
+      </div>
+
+      <div class="join-section">
+        <h3>Graduate Students</h3>
+        <p>
+          Prospective graduate students should directly apply to
+          <a href="https://www.utsouthwestern.edu/education/graduate-school/" target="_blank" rel="noopener noreferrer">UTSW Graduate Programs</a>.
+          If you are a recently recruited graduate student and interested in our work, please personally visit our lab and learn about the projects for rotation students.
+        </p>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .contact-info p {
+    font-size: var(--size-sm);
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-info a {
+    color: var(--color-navy-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .contact-subheading {
+    font-family: var(--font-heading);
+    font-size: var(--size-lg);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+  }
+
+  .join-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-xl);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+  }
+
+  .join-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .join-section h3 {
+    font-family: var(--font-heading);
+    font-size: var(--size-md);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .join-section a {
+    color: var(--color-navy-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

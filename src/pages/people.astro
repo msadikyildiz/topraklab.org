@@ -1,0 +1,133 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import PersonCard from '../components/PersonCard.astro';
+import people from '../data/people.json';
+
+import erdalImg from '../assets/images/people/erdal-toprak-small.jpg';
+import adamImg from '../assets/images/people/adam-lyon.jpg';
+import alanImg from '../assets/images/people/alan-katz.jpg';
+import fatmaImg from '../assets/images/people/fatma-coskun.png';
+import ilonaImg from '../assets/images/people/ilona-gaszek.jpg';
+import sadikImg from '../assets/images/people/sadik-yildiz.jpg';
+import aihberImg from '../assets/images/people/aihber-khan.jpg';
+
+const imageMap: Record<string, ImageMetadata> = {
+  'erdal-toprak-small.jpg': erdalImg,
+  'adam-lyon.jpg': adamImg,
+  'alan-katz.jpg': alanImg,
+  'fatma-coskun.png': fatmaImg,
+  'ilona-gaszek.jpg': ilonaImg,
+  'sadik-yildiz.jpg': sadikImg,
+  'aihber-khan.jpg': aihberImg,
+};
+---
+
+<PageLayout title="People | Toprak Lab" description="Current lab members and alumni of the Toprak Lab at UT Southwestern Medical Center.">
+  <section class="section">
+    <div class="container">
+      <SectionHeading text="People" />
+
+      <div class="people-grid">
+        {people.current.map((p) => (
+          <PersonCard
+            name={p.name}
+            role={p.role}
+            imageSrc={p.image ? imageMap[p.image] : undefined}
+          />
+        ))}
+      </div>
+
+      <div class="people-links">
+        <a href="/photos/">Photos from the Lab</a>
+        <a href="/past-visitors/">Past Visitors</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="alumni-heading">UT Southwestern Alumni</h2>
+      <ul class="alumni-list">
+        {people.utswAlumni.map((a) => (
+          <li><strong>{a.name}</strong> &mdash; {a.role}</li>
+        ))}
+      </ul>
+
+      <h2 class="alumni-heading">Other Students &amp; Interns</h2>
+      <ul class="alumni-list">
+        {people.otherAlumni.map((a) => (
+          <li><strong>{a.name}</strong> &mdash; {a.role}</li>
+        ))}
+      </ul>
+
+      <h2 class="alumni-heading">Sabanci University Alumni</h2>
+      <ul class="alumni-list">
+        {people.sabanciAlumni.map((a) => (
+          <li><strong>{a.name}</strong> &mdash; {a.role}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .people-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .people-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .people-links a {
+    font-family: var(--font-heading);
+    font-size: var(--size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-navy);
+    border-bottom: 1px solid var(--color-gray-100);
+    padding-bottom: 2px;
+  }
+
+  .people-links a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+
+  .alumni-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-lg);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-900);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .alumni-heading:first-child {
+    margin-top: 0;
+  }
+
+  .alumni-list {
+    margin-bottom: 1rem;
+  }
+
+  .alumni-list li {
+    font-size: var(--size-sm);
+    padding: 0.375rem 0;
+    color: var(--color-gray-600);
+  }
+
+  .alumni-list li strong {
+    color: var(--color-gray-900);
+  }
+</style>

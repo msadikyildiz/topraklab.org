@@ -1,0 +1,68 @@
+{
+  "current": [
+    {
+      "name": "Erdal Toprak, Ph.D.",
+      "role": "Associate Professor",
+      "image": "erdal-toprak-small.jpg"
+    },
+    {
+      "name": "Adam Lyon",
+      "role": "Graduate Student",
+      "image": "adam-lyon.jpg"
+    },
+    {
+      "name": "Alan Katz, Ph.D.",
+      "role": "Adjunct Instructor",
+      "image": "alan-katz.jpg"
+    },
+    {
+      "name": "Fatma Sevde Coskun, Ph.D.",
+      "role": "Postdoctoral Fellow",
+      "image": "fatma-coskun.png"
+    },
+    {
+      "name": "Ilona Gaszek",
+      "role": "Graduate Student",
+      "image": "ilona-gaszek.jpg"
+    },
+    {
+      "name": "Muhammed Sadik Yildiz, Ph.D.",
+      "role": "Postdoctoral Fellow",
+      "image": "sadik-yildiz.jpg"
+    },
+    {
+      "name": "Aihber Khan",
+      "role": "Research Scientist",
+      "image": "aihber-khan.jpg"
+    }
+  ],
+  "utswAlumni": [
+    { "name": "Ashley Vu", "role": "MSTP Student" },
+    { "name": "Nihal Ezgi Wood", "role": "Postdoctoral Research Fellow" },
+    { "name": "Marinelle Rodrigues", "role": "Postdoctoral Research Fellow" },
+    { "name": "Madhu Sudan Manna", "role": "Postdoctoral Research Fellow" },
+    { "name": "Ayesha Ahmed", "role": "Research Associate" },
+    { "name": "Yusuf Talha Tamer", "role": "Graduate Student" },
+    { "name": "Fatih Cansizoglu", "role": "Postdoctoral Research Fellow" },
+    { "name": "Vibha Jayaraj", "role": "Postdoctoral Research Fellow" },
+    { "name": "Dilay Hazal Ayhan", "role": "Research Associate" }
+  ],
+  "otherAlumni": [
+    { "name": "Byron Weiss", "role": "MSTP Student, UT Southwestern" },
+    { "name": "Kate Elston", "role": "Undergraduate Intern, Texas A&M University" },
+    { "name": "Cindy Tan", "role": "Undergraduate Intern, UC Santa Cruz" },
+    { "name": "Ye (Lawrance) Aung", "role": "Medical Student, UT Southwestern" }
+  ],
+  "sabanciAlumni": [
+    { "name": "Tugce Oz", "role": "Graduate Student, Max Planck Institute" },
+    { "name": "Tugce Altinusak", "role": "M.Sc., Sabanci University, Turkey" },
+    { "name": "Enes Karaboga", "role": "M.Sc., Sabanci University, Turkey" },
+    { "name": "Aysegul Guvenek", "role": "Graduate Student, Rutgers University" },
+    { "name": "Beste Mutlu", "role": "Graduate Student, Harvard University" },
+    { "name": "Huseyin Tas", "role": "Graduate Student, CSIC, Madrid, Spain" },
+    { "name": "Muhammed Sadik Yildiz", "role": "Graduate Student, Harvard Medical School" },
+    { "name": "Nirva Mumcuyan", "role": "Graduate Student, Baylor College of Medicine" },
+    { "name": "Vedat Burak Ozan", "role": "B.Sc., Sabanci University, Turkey" },
+    { "name": "Gizem Hazal Senturk", "role": "Undergraduate Student, Sabanci University" }
+  ]
+}
