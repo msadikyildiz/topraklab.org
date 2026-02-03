@@ -87,6 +87,25 @@ const { images } = Astro.props;
   .carousel__btn:hover {
     background: rgba(0, 0, 0, 0.5);
   }
+
+  @media (max-width: 768px) {
+    .carousel { aspect-ratio: 16 / 9; }
+  }
+
+  @media (max-width: 480px) {
+    .carousel { aspect-ratio: 4 / 3; }
+  }
+
+  @media (hover: none) {
+    .carousel__controls { opacity: 1; }
+    .carousel__btn {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.75rem;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+    }
+  }
 </style>
 
 <script>

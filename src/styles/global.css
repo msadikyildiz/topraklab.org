@@ -231,4 +231,8 @@ strong {
     --size-2xl: 1.75rem;
     --side-padding: 1rem;
   }
+
+  .section {
+    padding-block: 1.5rem;
+  }
 }
