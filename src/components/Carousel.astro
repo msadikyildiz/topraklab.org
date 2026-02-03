@@ -12,7 +12,7 @@ const { images } = Astro.props;
   <div class="carousel__track">
     {images.map((img, i) => (
       <div class:list={['carousel__slide', { 'carousel__slide--active': i === 0 }]} data-index={i}>
-        <Image src={img.src} alt={img.alt} width={960} height={377} loading={i === 0 ? 'eager' : 'lazy'} />
+        <Image src={img.src} alt={img.alt} width={1920} height={754} loading={i === 0 ? 'eager' : 'lazy'} />
       </div>
     ))}
   </div>

@@ -12,9 +12,13 @@ import media from '../data/media.json';
       <ul class="media-list">
         {media.map((m) => (
           <li class="media-item">
-            <span class="media-item__outlet">{m.outlet}</span>
-            {m.description && (
-              <span class="media-item__desc"> &mdash; {m.description}</span>
+            <span class="media-item__text">
+              {m.description
+                ? <>{m.outlet} {m.description}</>
+                : m.outlet}
+            </span>
+            {m.url && (
+              <a class="media-item__link" href={m.url} target="_blank" rel="noopener noreferrer">(Link)</a>
             )}
           </li>
         ))}
@@ -40,12 +44,14 @@ import media from '../data/media.json';
     border-left-color: var(--color-accent);
   }
 
-  .media-item__outlet {
-    font-weight: 600;
+  .media-item__text {
     color: var(--color-gray-900);
   }
 
-  .media-item__desc {
-    color: var(--color-gray-600);
+  .media-item__link {
+    color: var(--color-navy-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    margin-left: 0.35em;
   }
 </style>

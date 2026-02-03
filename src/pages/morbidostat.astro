@@ -6,24 +6,22 @@ import SectionHeading from '../components/SectionHeading.astro';
 <PageLayout title="Morbidostat | Toprak Lab" description="Build your own morbidostat — an automated high-throughput fluidic system for studying bacterial drug resistance.">
   <section class="section">
     <div class="container">
-      <SectionHeading text="Morbidostat" />
+      <SectionHeading text="Build Your Own Morbidostat!" />
 
       <p class="morbidostat-intro">
         The morbidostat is an automated high-throughput fluidic system for studying bacterial drug resistance in dynamically sustained drug environments. The protocol below describes how to build your own morbidostat, as published in <em>Nature Protocols</em>.
       </p>
 
-      <div class="morbidostat-embed">
-        <iframe
-          src="https://www.nature.com/articles/nprot.2013.021"
-          title="Building a Morbidostat — Nature Protocols"
-          loading="lazy"
-        ></iframe>
+      <div class="article-card">
+        <span class="article-card__label">Protocol</span>
+        <h2 class="article-card__title">Building a morbidostat: an automated continuous-culture device for studying bacterial drug resistance under dynamically sustained drug inhibition</h2>
+        <p class="article-card__authors">E. Toprak*, A. Veres, S. Yıldız, J.M. Pedraza, R. Chait, J. Paulsson &amp; R. Kishony*</p>
+        <p class="article-card__journal"><em>Nature Protocols</em> <strong>8</strong>, 555–585 (2013)</p>
+        <div class="article-card__actions">
+          <a href="https://www.nature.com/articles/nprot.2013.021" target="_blank" rel="noopener noreferrer" class="article-card__btn">View on Nature.com</a>
+          <a href="https://www.nature.com/articles/nprot.2013.021.pdf" target="_blank" rel="noopener noreferrer" class="article-card__btn article-card__btn--secondary">Download PDF</a>
+        </div>
       </div>
-
-      <p class="morbidostat-cite">
-        E. Toprak*, A. Veres, S. Yildiz, J.M. Pedraza, R. Chait, J. Paulsson, R. Kishony*, "Building a Morbidostat: An automated high-throughput fluidic system for studying bacterial drug resistance in dynamically sustained drug environments," <em>Nature Protocols</em>, 2013.
-        <a href="https://www.nature.com/articles/nprot.2013.021" target="_blank" rel="noopener noreferrer">View on Nature.com</a>
-      </p>
     </div>
   </section>
 </PageLayout>
@@ -33,35 +31,80 @@ import SectionHeading from '../components/SectionHeading.astro';
     max-width: 680px;
     margin-inline: auto;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     font-size: var(--size-md);
     line-height: 1.7;
   }
 
-  .morbidostat-embed {
-    width: 100%;
-    aspect-ratio: 8.5 / 11;
-    max-height: 80vh;
-    margin-bottom: 2rem;
-  }
-
-  .morbidostat-embed iframe {
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--color-gray-100);
-  }
-
-  .morbidostat-cite {
-    font-size: var(--size-sm);
-    color: var(--color-gray-300);
-    text-align: center;
+  .article-card {
     max-width: 680px;
     margin-inline: auto;
+    border: 1px solid var(--color-gray-100);
+    padding: 2rem 2.5rem;
   }
 
-  .morbidostat-cite a {
+  .article-card__label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: var(--size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--color-navy-light);
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--size-lg);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--color-gray-900);
+  }
+
+  .article-card__authors {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 0.25rem;
+  }
+
+  .article-card__journal {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+  }
+
+  .article-card__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .article-card__btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: var(--size-sm);
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--color-navy);
+    color: var(--color-white);
+    background-color: var(--color-navy);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .article-card__btn:hover {
+    background-color: var(--color-navy-light);
+    border-color: var(--color-navy-light);
+  }
+
+  .article-card__btn--secondary {
+    color: var(--color-navy);
+    background-color: transparent;
+  }
+
+  .article-card__btn--secondary:hover {
+    color: var(--color-white);
+    background-color: var(--color-navy);
   }
 </style>

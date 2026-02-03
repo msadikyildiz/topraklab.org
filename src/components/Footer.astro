@@ -11,8 +11,33 @@ const year = new Date().getFullYear();
       Dallas, TX, USA 75390-8597
     </p>
     <p class="footer__email">
-      <a href="mailto:erdal.toprak@utsouthwestern.edu">erdal.toprak@utsouthwestern.edu</a>
+      <span class="email-protect" data-u="erdal.toprak" data-d="utsouthwestern.edu"></span>
     </p>
+    <script>
+      document.querySelectorAll('.email-protect').forEach(el => {
+        const u = el.getAttribute('data-u');
+        const d = el.getAttribute('data-d');
+        if (u && d) {
+          const addr = u + '@' + d;
+          const a = document.createElement('a');
+          a.href = 'mailto:' + addr;
+          a.textContent = addr;
+          el.replaceWith(a);
+        }
+      });
+      document.querySelectorAll('.phone-protect').forEach(el => {
+        const a = el.getAttribute('data-a');
+        const b = el.getAttribute('data-b');
+        const c = el.getAttribute('data-c');
+        if (a && b && c) {
+          const num = '+1 (' + a + ') ' + b + '-' + c;
+          const link = document.createElement('a');
+          link.href = 'tel:+1' + a + b + c;
+          link.textContent = num;
+          el.replaceWith(link);
+        }
+      });
+    </script>
     <p class="footer__copy">
       &copy; {year} Toprak Lab. This website reflects only the views of the author and is not a publication of UT Southwestern, which bears no responsibility for its content.
     </p>

@@ -1,14 +1,14 @@
 {
   "systemsBiology": [
     {
-      "authors": "Ilona K Gaszek, Muhammed Sadik Yildiz, Zhaoxu Meng, Jose Alberto de la Paz, Sophia Maria Alvarez, Faruck Morcos, Milo M Lin, Erdal Toprak",
+      "authors": "Ilona K Gaszek, Muhammed Sadık Yıldız, Zhaoxu Meng, Jose Alberto de la Paz, Sophia Maria Alvarez, Faruck Morcos, Milo M Lin, Erdal Toprak",
       "title": "Higher-order epistasis drives evolutionary unpredictability toward novel antibiotic resistance",
       "journal": "Biorxiv",
       "year": 2025,
       "url": "https://www.biorxiv.org/content/10.1101/2025.07.08.663783v1.abstract"
     },
     {
-      "authors": "Adam Lyon, Mohammed Sadik Yildiz, Erdal Toprak",
+      "authors": "Adam Lyon, Muhammed Sadık Yıldız, Erdal Toprak",
       "title": "Context-dependent evolutionary dynamics toward bacterial survival during sequential antibiotic treatment",
       "journal": "Biorxiv",
       "year": 2025,
@@ -22,21 +22,21 @@
       "url": "https://www.biorxiv.org/content/10.1101/2025.01.14.633023v1.abstract"
     },
     {
-      "authors": "F.N. Kalkan*, M.S. Yildiz*, E. Wood, M.F. Farid, M.K. McCoy, C.C. Zhang, B. Posner, S.S. Chung, E. Toprak",
+      "authors": "F.N. Kalkan*, M.S. Yıldız*, E. Wood, M.F. Farid, M.K. McCoy, C.C. Zhang, B. Posner, S.S. Chung, E. Toprak",
       "title": "Synergistic and antagonistic drug-drug interactions are prevalent but not conserved across acute myeloid leukemia cell lines",
       "journal": "Scientific Reports",
       "year": 2025,
       "url": "https://www.nature.com/articles/s41598-025-03242-x"
     },
     {
-      "authors": "Kantarcioglu, I.K. Gaszek, T.F. Guclu, M.S. Yildiz, A.R. Atilgan, E. Toprak*, C. Atilgan*",
+      "authors": "Kantarcioglu, I.K. Gaszek, T.F. Guclu, M.S. Yıldız, A.R. Atilgan, E. Toprak*, C. Atilgan*",
       "title": "Elucidating TolC Protein Dynamics: Structural Shifts Facilitate Efflux Mediated \u03b2-lactam Resistance",
       "journal": "Communications Biology",
       "year": 2024,
       "url": "https://www.nature.com/articles/s42003-024-06750-0"
     },
     {
-      "authors": "M. Rodrigues, P. Sabaeifard, M.S. Yildiz, L. Coughlin, S. Ahmed, N. Poulides, A.C. Toprak, C. Behrendt, X. Wang, M. Monogue, J. Kim, S. Gan, X. Zhan, L. Filkins, N.S. Williams, L. Hooper, A.Y. Koh*, E. Toprak*",
+      "authors": "M. Rodrigues, P. Sabaeifard, M.S. Yıldız, L. Coughlin, S. Ahmed, N. Poulides, A.C. Toprak, C. Behrendt, X. Wang, M. Monogue, J. Kim, S. Gan, X. Zhan, L. Filkins, N.S. Williams, L. Hooper, A.Y. Koh*, E. Toprak*",
       "title": "Susceptible bacteria can survive antibiotic treatment in the mammalian gastrointestinal tract without evolving resistance",
       "journal": "Cell Host & Microbe",
       "year": 2024,
@@ -120,7 +120,7 @@
       "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002552"
     },
     {
-      "authors": "B. Okumus, D. Landgraf, G.C. Lai, S. Bakhsi, J.C. Arias-Castro, S. Yildiz, D. Huh, R. Fernandez-Lopez, C.N. Peterson, E. Toprak, M. El Karoui, J. Paulsson",
+      "authors": "B. Okumus, D. Landgraf, G.C. Lai, S. Bakhsi, J.C. Arias-Castro, S. Yıldız, D. Huh, R. Fernandez-Lopez, C.N. Peterson, E. Toprak, M. El Karoui, J. Paulsson",
       "title": "Mechanical slowing-down of cytoplasmic diffusion allows in vivo counting of proteins in individual cells",
       "journal": "Nature Communications",
       "year": 2016,
@@ -141,21 +141,21 @@
       "url": "https://www.nature.com/articles/ncomms8385"
     },
     {
-      "authors": "T. Oz, A. Guvenek, S. Yildiz, E. Karaboga, Y.T. Tamer, N. Mumcuyan, V.B. Ozan, G.H. Senturk, M. Cokol, P. Yeh, E. Toprak",
+      "authors": "T. Oz, A. Guvenek, S. Yıldız, E. Karaboga, Y.T. Tamer, N. Mumcuyan, V.B. Ozan, G.H. Senturk, M. Cokol, P. Yeh, E. Toprak",
       "title": "Selection strength contributes to the complexity of antibiotic resistance evolution",
       "journal": "Molecular Biology and Evolution",
       "year": 2014,
       "url": "https://academic.oup.com/mbe/article/31/9/2387/2925782"
     },
     {
-      "authors": "B. Okumus, S. Yildiz, E. Toprak",
+      "authors": "B. Okumus, S. Yıldız, E. Toprak",
       "title": "Fluidic and microfluidic tools for quantitative systems biology",
       "journal": "Current Opinion in Biotechnology (invited review)",
       "year": 2014,
       "url": "https://www.sciencedirect.com/science/article/pii/S095816691300640X"
     },
     {
-      "authors": "E. Toprak*, A. Veres, S. Yildiz, J.M. Pedraza, R. Chait, J. Paulsson, R. Kishony*",
+      "authors": "E. Toprak*, A. Veres, S. Yıldız, J.M. Pedraza, R. Chait, J. Paulsson, R. Kishony*",
       "title": "Building a Morbidostat: An automated high-throughput fluidic system for studying bacterial drug resistance in dynamically sustained drug environments",
       "journal": "Nature Protocols",
       "year": 2013,
