@@ -11,15 +11,22 @@ import media from '../data/media.json';
 
       <ul class="media-list">
         {media.map((m) => (
-          <li class="media-item">
-            <span class="media-item__text">
-              {m.description
-                ? <>{m.outlet} {m.description}</>
-                : m.outlet}
-            </span>
-            {m.url && (
-              <a class="media-item__link" href={m.url} target="_blank" rel="noopener noreferrer">(Link)</a>
-            )}
+          <li class="media-entry">
+            <p class="media-entry__citation">
+              {m.url ? (
+                <a href={m.url} class="media-entry__outlet" target="_blank" rel="noopener noreferrer">
+                  {m.outlet}
+                </a>
+              ) : (
+                <span class="media-entry__outlet">{m.outlet}</span>
+              )}
+              <br />
+              <span class="media-entry__title">{m.title}{m.description ? ` — ${m.description}` : ''}</span>
+              <br />
+              <span class="media-entry__detail">
+                {m.type}{m.year ? `, ${m.year}` : ''}.
+              </span>
+            </p>
           </li>
         ))}
       </ul>
@@ -33,25 +40,37 @@ import media from '../data/media.json';
     margin-inline: auto;
   }
 
-  .media-item {
+  .media-entry {
     padding: 0.75rem 0 0.75rem 0.75rem;
     border-left: 2px solid transparent;
     transition: border-color 0.2s;
-    font-size: var(--size-base);
   }
 
-  .media-item:hover {
+  .media-entry:hover {
     border-left-color: var(--color-accent);
   }
 
-  .media-item__text {
+  .media-entry__citation {
+    font-size: var(--size-sm);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .media-entry__outlet {
+    font-weight: 600;
     color: var(--color-gray-900);
   }
 
-  .media-item__link {
+  a.media-entry__outlet:hover {
     color: var(--color-navy-light);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    margin-left: 0.35em;
+  }
+
+  .media-entry__title {
+    color: var(--color-gray-600);
+  }
+
+  .media-entry__detail {
+    font-style: italic;
+    color: var(--color-gray-300);
   }
 </style>
