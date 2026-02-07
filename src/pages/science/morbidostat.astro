@@ -1,0 +1,293 @@
+---
+import ScienceLayout from '../../layouts/ScienceLayout.astro';
+import { Image } from 'astro:assets';
+
+import fitnessLandscape from '../../assets/images/science/palmer-2015-fitness-landscape.jpg';
+import delayedCommitment from '../../assets/images/science/palmer-2015-delayed-commitment.jpg';
+import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evolutionary-dynamics.jpg';
+---
+
+<ScienceLayout title="Morbidostat | Toprak Lab" description="Build your own morbidostat — an automated high-throughput fluidic system for studying bacterial drug resistance.">
+  <section class="section">
+    <div class="container">
+      <p class="morbidostat-intro">
+        The morbidostat is an automated high-throughput fluidic system for studying bacterial drug resistance in dynamically sustained drug environments. By continuously adjusting antibiotic concentrations in response to bacterial growth, it maintains constant selective pressure — enabling direct, real-time observation of resistance evolution.
+      </p>
+
+      <div class="article-card">
+        <span class="article-card__label">Protocol</span>
+        <h2 class="article-card__title">Building a morbidostat: an automated continuous-culture device for studying bacterial drug resistance under dynamically sustained drug inhibition</h2>
+        <p class="article-card__authors">E. Toprak*, A. Veres, S. Yıldız, J.M. Pedraza, R. Chait, J. Paulsson &amp; R. Kishony*</p>
+        <p class="article-card__journal"><em>Nature Protocols</em> <strong>8</strong>, 555–585 (2013)</p>
+        <div class="article-card__actions">
+          <a href="https://www.nature.com/articles/nprot.2013.021" target="_blank" rel="noopener noreferrer" class="article-card__btn">View on Nature.com</a>
+          <a href="https://www.nature.com/articles/nprot.2013.021.pdf" target="_blank" rel="noopener noreferrer" class="article-card__btn article-card__btn--secondary">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">What It Reveals</h2>
+      <p class="subsection-desc">
+        Morbidostat experiments produce rich datasets that map the full evolutionary trajectory of resistance — from initial mutations through complex epistatic interactions that shape fitness landscapes.
+      </p>
+
+      <figure class="full-figure">
+        <Image src={fitnessLandscape} alt="DHFR fitness landscape showing mutation combinations and their resistance levels under trimethoprim selection, with a 3D visualization of all 128 combinatorial variants" width={960} />
+        <figcaption>
+          <strong>Adaptive landscape of trimethoprim resistance.</strong> Fitness measurements across all combinatorial variants of DHFR mutations reveal the complex topography of resistance evolution — some mutation combinations produce high resistance (tall bars), while others are deleterious despite containing individually beneficial mutations.
+          <span class="figure-source">Palmer, Toprak, Baym et al., <em>Nature Communications</em> (2015)</span>
+        </figcaption>
+      </figure>
+
+      <figure class="full-figure">
+        <Image src={delayedCommitment} alt="Delayed commitment to evolutionary fate showing how accessible fitness peaks narrow with successive mutations" width={960} />
+        <figcaption>
+          <strong>Delayed commitment to evolutionary fate.</strong> Evolving populations maintain access to many fitness peaks early on, but higher-order epistasis progressively narrows their options. A pairwise epistasis model (pink) predicts faster commitment than observed (blue), indicating that complex genetic interactions keep evolutionary options open longer than expected.
+          <span class="figure-source">Palmer, Toprak, Baym et al., <em>Nature Communications</em> (2015)</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="subsection-heading">Enabled Research</h2>
+      <p class="subsection-desc">
+        The morbidostat has enabled a series of studies quantifying the molecular determinants of resistance evolution under diverse drug selection regimes.
+      </p>
+
+      <figure class="full-figure">
+        <Image src={evolutionaryDynamics} alt="Evolutionary dynamics under nitrofurantoin and chloramphenicol selection showing IC50 trajectories and mutation diversity across replicate populations" width={960} />
+        <figcaption>
+          <strong>Quantifying evolutionary dynamics under drug selection.</strong> Morbidostat evolution of <em>E. coli</em> under nitrofurantoin (NIT) and chloramphenicol (CHL) reveals distinct resistance trajectories and mutational spectra. Whole-genome sequencing identifies the genes and functional categories driving adaptation to each drug.
+          <span class="figure-source">Chevereau, Dravecka, Batur et al., <em>PLOS Biology</em> (2015)</span>
+        </figcaption>
+      </figure>
+
+      <ul class="enabled-list">
+        <li>
+          <a href="https://www.nature.com/articles/ncomms8385" target="_blank" rel="noopener noreferrer">
+            <span class="enabled-list__title">Delayed commitment to evolutionary fate in antibiotic resistance fitness landscapes</span>
+            <span class="enabled-list__meta">Palmer*, Toprak*, Baym et al. — <em>Nature Communications</em>, 2015</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002299" target="_blank" rel="noopener noreferrer">
+            <span class="enabled-list__title">Quantifying the determinants of evolutionary dynamics leading to drug resistance</span>
+            <span class="enabled-list__meta">Chevereau, Dravecka, Batur et al. — <em>PLOS Biology</em>, 2015</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002552" target="_blank" rel="noopener noreferrer">
+            <span class="enabled-list__title">Sequence-specific targeting of bacterial resistance genes increases antibiotic efficacy</span>
+            <span class="enabled-list__meta">Ayhan, Tamer, Akbar et al. — <em>PLOS Biology</em>, 2016</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.nature.com/articles/s41467-021-23191-z" target="_blank" rel="noopener noreferrer">
+            <span class="enabled-list__title">A trimethoprim derivative impedes antibiotic resistance evolution</span>
+            <span class="enabled-list__meta">Manna, Tamer, Gaszek et al. — <em>Nature Communications</em>, 2021</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</ScienceLayout>
+
+<style>
+  .section {
+    padding-block: 1.25rem;
+  }
+
+  .morbidostat-intro {
+    max-width: 680px;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: var(--size-md);
+    line-height: 1.7;
+  }
+
+  .subsection-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-xl);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .subsection-desc {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .full-figure {
+    max-width: 720px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--color-off-white);
+  }
+
+  .full-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .full-figure figcaption {
+    padding: 0.625rem 1rem;
+    font-size: var(--size-xs);
+    color: var(--color-gray-600);
+    line-height: 1.5;
+    border-top: 1px solid var(--color-gray-100);
+    background: var(--color-white);
+  }
+
+  .full-figure figcaption strong {
+    color: var(--color-gray-900);
+  }
+
+  .figure-source {
+    display: block;
+    margin-top: 0.375rem;
+    font-size: var(--size-xs);
+    color: var(--color-gray-300);
+  }
+
+  .article-card {
+    max-width: 720px;
+    margin-inline: auto;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
+    padding: 1.75rem 2rem;
+  }
+
+  .article-card__label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: var(--size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-navy-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .article-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--size-lg);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--color-gray-900);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .article-card__authors {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 0.25rem;
+  }
+
+  .article-card__journal {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+  }
+
+  .article-card__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .article-card__btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: var(--size-sm);
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--color-navy);
+    color: var(--color-white);
+    background-color: var(--color-navy);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .article-card__btn:hover {
+    background-color: var(--color-navy-light);
+    border-color: var(--color-navy-light);
+  }
+
+  .article-card__btn--secondary {
+    color: var(--color-navy);
+    background-color: transparent;
+  }
+
+  .article-card__btn--secondary:hover {
+    color: var(--color-white);
+    background-color: var(--color-navy);
+  }
+
+  /* Enabled research list */
+  .enabled-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .enabled-list li {
+    border-left: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .enabled-list li:hover {
+    border-left-color: var(--color-accent);
+  }
+
+  .enabled-list a {
+    display: block;
+    padding: 0.875rem 0 0.875rem 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid var(--color-gray-100);
+  }
+
+  .enabled-list li:last-child a {
+    border-bottom: none;
+  }
+
+  .enabled-list__title {
+    display: block;
+    font-weight: 600;
+    font-size: var(--size-sm);
+    color: var(--color-gray-900);
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+  }
+
+  .enabled-list a:hover .enabled-list__title {
+    color: var(--color-navy-light);
+  }
+
+  .enabled-list__meta {
+    display: block;
+    font-size: var(--size-xs);
+    color: var(--color-gray-300);
+  }
+
+  @media (max-width: 768px) {
+    .article-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

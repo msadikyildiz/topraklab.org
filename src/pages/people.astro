@@ -1,28 +1,28 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
+import PersonAvatar from '../components/PersonAvatar.astro';
+import PersonFeature from '../components/PersonFeature.astro';
 import PersonCard from '../components/PersonCard.astro';
-import { Image } from 'astro:assets';
 import people from '../data/people.json';
 
-import piPhoto from '../assets/images/people/erdal-toprak.jpg';
-import erdalImg from '../assets/images/people/erdal-toprak-small.jpg';
-import adamImg from '../assets/images/people/adam-lyon.jpg';
-import alanImg from '../assets/images/people/alan-katz.jpg';
-import fatmaImg from '../assets/images/people/fatma-coskun.png';
-import ilonaImg from '../assets/images/people/ilona-gaszek.jpg';
-import sadikImg from '../assets/images/people/sadik-yildiz.jpg';
-import aihberImg from '../assets/images/people/aihber-khan.jpg';
+// Auto-discover all people images
+const allImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/images/people/*.{jpg,png,webp}',
+  { eager: true }
+);
 
-const imageMap: Record<string, ImageMetadata> = {
-  'erdal-toprak-small.jpg': erdalImg,
-  'adam-lyon.jpg': adamImg,
-  'alan-katz.jpg': alanImg,
-  'fatma-coskun.png': fatmaImg,
-  'ilona-gaszek.jpg': ilonaImg,
-  'sadik-yildiz.jpg': sadikImg,
-  'aihber-khan.jpg': aihberImg,
-};
+function resolveImage(filename?: string): ImageMetadata | undefined {
+  if (!filename) return undefined;
+  const key = Object.keys(allImages).find((k) => k.endsWith(`/${filename}`));
+  return key ? allImages[key].default : undefined;
+}
+
+const piImage = resolveImage('erdal-toprak.jpg');
+
+// Split current members into featured (have bio) and regular
+const featured = people.current.filter((p: any) => p.bio);
+const regular = people.current.filter((p: any) => !p.bio);
 ---
 
 <PageLayout title="People | Toprak Lab" description="Current lab members and alumni of the Toprak Lab at UT Southwestern Medical Center.">
@@ -32,7 +32,7 @@ const imageMap: Record<string, ImageMetadata> = {
 
       <div class="pi-layout">
         <div class="pi-layout__photo">
-          <Image src={piPhoto} alt="Erdal Toprak, Ph.D." width={227} height={227} />
+          <PersonAvatar name="Erdal Toprak" imageSrc={piImage} size="lg" />
         </div>
         <div class="pi-layout__bio">
           <h2 class="pi-name">Erdal Toprak, Ph.D.</h2>
@@ -42,19 +42,28 @@ const imageMap: Record<string, ImageMetadata> = {
           </p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <SectionHeading text="People" />
+      {featured.length > 0 && (
+        <div class="featured-members">
+          {featured.map((p: any) => (
+            <PersonFeature
+              name={p.name}
+              role={p.role}
+              bio={p.bio}
+              imageSrc={resolveImage(p.image)}
+            />
+          ))}
+        </div>
+      )}
+
+      <h2 class="team-heading">Lab Members</h2>
 
       <div class="people-grid">
-        {people.current.map((p) => (
+        {regular.map((p: any) => (
           <PersonCard
             name={p.name}
             role={p.role}
-            imageSrc={p.image ? imageMap[p.image] : undefined}
+            imageSrc={resolveImage(p.image)}
           />
         ))}
       </div>
@@ -93,17 +102,16 @@ const imageMap: Record<string, ImageMetadata> = {
 </PageLayout>
 
 <style>
+  /* Tighten SectionHeading margin on this page */
+  .section :global(.section-heading) {
+    margin-bottom: 1.5rem;
+  }
+
   .pi-layout {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 2.5rem;
     align-items: start;
-  }
-
-  .pi-layout__photo img {
-    width: 227px;
-    height: 227px;
-    object-fit: cover;
   }
 
   .pi-name {
@@ -131,6 +139,28 @@ const imageMap: Record<string, ImageMetadata> = {
       display: flex;
       justify-content: center;
     }
+  }
+
+  .featured-members {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-gray-100);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .team-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-lg);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-900);
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-gray-100);
   }
 
   .people-grid {

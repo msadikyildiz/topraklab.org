@@ -3,77 +3,53 @@ import ScienceLayout from '../../layouts/ScienceLayout.astro';
 import ResearchTeam from '../../components/ResearchTeam.astro';
 import { Image } from 'astro:assets';
 
-import emLogo from '../../assets/images/science/earlymarker-logo-light.png';
+import emLogo from '../../assets/images/science/earlymarker-logo.png';
 import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
+import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-schematic.png';
 ---
 
 <ScienceLayout title="Liquid Biopsy | Toprak Lab" description="Circulating biomarker profiling for early detection and rapid pathogen isolation from blood.">
   <!-- Early Marker Banner -->
-  <section class="em-banner">
-    <div class="em-banner__inner">
-      <div class="em-banner__brand">
-        <Image src={emLogo} alt="Early Marker logo" width={72} height={72} class="em-banner__logo" />
-        <div>
-          <span class="em-banner__label">Spin-off Company</span>
-          <h2 class="em-banner__name">Early Marker</h2>
+  <section class="section section--banner">
+    <div class="container">
+      <section class="em-banner">
+        <div class="em-banner__inner">
+          <div class="em-banner__brand">
+            <Image src={emLogo} alt="Early Marker logo" width={48} height={48} class="em-banner__logo" />
+            <div>
+              <span class="em-banner__label">Spin-off Company</span>
+              <h2 class="em-banner__name">Early Marker</h2>
+            </div>
+          </div>
+          <div class="em-banner__body">
+            <p class="em-banner__tagline">Translating Toprak Lab circulating biomarker profiling research into clinically evaluated blood-based assays for early detection and longitudinal monitoring.</p>
+            <div class="em-banner__row">
+              <span class="em-banner__location">Pegasus BioLabs &middot; Dallas, TX</span>
+              <a href="https://earlymarker.bio" target="_blank" rel="noopener noreferrer" class="em-banner__cta">earlymarker.bio &rarr;</a>
+            </div>
+            <p class="em-banner__disclaimer">Research stage &mdash; clinical utility requires prospective validation.</p>
+          </div>
         </div>
-      </div>
-      <div class="em-banner__body">
-        <p class="em-banner__tagline">Translating biomarker-profiling research into clinically validated blood-based assays for early detection, screening, and longitudinal monitoring.</p>
-        <div class="em-banner__row">
-          <span class="em-banner__location">Pegasus BioLabs &middot; Dallas, TX</span>
-          <a href="https://earlymarker.bio" target="_blank" rel="noopener noreferrer" class="em-banner__cta">earlymarker.bio &rarr;</a>
-        </div>
-        <p class="em-banner__disclaimer">Research stage &mdash; clinical utility requires prospective validation.</p>
-      </div>
+      </section>
     </div>
   </section>
 
   <!-- Section 1: Intro (white) -->
-  <section class="section">
-    <div class="container">
-      <p class="vision-intro">
-        We use "liquid biopsy" to mean inference from blood: extracting clinically relevant signals from a complex, mixed sample. In the Toprak Lab this encompasses two distinct efforts&mdash;circulating biomarker profiling for early detection and longitudinal monitoring, and rapid isolation of bacteria from whole blood to accelerate bloodstream-infection workflows. Our biomarker-profiling work prioritizes reproducibility, stringent quality control, and model validation; translation of that effort is advanced through our spin-off, <a href="https://earlymarker.bio" target="_blank" rel="noopener noreferrer">Early Marker</a>.
-      </p>
-    </div>
-  </section>
 
   <!-- Section 2a: Circulating Biomarker Profiling (alt) -->
   <section class="section section--alt">
     <div class="container">
       <h2 class="subsection-heading">Circulating Biomarker Profiling</h2>
       <p class="subsection-desc">
-        In our circulating biomarker profiling work we combine sensitive sample handling with a staged computational analysis designed for noisy, confounded blood data. Rather than chasing headline accuracy, we gate sample quality up front, control for confounders, and build calibrated predictive models that we stress-test under resampling and held-out evaluation.
+        In our circulating biomarker profiling work we combine sensitive sample handling with a staged computational analysis designed for noisy, confounded blood data. Rather than chasing headline accuracy, we gate sample quality up front, control for confounders, and build calibrated predictive models that we stress-test under resampling and held-out evaluation. Blood-derived molecular readouts are highly sensitive to pre-analytical variation and shifts in cellular composition. We use a multi-index QC framework to score each sample across orthogonal axes, flag failure modes, and prevent low-quality inputs from biasing downstream inference. Training and evaluation data are strictly separated; we quantify robustness and uncertainty under repeated resampling before drawing conclusions.
       </p>
 
-      <figure class="paper-figure paper-figure--placeholder">
-        <div class="figure-placeholder" aria-label="Biomarker profiling pipeline schematic">
-          <span class="figure-placeholder__text">Pipeline concept figure</span>
-        </div>
+      <figure class="paper-figure">
+        <Image src={pipelineSchematic} alt="Biomarker profiling pipeline schematic: from blood draw through molecular readout, quality gating, and calibrated inference" width={960} />
         <figcaption>
           <strong>Biomarker profiling pipeline (schematic).</strong> From blood draw through molecular readout, quality gating, and calibrated inference. Schematic emphasizes QC gating and calibrated inference; it omits assay- and pipeline-specific details.
         </figcaption>
       </figure>
-    </div>
-  </section>
-
-  <!-- Section 2b: Analytical Rigor (white) -->
-  <section class="section">
-    <div class="container">
-      <h3 class="subsection-subheading">Analytical Rigor</h3>
-      <p class="subsection-desc">
-        Blood-derived molecular readouts are highly sensitive to pre-analytical variation and shifts in cellular composition. We use a multi-index QC framework to score each sample across orthogonal axes, flag failure modes, and prevent low-quality inputs from biasing downstream inference. Training and evaluation data are strictly separated; we quantify robustness and uncertainty under repeated resampling before drawing conclusions.
-      </p>
-
-      <figure class="paper-figure paper-figure--placeholder">
-        <div class="figure-placeholder" aria-label="Quality gating schematic">
-          <span class="figure-placeholder__text">QC validation matrix figure</span>
-        </div>
-        <figcaption>
-          <strong>Quality gating (schematic).</strong> Each sample is scored across multiple independent QC axes; only samples passing acceptance criteria proceed to modeling. Axes are abstracted; metrics differ by study and are not shown here.
-        </figcaption>
-      </figure>
-
     </div>
   </section>
 
@@ -115,7 +91,12 @@ import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
 <style>
   /* ── Layout ── */
   .section {
-    padding-block: 2rem;
+    padding-block: 1.25rem;
+  }
+
+  .section--banner {
+    padding-top: 0.75rem;
+    padding-bottom: 0;
   }
 
   /* ── Intro ── */
@@ -161,14 +142,17 @@ import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
     color: var(--color-gray-600);
     line-height: 1.6;
     max-width: 680px;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.75rem;
   }
 
   /* ── Figures ── */
   .paper-figure {
+    max-width: 720px;
     border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
     overflow: hidden;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--color-off-white);
   }
 
   .paper-figure img {
@@ -178,32 +162,16 @@ import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
   }
 
   .paper-figure figcaption {
-    padding: 1rem 1.25rem;
-    font-size: var(--size-sm);
+    padding: 0.625rem 1rem;
+    font-size: var(--size-xs);
     color: var(--color-gray-600);
-    line-height: 1.6;
+    line-height: 1.5;
     border-top: 1px solid var(--color-gray-100);
+    background: var(--color-white);
   }
 
   .paper-figure figcaption strong {
     color: var(--color-gray-900);
-  }
-
-  /* ── Placeholder figures → gold-bordered annotations ── */
-  .paper-figure--placeholder {
-    border: none;
-    border-left: 3px solid var(--color-accent);
-    padding: 1rem 1.25rem;
-    background: transparent;
-  }
-
-  .paper-figure--placeholder .figure-placeholder {
-    display: none;
-  }
-
-  .paper-figure--placeholder figcaption {
-    padding: 0;
-    border-top: none;
   }
 
   /* ── Article card base ── */
@@ -211,6 +179,7 @@ import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
     max-width: 720px;
     margin-inline: auto;
     border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
     padding: 1.75rem 2rem;
     background-color: var(--color-white);
   }
@@ -276,26 +245,36 @@ import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
   .em-banner {
     position: relative;
     background: linear-gradient(135deg, #001a3a 0%, var(--color-navy) 60%, #0a1e3d 100%);
-    border-top: 3px solid;
-    border-image: linear-gradient(90deg, #c87533 0%, #c87533 40%, transparent 100%) 1;
-    padding: 1.75rem 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 2rem 2.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   }
 
   .em-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #c87533 0%, #c87533 40%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .em-banner::after {
     content: '';
     position: absolute;
     top: -20px;
     left: 60px;
     width: 180px;
     height: 180px;
-    background: radial-gradient(circle, rgba(200, 117, 51, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(200, 117, 51, 0.15) 0%, transparent 70%);
     pointer-events: none;
   }
 
   .em-banner__inner {
     position: relative;
-    max-width: 960px;
-    margin-inline: auto;
     display: flex;
     align-items: flex-start;
     gap: 2rem;
@@ -304,14 +283,14 @@ import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
   .em-banner__brand {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
     flex-shrink: 0;
   }
 
   .em-banner__logo {
-    width: 72px;
-    height: 72px;
-    filter: drop-shadow(0 0 16px rgba(200, 117, 51, 0.3));
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 0 12px rgba(200, 117, 51, 0.4));
   }
 
   .em-banner__label {
@@ -395,10 +374,6 @@ import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
       max-width: none;
     }
 
-    .em-banner {
-      padding: 1.5rem 1.25rem;
-    }
-
     .em-banner__inner {
       flex-direction: column;
       gap: 1rem;
@@ -411,7 +386,7 @@ import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
 
   @media (max-width: 480px) {
     .section {
-      padding-block: 1.5rem;
+      padding-block: 1rem;
     }
   }
 </style>

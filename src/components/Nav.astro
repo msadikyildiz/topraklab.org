@@ -5,7 +5,7 @@ const links = [
   { label: 'Home', href: '/' },
   { label: 'People', href: '/people/' },
   { label: 'Publications', href: '/publications/' },
-  { label: 'Morbidostat', href: '/morbidostat/' },
+  { label: 'Science', href: '/science/antibiotic-resistance/', activePrefix: '/science/' },
   { label: 'Funding', href: '/funding/' },
   { label: 'News', href: '/news/' },
   { label: 'Contact', href: '/contact/' },
@@ -18,16 +18,19 @@ const links = [
       <span class="nav__hamburger"></span>
     </button>
     <ul class="nav__list" role="list">
-      {links.map(({ label, href }) => (
+      {links.map(({ label, href, activePrefix }) => {
+        const prefix = activePrefix ?? href;
+        return (
         <li class="nav__item">
           <a
-            class:list={['nav__link', { 'nav__link--active': pathname === href || (href !== '/' && pathname.startsWith(href)) }]}
+            class:list={['nav__link', { 'nav__link--active': pathname === href || (prefix !== '/' && pathname.startsWith(prefix)) }]}
             href={href}
           >
             {label}
           </a>
         </li>
-      ))}
+      );
+      })}
     </ul>
   </div>
 </nav>

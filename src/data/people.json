@@ -1,42 +1,41 @@
 {
   "current": [
     {
-      "name": "Erdal Toprak, Ph.D.",
-      "role": "Associate Professor",
-      "image": "erdal-toprak-small.jpg"
-    },
-    {
-      "name": "Adam Lyon",
-      "role": "Graduate Student",
-      "image": "adam-lyon.jpg"
-    },
-    {
       "name": "Alan Katz, Ph.D.",
       "role": "Adjunct Instructor",
-      "image": "alan-katz.jpg"
+      "image": "alan-katz.jpg",
+      "slug": "alan-katz"
     },
     {
       "name": "Fatma Sevde Coskun, Ph.D.",
       "role": "Postdoctoral Fellow",
-      "image": "fatma-coskun.png"
+      "image": "fatma-coskun.jpg",
+      "slug": "fatma-coskun",
+      "bio": "I am a postdoctoral researcher in the Toprak Lab at UT Southwestern. I received my PhD in Immunology from UT Southwestern, where I trained in the Van Oers Lab, and then worked briefly in industry. I joined the Toprak Lab in 2024 and have since worked on multiple projects while expanding my expertise in next-generation sequencing (NGS) analysis. My research includes building mutagenesis libraries of \u03b2-lactamases to study evolutionary trajectories and developing a highly efficient protocol for isolating bacteria from blood. I am also involved in one of the lab\u2019s most exciting projects focused on blood-based cancer diagnostics. Outside the lab, I enjoy playing with my dog (despite his lack of enthusiasm), cooking, going to the movies, and oil painting.",
+      "researchAreas": ["antibiotic-resistance", "liquid-biopsy"]
     },
     {
-      "name": "Ilona Gaszek",
-      "role": "Graduate Student",
-      "image": "ilona-gaszek.jpg"
-    },
-    {
-      "name": "Muhammed Sadık Yıldız, Ph.D.",
+      "name": "Muhammed Sad\u0131k Y\u0131ld\u0131z, Ph.D.",
       "role": "Postdoctoral Fellow",
-      "image": "sadik-yildiz.jpg"
+      "image": "sadik-yildiz.jpg",
+      "slug": "sadik-yildiz",
+      "researchAreas": ["antibiotic-resistance"]
     },
     {
-      "name": "Aihber Khan",
-      "role": "Research Scientist",
-      "image": "aihber-khan.jpg"
+      "name": "Ariq Chowdhury",
+      "role": "Research Technician",
+      "slug": "ariq-chowdhury"
+    },
+    {
+      "name": "Deniz Sezer, Ph.D.",
+      "role": "Adjunct Instructor",
+      "slug": "deniz-sezer"
     }
   ],
   "utswAlumni": [
+    { "name": "Adam Lyon", "role": "Graduate Student" },
+    { "name": "Ilona Gaszek", "role": "Graduate Student" },
+    { "name": "Aihber Khan", "role": "Research Scientist" },
     { "name": "Ashley Vu", "role": "MSTP Student" },
     { "name": "Nihal Ezgi Wood", "role": "Postdoctoral Research Fellow" },
     { "name": "Marinelle Rodrigues", "role": "Postdoctoral Research Fellow" },
@@ -60,7 +59,7 @@
     { "name": "Aysegul Guvenek", "role": "Graduate Student, Rutgers University" },
     { "name": "Beste Mutlu", "role": "Graduate Student, Harvard University" },
     { "name": "Huseyin Tas", "role": "Graduate Student, CSIC, Madrid, Spain" },
-    { "name": "Muhammed Sadık Yıldız", "role": "Graduate Student, Harvard Medical School" },
+    { "name": "Muhammed Sad\u0131k Y\u0131ld\u0131z", "role": "Graduate Student, Harvard Medical School" },
     { "name": "Nirva Mumcuyan", "role": "Graduate Student, Baylor College of Medicine" },
     { "name": "Vedat Burak Ozan", "role": "B.Sc., Sabanci University, Turkey" },
     { "name": "Gizem Hazal Senturk", "role": "Undergraduate Student, Sabanci University" }

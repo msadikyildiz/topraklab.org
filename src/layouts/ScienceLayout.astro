@@ -1,0 +1,16 @@
+---
+import PageLayout from './PageLayout.astro';
+import ScienceNav from '../components/ScienceNav.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<PageLayout title={title} description={description}>
+  <ScienceNav />
+  <slot />
+</PageLayout>

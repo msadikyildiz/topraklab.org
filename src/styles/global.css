@@ -205,7 +205,7 @@ strong {
 }
 
 .section {
-  padding-block: 3rem;
+  padding-block: 2rem;
 }
 
 .section--alt {
@@ -222,7 +222,7 @@ strong {
   }
 
   .section {
-    padding-block: 2rem;
+    padding-block: 1.5rem;
   }
 }
 
@@ -233,6 +233,6 @@ strong {
   }
 
   .section {
-    padding-block: 1.5rem;
+    padding-block: 1.25rem;
   }
 }

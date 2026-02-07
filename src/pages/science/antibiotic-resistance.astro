@@ -1,0 +1,326 @@
+---
+import ScienceLayout from '../../layouts/ScienceLayout.astro';
+import ResearchTeam from '../../components/ResearchTeam.astro';
+import { Image } from 'astro:assets';
+
+import gaszekFig1 from '../../assets/images/science/gaszek-2025-fig1.jpg';
+import gaszekFig2 from '../../assets/images/science/gaszek-2025-fig2.jpg';
+import lyonFig1 from '../../assets/images/science/lyon-2025-fig1.jpg';
+import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
+---
+
+<ScienceLayout title="Antibiotic Resistance Evolution | Toprak Lab" description="Understanding how bacteria evolve resistance through protein epistasis, large-scale mutagenesis, and evolutionary dynamics.">
+  <section class="section">
+    <div class="container">
+      <p class="vision-intro">
+        A central challenge in combating antibiotic resistance is understanding how bacteria evolve under drug pressure. The Toprak Lab investigates this through protein epistasis, large-scale mutagenesis, and direct observation of evolutionary dynamics — revealing rules that govern resistance emergence and inform strategies to prevent it.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">Deep Mutational Scanning</h2>
+      <p class="subsection-desc">
+        Systematic mapping of how single and combinatorial mutations reshape the fitness landscape of resistance enzymes.
+      </p>
+
+      <figure class="paper-figure">
+        <Image src={gaszekFig1} alt="TEM-1 combinatorial mutant library design and fitness landscape under ampicillin and aztreonam selection" width={960} />
+        <figcaption>
+          <strong>Combinatorial fitness landscape.</strong> A library of 55,296 TEM-1 &beta;-lactamase variants is systematically assayed under ampicillin and aztreonam selection, mapping how combinations of five key mutations reshape enzyme fitness across drug environments.
+        </figcaption>
+      </figure>
+      <figure class="paper-figure">
+        <Image src={gaszekFig2} alt="Graph-theoretic fitness landscape showing neutral merging and fitness peaks" width={960} />
+        <figcaption>
+          <strong>Evolutionary unpredictability.</strong> Graph-based visualization of the fitness landscape reveals multiple accessible peaks under aztreonam — higher-order epistasis creates branching evolutionary paths that make resistance outcomes fundamentally hard to predict.
+        </figcaption>
+      </figure>
+
+      <div class="article-card">
+        <span class="article-card__label">Preprint 2025</span>
+        <h3 class="article-card__title">Higher-order epistasis drives evolutionary unpredictability toward novel antibiotic resistance</h3>
+        <p class="article-card__authors">I.K. Gaszek, M.S. Yıldız, Z. Meng, J.A. de la Paz, S.M. Alvarez, F. Morcos, M.M. Lin, E. Toprak</p>
+        <p class="article-card__journal"><em>bioRxiv</em> (2025)</p>
+        <p class="article-card__summary">
+          Comprehensive deep mutational scanning of <strong>55,296 TEM-1 &beta;-lactamase variants</strong> yielding over <strong>8 million fitness measurements</strong>. Reveals that higher-order epistasis — interactions among three or more mutations — drives unpredictable evolutionary trajectories toward novel resistance phenotypes.
+        </p>
+        <div class="article-card__actions">
+          <a href="https://www.biorxiv.org/content/10.1101/2025.07.08.663783v1.abstract" target="_blank" rel="noopener noreferrer" class="article-card__btn">View on bioRxiv</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="subsection-heading">Sequential Treatment Dynamics</h2>
+      <p class="subsection-desc">
+        How evolutionary history under one antibiotic shapes adaptation to subsequent treatments.
+      </p>
+
+      <figure class="paper-figure">
+        <Image src={lyonFig1} alt="Evolution protocol scheme and survival outcomes during single antibiotic treatment" width={960} />
+        <figcaption>
+          <strong>Sequential treatment protocol.</strong> Bacterial populations are evolved under amikacin, levofloxacin, and cefepime in isolation, establishing baseline resistance dynamics and survival outcomes for each drug.
+        </figcaption>
+      </figure>
+      <figure class="paper-figure">
+        <Image src={lyonFig3} alt="Survival and phenotypic outcomes of sequential antibiotic treatment" width={960} />
+        <figcaption>
+          <strong>Context-dependent resistance.</strong> When antibiotics are applied in sequence, the evolutionary history under the first drug fundamentally reshapes adaptation to the second — identical drugs produce different resistance phenotypes depending on treatment order.
+        </figcaption>
+      </figure>
+
+      <div class="article-card">
+        <span class="article-card__label">Preprint 2025</span>
+        <h3 class="article-card__title">Context-dependent evolutionary dynamics toward bacterial survival during sequential antibiotic treatment</h3>
+        <p class="article-card__authors">A. Lyon, M.S. Yıldız, E. Toprak</p>
+        <p class="article-card__journal"><em>bioRxiv</em> (2025)</p>
+        <p class="article-card__summary">
+          Demonstrates that evolutionary outcomes during sequential antibiotic treatment are context-dependent — the order and history of drug exposure fundamentally alters the trajectory of resistance evolution, with implications for clinical treatment sequencing.
+        </p>
+        <div class="article-card__actions">
+          <a href="https://www.biorxiv.org/content/10.1101/2025.04.08.647880v2.abstract" target="_blank" rel="noopener noreferrer" class="article-card__btn">View on bioRxiv</a>
+        </div>
+      </div>
+
+      <ResearchTeam area="antibiotic-resistance" />
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">Related Publications</h2>
+      <ul class="related-list">
+        <li class="related-item">
+          <a href="https://academic.oup.com/mbe/article/36/7/1533/5458069" target="_blank" rel="noopener noreferrer">
+            <span class="related-item__title">High-order epistasis in catalytic power of dihydrofolate reductase gives rise to a rugged fitness landscape in the presence of trimethoprim selection</span>
+            <span class="related-item__meta">Tamer, Gaszek, Abdizadeh et al. &mdash; <em>MBE</em>, 2019</span>
+          </a>
+        </li>
+        <li class="related-item">
+          <a href="https://www.nature.com/articles/s41467-021-23191-z" target="_blank" rel="noopener noreferrer">
+            <span class="related-item__title">A trimethoprim derivative impedes antibiotic resistance evolution</span>
+            <span class="related-item__meta">Manna, Tamer, Gaszek et al. &mdash; <em>Nature Communications</em>, 2021</span>
+          </a>
+        </li>
+        <li class="related-item">
+          <a href="https://academic.oup.com/mbe/article/38/10/4493/6310175" target="_blank" rel="noopener noreferrer">
+            <span class="related-item__title">The antibiotic efflux protein TolC is a highly evolvable target under colicin E1 and TLS phage selection</span>
+            <span class="related-item__meta">Tamer, Gaszek, Rodrigues et al. &mdash; <em>MBE</em>, 2021</span>
+          </a>
+        </li>
+        <li class="related-item">
+          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002552" target="_blank" rel="noopener noreferrer">
+            <span class="related-item__title">Sequence-specific targeting of bacterial resistance genes increases antibiotic efficacy</span>
+            <span class="related-item__meta">Ayhan, Tamer, Akbar et al. &mdash; <em>PLOS Biology</em>, 2016</span>
+          </a>
+        </li>
+        <li class="related-item">
+          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002299" target="_blank" rel="noopener noreferrer">
+            <span class="related-item__title">Quantifying the determinants of evolutionary dynamics leading to drug resistance</span>
+            <span class="related-item__meta">Chevereau, Dravecka, Batur et al. &mdash; <em>PLOS Biology</em>, 2015</span>
+          </a>
+        </li>
+        <li class="related-item">
+          <a href="https://www.nature.com/articles/ncomms8385" target="_blank" rel="noopener noreferrer">
+            <span class="related-item__title">Delayed commitment to evolutionary fate in antibiotic resistance fitness landscapes</span>
+            <span class="related-item__meta">Palmer*, Toprak*, Baym et al. &mdash; <em>Nature Communications</em>, 2015</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</ScienceLayout>
+
+<style>
+  .section {
+    padding-block: 1.25rem;
+  }
+
+  .vision-intro {
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+    font-size: var(--size-md);
+    line-height: 1.7;
+  }
+
+  .subsection-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-xl);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .subsection-desc {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .paper-figure {
+    max-width: 720px;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: var(--color-off-white);
+  }
+
+  .paper-figure:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+
+  .paper-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .paper-figure figcaption {
+    padding: 0.625rem 1rem;
+    font-size: var(--size-xs);
+    color: var(--color-gray-600);
+    line-height: 1.5;
+    border-top: 1px solid var(--color-gray-100);
+    background: var(--color-white);
+  }
+
+  .paper-figure figcaption strong {
+    color: var(--color-gray-900);
+  }
+
+  .article-card {
+    max-width: 720px;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
+    padding: 1.75rem 2rem;
+    background-color: var(--color-white);
+  }
+
+  .article-card__label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: var(--size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-navy-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .article-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--size-lg);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--color-gray-900);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .article-card__authors {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 0.25rem;
+  }
+
+  .article-card__journal {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 1rem;
+  }
+
+  .article-card__summary {
+    font-size: var(--size-sm);
+    line-height: 1.7;
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .article-card__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .article-card__btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: var(--size-sm);
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--color-navy);
+    color: var(--color-white);
+    background-color: var(--color-navy);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .article-card__btn:hover {
+    background-color: var(--color-navy-light);
+    border-color: var(--color-navy-light);
+  }
+
+  /* Related publications */
+  .related-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .related-item {
+    border-left: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .related-item:hover {
+    border-left-color: var(--color-accent);
+  }
+
+  .related-item a {
+    display: block;
+    padding: 0.875rem 0 0.875rem 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid var(--color-gray-100);
+  }
+
+  .related-item:last-child a {
+    border-bottom: none;
+  }
+
+  .related-item__title {
+    display: block;
+    font-weight: 600;
+    font-size: var(--size-sm);
+    color: var(--color-gray-900);
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+  }
+
+  .related-item a:hover .related-item__title {
+    color: var(--color-navy-light);
+  }
+
+  .related-item__meta {
+    display: block;
+    font-size: var(--size-xs);
+    color: var(--color-gray-300);
+  }
+
+  @media (max-width: 768px) {
+    .article-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

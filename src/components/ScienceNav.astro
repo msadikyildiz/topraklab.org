@@ -1,0 +1,67 @@
+---
+const links = [
+  { href: '/science/antibiotic-resistance/', label: 'Resistance Evolution' },
+  { href: '/science/morbidostat/', label: 'Morbidostat' },
+  { href: '/science/liquid-biopsy/', label: 'Liquid Biopsy' },
+];
+
+const pathname = Astro.url.pathname;
+---
+
+<nav class="science-nav" aria-label="Science sections">
+  <div class="science-nav__inner">
+    {links.map(link => (
+      <a
+        href={link.href}
+        class:list={['science-nav__link', { active: pathname === link.href }]}
+        {...(pathname === link.href ? { 'aria-current': 'page' } : {})}
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<style>
+  .science-nav {
+    background-color: var(--color-off-white);
+    border-bottom: 1px solid var(--color-gray-100);
+  }
+
+  .science-nav__inner {
+    max-width: 960px;
+    margin-inline: auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .science-nav__link {
+    font-family: var(--font-heading);
+    font-size: var(--size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: var(--color-gray-600);
+    padding: 0.75rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .science-nav__link:hover {
+    color: var(--color-navy);
+  }
+
+  .science-nav__link.active {
+    color: var(--color-navy);
+    border-bottom-color: var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    .science-nav__inner {
+      gap: 1.25rem;
+    }
+  }
+</style>
