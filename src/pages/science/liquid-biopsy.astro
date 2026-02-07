@@ -1,0 +1,417 @@
+---
+import ScienceLayout from '../../layouts/ScienceLayout.astro';
+import ResearchTeam from '../../components/ResearchTeam.astro';
+import { Image } from 'astro:assets';
+
+import emLogo from '../../assets/images/science/earlymarker-logo-light.png';
+import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
+---
+
+<ScienceLayout title="Liquid Biopsy | Toprak Lab" description="Circulating biomarker profiling for early detection and rapid pathogen isolation from blood.">
+  <!-- Early Marker Banner -->
+  <section class="em-banner">
+    <div class="em-banner__inner">
+      <div class="em-banner__brand">
+        <Image src={emLogo} alt="Early Marker logo" width={72} height={72} class="em-banner__logo" />
+        <div>
+          <span class="em-banner__label">Spin-off Company</span>
+          <h2 class="em-banner__name">Early Marker</h2>
+        </div>
+      </div>
+      <div class="em-banner__body">
+        <p class="em-banner__tagline">Translating biomarker-profiling research into clinically validated blood-based assays for early detection, screening, and longitudinal monitoring.</p>
+        <div class="em-banner__row">
+          <span class="em-banner__location">Pegasus BioLabs &middot; Dallas, TX</span>
+          <a href="https://earlymarker.bio" target="_blank" rel="noopener noreferrer" class="em-banner__cta">earlymarker.bio &rarr;</a>
+        </div>
+        <p class="em-banner__disclaimer">Research stage &mdash; clinical utility requires prospective validation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Intro (white) -->
+  <section class="section">
+    <div class="container">
+      <p class="vision-intro">
+        We use "liquid biopsy" to mean inference from blood: extracting clinically relevant signals from a complex, mixed sample. In the Toprak Lab this encompasses two distinct efforts&mdash;circulating biomarker profiling for early detection and longitudinal monitoring, and rapid isolation of bacteria from whole blood to accelerate bloodstream-infection workflows. Our biomarker-profiling work prioritizes reproducibility, stringent quality control, and model validation; translation of that effort is advanced through our spin-off, <a href="https://earlymarker.bio" target="_blank" rel="noopener noreferrer">Early Marker</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 2a: Circulating Biomarker Profiling (alt) -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">Circulating Biomarker Profiling</h2>
+      <p class="subsection-desc">
+        In our circulating biomarker profiling work we combine sensitive sample handling with a staged computational analysis designed for noisy, confounded blood data. Rather than chasing headline accuracy, we gate sample quality up front, control for confounders, and build calibrated predictive models that we stress-test under resampling and held-out evaluation.
+      </p>
+
+      <figure class="paper-figure paper-figure--placeholder">
+        <div class="figure-placeholder" aria-label="Biomarker profiling pipeline schematic">
+          <span class="figure-placeholder__text">Pipeline concept figure</span>
+        </div>
+        <figcaption>
+          <strong>Biomarker profiling pipeline (schematic).</strong> From blood draw through molecular readout, quality gating, and calibrated inference. Schematic emphasizes QC gating and calibrated inference; it omits assay- and pipeline-specific details.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Section 2b: Analytical Rigor (white) -->
+  <section class="section">
+    <div class="container">
+      <h3 class="subsection-subheading">Analytical Rigor</h3>
+      <p class="subsection-desc">
+        Blood-derived molecular readouts are highly sensitive to pre-analytical variation and shifts in cellular composition. We use a multi-index QC framework to score each sample across orthogonal axes, flag failure modes, and prevent low-quality inputs from biasing downstream inference. Training and evaluation data are strictly separated; we quantify robustness and uncertainty under repeated resampling before drawing conclusions.
+      </p>
+
+      <figure class="paper-figure paper-figure--placeholder">
+        <div class="figure-placeholder" aria-label="Quality gating schematic">
+          <span class="figure-placeholder__text">QC validation matrix figure</span>
+        </div>
+        <figcaption>
+          <strong>Quality gating (schematic).</strong> Each sample is scored across multiple independent QC axes; only samples passing acceptance criteria proceed to modeling. Axes are abstracted; metrics differ by study and are not shown here.
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Bloodstream Infection (alt) -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">Rapid Pathogen Isolation from Blood</h2>
+      <p class="subsection-desc">
+        Conventional blood culture workflows can take days before susceptibility testing begins. We are developing protocols to recover bacteria directly from whole blood in ~30 minutes, removing the culture amplification bottleneck and compressing the time to obtain material for downstream identification and susceptibility testing. Turnaround ultimately depends on pathogen burden and the downstream assay.
+      </p>
+
+      <figure class="paper-figure">
+        <Image src={coskunFig1} alt="Comparison of conventional 18–48 hour bacterial isolation versus rapid ~30 minute protocol from blood samples" width={960} />
+        <figcaption>
+          <strong>Rapid bacterial isolation.</strong> Panel A: conventional culture-based workflow requiring 18–48 hours. Panel B: rapid method recovering bacteria from whole blood in approximately 30 minutes, removing the culture amplification bottleneck. Turnaround for identification and susceptibility testing depends on pathogen burden and the downstream assay.
+        </figcaption>
+      </figure>
+
+      <div class="article-card">
+        <span class="article-card__label">Published Article</span>
+        <h3 class="article-card__title">A simple, low-cost, and highly efficient protocol for rapid isolation of pathogenic bacteria from human blood</h3>
+        <p class="article-card__authors">Coskun FS, Quick J, Toprak E</p>
+        <p class="article-card__journal"><em>Frontiers in Microbiology</em> <strong>16</strong>:1637776 (2025)</p>
+        <div class="article-card__actions">
+          <a href="https://doi.org/10.3389/fmicb.2025.1637776" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Research Team (white) -->
+  <section class="section">
+    <div class="container">
+      <ResearchTeam area="liquid-biopsy" />
+    </div>
+  </section>
+</ScienceLayout>
+
+<style>
+  /* ── Layout ── */
+  .section {
+    padding-block: 2rem;
+  }
+
+  /* ── Intro ── */
+  .vision-intro {
+    font-size: var(--size-md);
+    line-height: 1.65;
+  }
+
+  .vision-intro a {
+    color: var(--color-navy);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .vision-intro a:hover {
+    color: var(--color-navy-light);
+  }
+
+  /* ── Headings ── */
+  .subsection-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-xl);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .subsection-subheading {
+    font-family: var(--font-heading);
+    font-size: var(--size-md);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Body text ── */
+  .subsection-desc {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    max-width: 680px;
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── Figures ── */
+  .paper-figure {
+    border: 1px solid var(--color-gray-100);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .paper-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .paper-figure figcaption {
+    padding: 1rem 1.25rem;
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .paper-figure figcaption strong {
+    color: var(--color-gray-900);
+  }
+
+  /* ── Placeholder figures → gold-bordered annotations ── */
+  .paper-figure--placeholder {
+    border: none;
+    border-left: 3px solid var(--color-accent);
+    padding: 1rem 1.25rem;
+    background: transparent;
+  }
+
+  .paper-figure--placeholder .figure-placeholder {
+    display: none;
+  }
+
+  .paper-figure--placeholder figcaption {
+    padding: 0;
+    border-top: none;
+  }
+
+  /* ── Article card base ── */
+  .article-card {
+    max-width: 720px;
+    margin-inline: auto;
+    border: 1px solid var(--color-gray-100);
+    padding: 1.75rem 2rem;
+    background-color: var(--color-white);
+  }
+
+  .article-card__label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: var(--size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-navy-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .article-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--size-lg);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    color: var(--color-gray-900);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .article-card__authors {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 0.25rem;
+  }
+
+  .article-card__journal {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 1rem;
+  }
+
+  .article-card__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .article-card__btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: var(--size-sm);
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--color-navy);
+    color: var(--color-white);
+    background-color: var(--color-navy);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .article-card__btn:hover {
+    background-color: var(--color-navy-light);
+    border-color: var(--color-navy-light);
+  }
+
+  /* ── Early Marker Banner ── */
+  .em-banner {
+    position: relative;
+    background: linear-gradient(135deg, #001a3a 0%, var(--color-navy) 60%, #0a1e3d 100%);
+    border-top: 3px solid;
+    border-image: linear-gradient(90deg, #c87533 0%, #c87533 40%, transparent 100%) 1;
+    padding: 1.75rem 2rem;
+  }
+
+  .em-banner::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 60px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(200, 117, 51, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .em-banner__inner {
+    position: relative;
+    max-width: 960px;
+    margin-inline: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .em-banner__brand {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .em-banner__logo {
+    width: 72px;
+    height: 72px;
+    filter: drop-shadow(0 0 16px rgba(200, 117, 51, 0.3));
+  }
+
+  .em-banner__label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(200, 165, 90, 0.8);
+    margin-bottom: 0.15rem;
+  }
+
+  .em-banner__name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    text-transform: none;
+    margin: 0;
+  }
+
+  .em-banner__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .em-banner__tagline {
+    font-size: var(--size-base);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 0.6rem;
+  }
+
+  .em-banner__row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+
+  .em-banner__location {
+    font-size: var(--size-sm);
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .em-banner__cta {
+    display: inline-block;
+    padding: 0.45rem 1.25rem;
+    font-size: var(--size-sm);
+    font-weight: 600;
+    text-decoration: none;
+    color: #d4a05a;
+    border: 1.5px solid rgba(200, 117, 51, 0.5);
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  }
+
+  .em-banner__cta:hover {
+    background-color: rgba(200, 117, 51, 0.15);
+    border-color: #c87533;
+    color: #e8c080;
+  }
+
+  .em-banner__disclaimer {
+    font-size: var(--size-xs);
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.28);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .article-card {
+      padding: 1.5rem;
+    }
+
+    .subsection-desc {
+      max-width: none;
+    }
+
+    .em-banner {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .em-banner__inner {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .em-banner__name {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section {
+      padding-block: 1.5rem;
+    }
+  }
+</style>
