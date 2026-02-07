@@ -9,7 +9,7 @@ interface Props {
 
 const { name, imageSrc, size = 'md' } = Astro.props;
 
-const sizes = { sm: 56, md: 120, lg: 180 };
+const sizes = { sm: 72, md: 120, lg: 180 };
 const diameter = sizes[size];
 ---
 
@@ -41,8 +41,8 @@ const diameter = sizes[size];
   }
 
   .avatar--sm {
-    width: 56px;
-    height: 56px;
+    width: 72px;
+    height: 72px;
   }
 
   .avatar--md {
@@ -72,7 +72,7 @@ const diameter = sizes[size];
   }
 
   .avatar--placeholder.avatar--sm span {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .avatar--placeholder.avatar--md span {

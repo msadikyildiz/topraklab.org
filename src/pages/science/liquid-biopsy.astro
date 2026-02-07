@@ -45,7 +45,7 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
       </p>
 
       <figure class="paper-figure">
-        <Image src={pipelineSchematic} alt="Biomarker profiling pipeline schematic: from blood draw through molecular readout, quality gating, and calibrated inference" width={960} />
+        <Image src={pipelineSchematic} alt="Biomarker profiling pipeline schematic: from blood draw through molecular readout, quality gating, and calibrated inference" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
           <strong>Biomarker profiling pipeline (schematic).</strong> From blood draw through molecular readout, quality gating, and calibrated inference. Schematic emphasizes QC gating and calibrated inference; it omits assay- and pipeline-specific details.
         </figcaption>
@@ -62,7 +62,7 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
       </p>
 
       <figure class="paper-figure">
-        <Image src={coskunFig1} alt="Comparison of conventional 18–48 hour bacterial isolation versus rapid ~30 minute protocol from blood samples" width={960} />
+        <Image src={coskunFig1} alt="Comparison of conventional 18–48 hour bacterial isolation versus rapid ~30 minute protocol from blood samples" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
           <strong>Rapid bacterial isolation.</strong> Panel A: conventional culture-based workflow requiring 18–48 hours. Panel B: rapid method recovering bacteria from whole blood in approximately 30 minutes, removing the culture amplification bottleneck. Turnaround for identification and susceptibility testing depends on pathogen burden and the downstream assay.
         </figcaption>
@@ -124,6 +124,8 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
     letter-spacing: normal;
     color: var(--color-gray-900);
     margin-bottom: 0.5rem;
+    max-width: 720px;
+    margin-inline: auto;
   }
 
   .subsection-subheading {
@@ -141,18 +143,20 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
     font-size: var(--size-sm);
     color: var(--color-gray-600);
     line-height: 1.6;
-    max-width: 680px;
+    max-width: 720px;
+    margin-inline: auto;
     margin-bottom: 0.75rem;
   }
 
   /* ── Figures ── */
   .paper-figure {
     max-width: 720px;
+    margin-inline: auto;
     border: 1px solid var(--color-gray-100);
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 1rem;
-    background: var(--color-off-white);
+    background: var(--color-white);
   }
 
   .paper-figure img {
@@ -244,6 +248,8 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
   /* ── Early Marker Banner ── */
   .em-banner {
     position: relative;
+    max-width: 720px;
+    margin-inline: auto;
     background: linear-gradient(135deg, #001a3a 0%, var(--color-navy) 60%, #0a1e3d 100%);
     border-radius: 12px;
     overflow: hidden;

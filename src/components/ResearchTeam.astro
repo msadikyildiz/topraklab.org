@@ -39,7 +39,7 @@ const researchers = people.current.filter(
     {researchers.map((p: any) => (
       <div class="research-team__person">
         <PersonAvatar name={p.name} imageSrc={resolveImage(p.image)} size="sm" />
-        <span class="research-team__name">{p.name.split(' ')[0]}</span>
+        <span class="research-team__name">{p.shortName || p.name.split(' ')[0]}</span>
       </div>
     ))}
   </div>
@@ -50,6 +50,8 @@ const researchers = people.current.filter(
     margin-top: 2.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-gray-100);
+    max-width: 720px;
+    margin-inline: auto;
   }
 
   .research-team__heading {
@@ -58,7 +60,7 @@ const researchers = people.current.filter(
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--color-gray-300);
+    color: var(--color-gray-600);
     margin-bottom: 1.25rem;
   }
 

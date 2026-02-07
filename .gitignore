@@ -7,3 +7,9 @@ scrape.mjs
 
 # Image processing workspace
 input/
+
+# Downloaded binaries
+scripts/bin/
+
+# Original image backups (before sanitization)
+src/assets/images/science/.originals/

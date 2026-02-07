@@ -149,6 +149,8 @@ body {
   font-weight: 400;
   color: var(--color-gray-600);
   background-color: var(--color-white);
+  background-image: url('/textures/paper-grain.png');
+  background-repeat: repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {

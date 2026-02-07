@@ -35,7 +35,7 @@ import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evo
       </p>
 
       <figure class="full-figure">
-        <Image src={fitnessLandscape} alt="DHFR fitness landscape showing mutation combinations and their resistance levels under trimethoprim selection, with a 3D visualization of all 128 combinatorial variants" width={960} />
+        <Image src={fitnessLandscape} alt="DHFR fitness landscape showing mutation combinations and their resistance levels under trimethoprim selection, with a 3D visualization of all 128 combinatorial variants" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
           <strong>Adaptive landscape of trimethoprim resistance.</strong> Fitness measurements across all combinatorial variants of DHFR mutations reveal the complex topography of resistance evolution — some mutation combinations produce high resistance (tall bars), while others are deleterious despite containing individually beneficial mutations.
           <span class="figure-source">Palmer, Toprak, Baym et al., <em>Nature Communications</em> (2015)</span>
@@ -43,7 +43,7 @@ import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evo
       </figure>
 
       <figure class="full-figure">
-        <Image src={delayedCommitment} alt="Delayed commitment to evolutionary fate showing how accessible fitness peaks narrow with successive mutations" width={960} />
+        <Image src={delayedCommitment} alt="Delayed commitment to evolutionary fate showing how accessible fitness peaks narrow with successive mutations" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
           <strong>Delayed commitment to evolutionary fate.</strong> Evolving populations maintain access to many fitness peaks early on, but higher-order epistasis progressively narrows their options. A pairwise epistasis model (pink) predicts faster commitment than observed (blue), indicating that complex genetic interactions keep evolutionary options open longer than expected.
           <span class="figure-source">Palmer, Toprak, Baym et al., <em>Nature Communications</em> (2015)</span>
@@ -60,7 +60,7 @@ import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evo
       </p>
 
       <figure class="full-figure">
-        <Image src={evolutionaryDynamics} alt="Evolutionary dynamics under nitrofurantoin and chloramphenicol selection showing IC50 trajectories and mutation diversity across replicate populations" width={960} />
+        <Image src={evolutionaryDynamics} alt="Evolutionary dynamics under nitrofurantoin and chloramphenicol selection showing IC50 trajectories and mutation diversity across replicate populations" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
           <strong>Quantifying evolutionary dynamics under drug selection.</strong> Morbidostat evolution of <em>E. coli</em> under nitrofurantoin (NIT) and chloramphenicol (CHL) reveals distinct resistance trajectories and mutational spectra. Whole-genome sequencing identifies the genes and functional categories driving adaptation to each drug.
           <span class="figure-source">Chevereau, Dravecka, Batur et al., <em>PLOS Biology</em> (2015)</span>
@@ -103,9 +103,8 @@ import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evo
   }
 
   .morbidostat-intro {
-    max-width: 680px;
+    max-width: 720px;
     margin-inline: auto;
-    text-align: center;
     margin-bottom: 1.5rem;
     font-size: var(--size-md);
     line-height: 1.7;
@@ -119,22 +118,27 @@ import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evo
     letter-spacing: normal;
     color: var(--color-gray-900);
     margin-bottom: 0.5rem;
+    max-width: 720px;
+    margin-inline: auto;
   }
 
   .subsection-desc {
     font-size: var(--size-sm);
     color: var(--color-gray-600);
     line-height: 1.6;
+    max-width: 720px;
+    margin-inline: auto;
     margin-bottom: 1rem;
   }
 
   .full-figure {
     max-width: 720px;
+    margin-inline: auto;
     margin-bottom: 1.5rem;
     border: 1px solid var(--color-gray-100);
     border-radius: 4px;
     overflow: hidden;
-    background: var(--color-off-white);
+    background: var(--color-white);
   }
 
   .full-figure img {
