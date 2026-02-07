@@ -15,7 +15,7 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
       <section class="em-banner">
         <div class="em-banner__inner">
           <div class="em-banner__brand">
-            <Image src={emLogo} alt="Early Marker logo" width={48} height={48} class="em-banner__logo" />
+            <Image src={emLogo} alt="Early Marker logo" width={88} height={88} class="em-banner__logo" />
             <div>
               <span class="em-banner__label">Spin-off Company</span>
               <h2 class="em-banner__name">Early Marker</h2>
@@ -250,37 +250,74 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
     position: relative;
     max-width: 720px;
     margin-inline: auto;
-    background: linear-gradient(135deg, #001a3a 0%, var(--color-navy) 60%, #0a1e3d 100%);
+    background:
+      radial-gradient(ellipse 60% 80% at 12% 40%, rgba(196, 163, 90, 0.12) 0%, transparent 70%),
+      radial-gradient(circle at 8% 50%, rgba(200, 140, 60, 0.10) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 60% at 90% 30%, rgba(80, 120, 200, 0.06) 0%, transparent 60%),
+      linear-gradient(135deg, #00152e 0%, #001a3a 30%, var(--color-navy) 60%, #0a1e3d 100%);
+    border: 1.5px solid rgba(196, 163, 90, 0.45);
     border-radius: 12px;
     overflow: hidden;
-    padding: 2rem 2.25rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 2.25rem 2.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
+  /* Starfield particles */
   .em-banner::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #c87533 0%, #c87533 40%, transparent 100%);
+    width: 1px;
+    height: 1px;
+    z-index: 0;
     pointer-events: none;
+    box-shadow:
+      42px 18px 0 0 rgba(255, 255, 255, 0.50),
+      130px 42px 0 0 rgba(255, 245, 220, 0.40),
+      220px 12px 0 0 rgba(255, 255, 255, 0.30),
+      310px 55px 0 0 rgba(255, 255, 255, 0.25),
+      380px 22px 0 0 rgba(255, 245, 220, 0.45),
+      460px 48px 0 0 rgba(255, 255, 255, 0.20),
+      540px 15px 0 0 rgba(255, 255, 255, 0.35),
+      590px 58px 0 0 rgba(255, 245, 220, 0.30),
+      650px 30px 0 0 rgba(255, 255, 255, 0.25),
+      70px 75px 0 0 rgba(255, 255, 255, 0.20),
+      160px 90px 0 0 rgba(255, 245, 220, 0.35),
+      250px 82px 0 0 rgba(255, 255, 255, 0.25),
+      340px 100px 0 0 rgba(255, 255, 255, 0.30),
+      430px 88px 0 0 rgba(255, 245, 220, 0.20),
+      510px 110px 0 0 rgba(255, 255, 255, 0.40),
+      580px 95px 0 0 rgba(255, 255, 255, 0.20),
+      95px 130px 0 0 rgba(255, 245, 220, 0.30),
+      200px 120px 0 0 rgba(255, 255, 255, 0.25),
+      290px 140px 0 0 rgba(255, 255, 255, 0.35),
+      400px 125px 0 0 rgba(255, 245, 220, 0.25),
+      480px 145px 0 0 rgba(255, 255, 255, 0.20),
+      560px 135px 0 0 rgba(255, 255, 255, 0.30),
+      640px 115px 0 0 rgba(255, 245, 220, 0.40),
+      25px 155px 0 0 rgba(255, 255, 255, 0.25),
+      680px 65px 0 0 rgba(255, 255, 255, 0.30);
   }
 
+  /* Comet / light streak */
   .em-banner::after {
     content: '';
     position: absolute;
-    top: -20px;
-    left: 60px;
-    width: 180px;
-    height: 180px;
-    background: radial-gradient(circle, rgba(200, 117, 51, 0.15) 0%, transparent 70%);
+    top: 35%;
+    left: 5%;
+    width: 55%;
+    height: 2px;
+    z-index: 0;
     pointer-events: none;
+    background: linear-gradient(90deg, rgba(212, 160, 90, 0.40), rgba(212, 160, 90, 0.08) 60%, transparent 100%);
+    transform: rotate(-3deg);
+    filter: blur(1.5px);
   }
 
   .em-banner__inner {
     position: relative;
+    z-index: 1;
     display: flex;
     align-items: flex-start;
     gap: 2rem;
@@ -294,9 +331,9 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
   }
 
   .em-banner__logo {
-    width: 48px;
-    height: 48px;
-    filter: drop-shadow(0 0 12px rgba(200, 117, 51, 0.4));
+    width: 88px;
+    height: 88px;
+    filter: drop-shadow(0 0 14px rgba(200, 140, 60, 0.45)) drop-shadow(0 0 32px rgba(196, 163, 90, 0.20));
   }
 
   .em-banner__label {
@@ -344,6 +381,20 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
   .em-banner__location {
     font-size: var(--size-sm);
     color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .em-banner__location::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23d4a05a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .em-banner__cta {
@@ -353,15 +404,17 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
     font-weight: 600;
     text-decoration: none;
     color: #d4a05a;
-    border: 1.5px solid rgba(200, 117, 51, 0.5);
+    border: 1.5px solid rgba(200, 117, 51, 0.7);
     border-radius: 6px;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    box-shadow: 0 0 8px rgba(200, 117, 51, 0.15);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   }
 
   .em-banner__cta:hover {
     background-color: rgba(200, 117, 51, 0.15);
     border-color: #c87533;
     color: #e8c080;
+    box-shadow: 0 0 14px rgba(200, 117, 51, 0.30);
   }
 
   .em-banner__disclaimer {
@@ -378,6 +431,20 @@ import pipelineSchematic from '../../assets/images/science/biomarker-pipeline-sc
 
     .subsection-desc {
       max-width: none;
+    }
+
+    .em-banner {
+      padding: 1.75rem 1.5rem;
+    }
+
+    .em-banner__logo {
+      width: 64px;
+      height: 64px;
+    }
+
+    .em-banner::after {
+      width: 40%;
+      left: 3%;
     }
 
     .em-banner__inner {
