@@ -4,3 +4,6 @@ dist/
 .DS_Store
 old_website/
 scrape.mjs
+
+# Image processing workspace
+input/
