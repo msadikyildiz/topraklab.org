@@ -1,6 +1,8 @@
 /join-us              /contact    301
 /contact-us           /contact    301
 /news-in-the-media    /news       301
-/photos-from-the-lab  /photos     301
+/photos-from-the-lab  /people/    301
 /morbidostat           /science/morbidostat  301
+/photos/               /people/  301
+/past-visitors/        /people/  301
 /science/              /science/antibiotic-resistance/  301

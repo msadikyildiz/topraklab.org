@@ -1,22 +1,19 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import SectionHeading from '../components/SectionHeading.astro';
 import funding from '../data/funding.json';
 ---
 
 <PageLayout title="Funding | Toprak Lab" description="Current and past funding sources for the Toprak Lab at UT Southwestern Medical Center.">
   <section class="section">
     <div class="container">
-      <SectionHeading text="Funding" />
-
-      <h2 class="funding-heading">Current Funding</h2>
+      <h2 class="subsection-heading">Current Funding</h2>
       <ul class="funding-list">
         {funding.current.map((f) => (
           <li>{f}</li>
         ))}
       </ul>
 
-      <h2 class="funding-heading">Past Funding</h2>
+      <h2 class="subsection-heading">Past Funding</h2>
       <ul class="funding-list">
         {funding.past.map((f) => (
           <li>{f}</li>
@@ -27,18 +24,12 @@ import funding from '../data/funding.json';
 </PageLayout>
 
 <style>
-  .funding-heading {
-    font-family: var(--font-heading);
-    font-size: var(--size-lg);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-gray-900);
+  .subsection-heading {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
-  .funding-heading:first-of-type {
+  .subsection-heading:first-of-type {
     margin-top: 0;
   }
 

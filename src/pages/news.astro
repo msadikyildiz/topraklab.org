@@ -1,14 +1,11 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import SectionHeading from '../components/SectionHeading.astro';
 import media from '../data/media.json';
 ---
 
 <PageLayout title="News | Toprak Lab" description="Media coverage and news mentions of the Toprak Lab's research.">
   <section class="section">
     <div class="container">
-      <SectionHeading text="News in the Media" />
-
       <ul class="media-list">
         {media.map((m) => (
           <li class="media-entry">

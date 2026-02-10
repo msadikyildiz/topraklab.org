@@ -1,12 +1,32 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import SectionHeading from '../components/SectionHeading.astro';
 import PersonAvatar from '../components/PersonAvatar.astro';
 import PersonFeature from '../components/PersonFeature.astro';
 import PersonCard from '../components/PersonCard.astro';
+import PhotoGallery from '../components/PhotoGallery.astro';
 import people from '../data/people.json';
+import visitors from '../data/visitors.json';
 
-// Auto-discover all people images
+import lab1 from '../assets/images/lab-photos/lab-photo-1.jpg';
+import lab2 from '../assets/images/lab-photos/lab-photo-2.jpg';
+import lab3 from '../assets/images/lab-photos/lab-photo-3.jpg';
+import lab4 from '../assets/images/lab-photos/lab-photo-4.jpg';
+import lab5 from '../assets/images/lab-photos/lab-photo-5.jpg';
+import lab6 from '../assets/images/lab-photos/lab-photo-6.jpg';
+import lab7 from '../assets/images/lab-photos/lab-photo-7.jpg';
+import lab8 from '../assets/images/lab-photos/lab-photo-8.jpg';
+import lab9 from '../assets/images/lab-photos/lab-photo-9.jpg';
+
+import ericImg from '../assets/images/visitors/eric-jakobsson.jpg';
+import fyodorImg from '../assets/images/visitors/fyodor-kondrashov.jpg';
+import michaelImg from '../assets/images/visitors/michael-lynch.jpg';
+import jeffImg from '../assets/images/visitors/jeff-gore.jpg';
+import maitreyaImg from '../assets/images/visitors/maitreya-dunham.jpg';
+import dmitriImg from '../assets/images/visitors/dmitri-petrov.jpg';
+import shelleyImg from '../assets/images/visitors/shelley-copley.jpg';
+import rylandImg from '../assets/images/visitors/ryland-young.jpg';
+import breeImg from '../assets/images/visitors/bree-aldridge.jpg';
+
 const allImages = import.meta.glob<{ default: ImageMetadata }>(
   '../assets/images/people/*.{jpg,png,webp}',
   { eager: true }
@@ -20,16 +40,38 @@ function resolveImage(filename?: string): ImageMetadata | undefined {
 
 const piImage = resolveImage('erdal-toprak.jpg');
 
-// Split current members into featured (have bio) and regular
 const featured = people.current.filter((p: any) => p.bio);
 const regular = people.current.filter((p: any) => !p.bio);
+
+const photos = [
+  { src: lab1, alt: 'Lab photo 1' },
+  { src: lab2, alt: 'Lab photo 2' },
+  { src: lab3, alt: 'Lab photo 3' },
+  { src: lab4, alt: 'Lab photo 4' },
+  { src: lab5, alt: 'Lab photo 5' },
+  { src: lab6, alt: 'Lab photo 6' },
+  { src: lab7, alt: 'Lab photo 7' },
+  { src: lab8, alt: 'Lab photo 8' },
+  { src: lab9, alt: 'Lab photo 9' },
+];
+
+const visitorImageMap: Record<string, ImageMetadata> = {
+  'eric-jakobsson.jpg': ericImg,
+  'fyodor-kondrashov.jpg': fyodorImg,
+  'michael-lynch.jpg': michaelImg,
+  'jeff-gore.jpg': jeffImg,
+  'maitreya-dunham.jpg': maitreyaImg,
+  'dmitri-petrov.jpg': dmitriImg,
+  'shelley-copley.jpg': shelleyImg,
+  'ryland-young.jpg': rylandImg,
+  'bree-aldridge.jpg': breeImg,
+};
 ---
 
 <PageLayout title="People | Toprak Lab" description="Current lab members and alumni of the Toprak Lab at UT Southwestern Medical Center.">
+  <!-- PI -->
   <section class="section">
     <div class="container">
-      <SectionHeading text="Meet the PI" />
-
       <div class="pi-layout">
         <div class="pi-layout__photo">
           <PersonAvatar name="Erdal Toprak" imageSrc={piImage} size="lg" />
@@ -42,6 +84,8 @@ const regular = people.current.filter((p: any) => !p.bio);
           </p>
         </div>
       </div>
+
+      <h2 class="subsection-heading team-heading">Lab Members</h2>
 
       {featured.length > 0 && (
         <div class="featured-members">
@@ -56,8 +100,6 @@ const regular = people.current.filter((p: any) => !p.bio);
         </div>
       )}
 
-      <h2 class="team-heading">Lab Members</h2>
-
       <div class="people-grid">
         {regular.map((p: any) => (
           <PersonCard
@@ -67,31 +109,53 @@ const regular = people.current.filter((p: any) => !p.bio);
           />
         ))}
       </div>
+    </div>
+  </section>
 
-      <div class="people-links">
-        <a href="/photos/">Photos from the Lab</a>
-        <a href="/past-visitors/">Past Visitors</a>
+  <!-- Photos from the Lab -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">Photos from the Lab</h2>
+      <PhotoGallery images={photos} />
+    </div>
+  </section>
+
+  <!-- Past Visitors -->
+  <section class="section">
+    <div class="container">
+      <h2 class="subsection-heading">Past Visitors</h2>
+      <div class="visitors-grid">
+        {visitors.map((v) => (
+          <div class="visitor-card">
+            <PersonCard
+              name={v.name}
+              role={v.date}
+              imageSrc={v.image ? visitorImageMap[v.image] : undefined}
+            />
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
+  <!-- Alumni -->
   <section class="section section--alt">
     <div class="container">
-      <h2 class="alumni-heading">UT Southwestern Alumni</h2>
+      <h2 class="subsection-heading">UT Southwestern Alumni</h2>
       <ul class="alumni-list">
         {people.utswAlumni.map((a) => (
           <li><strong>{a.name}</strong> &mdash; {a.role}</li>
         ))}
       </ul>
 
-      <h2 class="alumni-heading">Other Students &amp; Interns</h2>
+      <h2 class="subsection-heading alumni-next">Other Students &amp; Interns</h2>
       <ul class="alumni-list">
         {people.otherAlumni.map((a) => (
           <li><strong>{a.name}</strong> &mdash; {a.role}</li>
         ))}
       </ul>
 
-      <h2 class="alumni-heading">Sabanci University Alumni</h2>
+      <h2 class="subsection-heading alumni-next">Sabanci University Alumni</h2>
       <ul class="alumni-list">
         {people.sabanciAlumni.map((a) => (
           <li><strong>{a.name}</strong> &mdash; {a.role}</li>
@@ -102,11 +166,6 @@ const regular = people.current.filter((p: any) => !p.bio);
 </PageLayout>
 
 <style>
-  /* Tighten SectionHeading margin on this page */
-  .section :global(.section-heading) {
-    margin-bottom: 1.5rem;
-  }
-
   .pi-layout {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -141,26 +200,18 @@ const regular = people.current.filter((p: any) => !p.bio);
     }
   }
 
-  .featured-members {
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--color-gray-100);
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
   .team-heading {
-    font-family: var(--font-heading);
-    font-size: var(--size-lg);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-gray-900);
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     padding-top: 2rem;
     border-top: 1px solid var(--color-gray-100);
+  }
+
+  .featured-members {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .people-grid {
@@ -168,44 +219,33 @@ const regular = people.current.filter((p: any) => !p.bio);
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem 2.5rem;
-    margin-bottom: 2.5rem;
   }
 
-  .people-links {
-    display: flex;
-    justify-content: center;
+  .visitors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--color-gray-100);
+    justify-items: center;
   }
 
-  .people-links a {
-    font-family: var(--font-heading);
-    font-size: var(--size-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-navy);
-    border-bottom: 1px solid var(--color-gray-100);
-    padding-bottom: 2px;
+  @media (max-width: 600px) {
+    .visitors-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .people-links a:hover {
-    border-bottom-color: var(--color-accent);
+  @media (max-width: 380px) {
+    .visitors-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
-  .alumni-heading {
-    font-family: var(--font-heading);
-    font-size: var(--size-lg);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-gray-900);
+  .subsection-heading {
     margin-bottom: 1rem;
-    margin-top: 2rem;
   }
 
-  .alumni-heading:first-child {
-    margin-top: 0;
+  .alumni-next {
+    margin-top: 2rem;
   }
 
   .alumni-list {

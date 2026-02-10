@@ -1,0 +1,275 @@
+---
+import ScienceLayout from '../../layouts/ScienceLayout.astro';
+import { Image } from 'astro:assets';
+import emLogo from '../../assets/images/science/earlymarker-logo.png';
+---
+
+<ScienceLayout>
+  <section class="section section--banner">
+    <div class="container">
+      <section class="em-banner">
+        <div class="em-banner__stage">
+          <Image src={emLogo} alt="Early Marker logo" width={110} height={110} class="em-banner__logo" />
+        </div>
+        <div class="em-banner__divider" aria-hidden="true"></div>
+        <div class="em-banner__content">
+          <span class="em-banner__label">Toprak Lab Spin-off</span>
+          <h2 class="em-banner__name">Early Marker</h2>
+          <p class="em-banner__tagline">Translating Toprak Lab circulating biomarker profiling research into clinically evaluated blood-based assays for early detection and longitudinal monitoring.</p>
+          <div class="em-banner__actions">
+            <a href="https://earlymarker.bio" target="_blank" rel="noopener noreferrer" class="em-banner__cta">earlymarker.bio &rarr;</a>
+          </div>
+          <p class="em-banner__footer">
+            <span class="em-banner__location">Pegasus BioLabs &middot; Dallas, TX</span>
+            <span class="em-banner__disclaimer">Research stage &mdash; clinical utility requires prospective validation.</span>
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">Circulating Biomarker Profiling</h2>
+      <p class="subsection-desc">In our circulating biomarker profiling work we combine sensitive sample handling with a staged computational analysis designed for noisy, confounded blood data. Rather than chasing headline accuracy, we gate sample quality up front, control for confounders, and build calibrated predictive models.</p>
+    </div>
+  </section>
+</ScienceLayout>
+
+<style>
+  /* Page basics */
+  .section { padding-block: 1.25rem; }
+  .section--banner { padding-top: 0.75rem; padding-bottom: 0; }
+  .subsection-heading {
+    font-family: var(--font-heading); font-size: var(--size-xl); font-weight: 400;
+    color: var(--color-gray-900); margin-bottom: 0.5rem; max-width: 720px; margin-inline: auto;
+  }
+  .subsection-desc {
+    font-size: var(--size-sm); color: var(--color-gray-600); line-height: 1.6;
+    max-width: 720px; margin-inline: auto;
+  }
+
+  /* Banner */
+  .em-banner {
+    position: relative;
+    max-width: 720px;
+    margin-inline: auto;
+    display: flex;
+    align-items: stretch;
+    border: 1.5px solid rgba(196, 163, 90, 0.45);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .em-banner__stage {
+    position: relative;
+    flex: 0 0 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2rem 1.5rem;
+    background:
+      radial-gradient(ellipse 80% 90% at 50% 45%, rgba(220, 170, 70, 0.20) 0%, transparent 65%),
+      radial-gradient(circle at 50% 50%, rgba(200, 140, 60, 0.16) 0%, transparent 55%),
+      linear-gradient(170deg, #000e1e 0%, #001428 40%, #001a3a 100%);
+    overflow: hidden;
+  }
+
+  /* Starfield in left panel only */
+  .em-banner__stage::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 1px; height: 1px;
+    z-index: 0;
+    pointer-events: none;
+    box-shadow:
+      22px 14px 0 0 rgba(255, 255, 255, 0.55),
+      68px 8px 0 0 rgba(255, 245, 220, 0.40),
+      115px 22px 0 0 rgba(255, 255, 255, 0.30),
+      160px 11px 0 0 rgba(255, 245, 220, 0.45),
+      200px 26px 0 0 rgba(255, 255, 255, 0.25),
+      38px 34px 0 0 rgba(255, 255, 255, 0.20),
+      18px 52px 0 0 rgba(255, 245, 220, 0.35),
+      80px 48px 0 0 rgba(255, 255, 255, 0.25),
+      135px 58px 0 0 rgba(255, 255, 255, 0.40),
+      185px 44px 0 0 rgba(255, 245, 220, 0.30),
+      55px 66px 0 0 rgba(255, 255, 255, 0.20),
+      30px 85px 0 0 rgba(255, 255, 255, 0.30),
+      95px 78px 0 0 rgba(255, 245, 220, 0.25),
+      150px 92px 0 0 rgba(255, 255, 255, 0.35),
+      210px 82px 0 0 rgba(255, 255, 255, 0.20),
+      12px 110px 0 0 rgba(255, 245, 220, 0.30),
+      72px 105px 0 0 rgba(255, 255, 255, 0.25),
+      128px 118px 0 0 rgba(255, 255, 255, 0.40),
+      190px 108px 0 0 rgba(255, 245, 220, 0.20),
+      48px 125px 0 0 rgba(255, 255, 255, 0.30),
+      25px 142px 0 0 rgba(255, 255, 255, 0.25),
+      88px 138px 0 0 rgba(255, 245, 220, 0.35),
+      155px 148px 0 0 rgba(255, 255, 255, 0.20),
+      205px 135px 0 0 rgba(255, 255, 255, 0.30),
+      110px 155px 0 0 rgba(255, 245, 220, 0.25);
+  }
+
+  /* Comet in left panel */
+  .em-banner__stage::after {
+    content: '';
+    position: absolute;
+    top: 30%; left: 8%;
+    width: 85%; height: 2px;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(212, 160, 90, 0.50), rgba(212, 160, 90, 0.12) 55%, transparent 100%);
+    transform: rotate(-5deg);
+    filter: blur(1.5px);
+  }
+
+  .em-banner__logo {
+    position: relative;
+    z-index: 1;
+    width: 110px; height: 110px;
+    filter:
+      drop-shadow(0 0 20px rgba(220, 170, 70, 0.70))
+      drop-shadow(0 0 38px rgba(200, 140, 60, 0.45))
+      drop-shadow(0 0 55px rgba(196, 163, 90, 0.20));
+  }
+
+  .em-banner__label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(200, 165, 90, 0.70);
+    text-align: left;
+    margin-bottom: 0.15rem;
+  }
+
+  .em-banner__divider {
+    flex: 0 0 2px;
+    align-self: stretch;
+    background: linear-gradient(180deg, transparent 0%, rgba(196, 163, 90, 0.40) 20%, rgba(196, 163, 90, 0.50) 50%, rgba(196, 163, 90, 0.40) 80%, transparent 100%);
+  }
+
+  .em-banner__content {
+    flex: 1;
+    min-width: 0;
+    padding: 1.5rem 1.75rem;
+    background:
+      radial-gradient(ellipse 60% 70% at 80% 25%, rgba(80, 120, 200, 0.05) 0%, transparent 60%),
+      linear-gradient(135deg, #001a3a 0%, var(--color-navy) 50%, #0a1e3d 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .em-banner__name {
+    font-family: var(--font-heading);
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
+    text-transform: none;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .em-banner__tagline {
+    font-size: var(--size-sm);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.80);
+    margin-bottom: 0.75rem;
+  }
+
+  .em-banner__actions { margin-bottom: 0.625rem; }
+
+  /* Filled gold CTA */
+  .em-banner__cta {
+    display: inline-block;
+    padding: 0.5rem 1.4rem;
+    font-size: var(--size-sm);
+    font-weight: 700;
+    text-decoration: none;
+    color: #001a3a;
+    background-color: #C4A35A;
+    border: 1.5px solid #C4A35A;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(196, 163, 90, 0.20);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .em-banner__cta:hover {
+    background-color: #d4b76e;
+    border-color: #d4b76e;
+    color: #00102a;
+    box-shadow: 0 0 18px rgba(196, 163, 90, 0.35);
+  }
+
+  .em-banner__footer {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    margin: 0;
+  }
+
+  .em-banner__location {
+    font-size: var(--size-xs);
+    color: rgba(255, 255, 255, 0.45);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .em-banner__location::before {
+    content: '';
+    display: inline-block;
+    width: 12px; height: 12px;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23d4a05a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .em-banner__disclaimer {
+    font-size: 0.6875rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  @media (max-width: 600px) {
+    .em-banner { flex-direction: column; }
+    .em-banner__stage {
+      flex: 0 0 auto;
+      flex-direction: row;
+      gap: 0.75rem;
+      padding: 1.25rem 1.5rem;
+    }
+    .em-banner__stage::before {
+      box-shadow:
+        22px 10px 0 0 rgba(255, 255, 255, 0.45),
+        68px 6px 0 0 rgba(255, 245, 220, 0.35),
+        115px 14px 0 0 rgba(255, 255, 255, 0.25),
+        200px 10px 0 0 rgba(255, 245, 220, 0.35),
+        280px 8px 0 0 rgba(255, 255, 255, 0.30),
+        160px 28px 0 0 rgba(255, 255, 255, 0.20),
+        50px 32px 0 0 rgba(255, 245, 220, 0.30),
+        240px 25px 0 0 rgba(255, 255, 255, 0.25),
+        330px 15px 0 0 rgba(255, 245, 220, 0.20),
+        380px 22px 0 0 rgba(255, 255, 255, 0.30);
+    }
+    .em-banner__stage::after { top: 50%; width: 70%; transform: rotate(-2deg); }
+    .em-banner__logo { width: 56px; height: 56px; }
+    .em-banner__divider {
+      flex: 0 0 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(196, 163, 90, 0.40) 20%, rgba(196, 163, 90, 0.50) 50%, rgba(196, 163, 90, 0.40) 80%, transparent 100%);
+    }
+    .em-banner__content { padding: 1.25rem 1.5rem; }
+    .em-banner__name { font-size: 1.35rem; }
+    .em-banner__footer { flex-direction: column; gap: 0.15rem; }
+  }
+</style>

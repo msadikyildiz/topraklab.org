@@ -1,6 +1,5 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import SectionHeading from '../components/SectionHeading.astro';
 import PublicationEntry from '../components/PublicationEntry.astro';
 import pubs from '../data/publications.json';
 ---
@@ -8,9 +7,7 @@ import pubs from '../data/publications.json';
 <PageLayout title="Publications | Toprak Lab" description="Publications from the Toprak Lab covering systems biology, single molecule biophysics, and theoretical physics.">
   <section class="section">
     <div class="container">
-      <SectionHeading text="Publications" />
-
-      <h2 class="pub-category">Systems Biology</h2>
+      <h2 class="subsection-heading">Systems Biology</h2>
       <ol class="pub-list" reversed>
         {pubs.systemsBiology.map((p) => (
           <PublicationEntry
@@ -23,7 +20,7 @@ import pubs from '../data/publications.json';
         ))}
       </ol>
 
-      <h2 class="pub-category">Single Molecule Biophysics</h2>
+      <h2 class="subsection-heading">Single Molecule Biophysics</h2>
       <ol class="pub-list" reversed>
         {pubs.singleMolecule.map((p) => (
           <PublicationEntry
@@ -36,7 +33,7 @@ import pubs from '../data/publications.json';
         ))}
       </ol>
 
-      <h2 class="pub-category">Theoretical Physics</h2>
+      <h2 class="subsection-heading">Theoretical Physics</h2>
       <ol class="pub-list" reversed>
         {pubs.theoreticalPhysics.map((p) => (
           <PublicationEntry
@@ -53,20 +50,12 @@ import pubs from '../data/publications.json';
 </PageLayout>
 
 <style>
-  .pub-category {
-    font-family: var(--font-heading);
-    font-size: var(--size-lg);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-gray-900);
+  .subsection-heading {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--color-gray-100);
   }
 
-  .pub-category:first-of-type {
+  .subsection-heading:first-of-type {
     margin-top: 0;
   }
 

@@ -1,0 +1,238 @@
+---
+import ScienceLayout from '../../layouts/ScienceLayout.astro';
+import { Image } from 'astro:assets';
+import emLogo from '../../assets/images/science/earlymarker-logo.png';
+---
+
+<ScienceLayout title="C1 — Centered Hero" description="Candidate 1">
+  <section class="section section--banner">
+    <div class="container">
+      <section class="em-banner">
+        <div class="em-banner__stars"></div>
+        <div class="em-banner__inner">
+          <Image src={emLogo} alt="Early Marker logo" width={132} height={132} class="em-banner__logo" />
+          <h2 class="em-banner__name">Early Marker</h2>
+          <p class="em-banner__tagline">Translating Toprak Lab circulating biomarker profiling research into clinically evaluated blood-based assays for early detection and longitudinal monitoring.</p>
+          <a href="https://earlymarker.bio" target="_blank" rel="noopener noreferrer" class="em-banner__cta">earlymarker.bio &rarr;</a>
+          <span class="em-banner__location">Pegasus BioLabs &middot; Dallas, TX</span>
+          <p class="em-banner__disclaimer">Research stage &mdash; clinical utility requires prospective validation.</p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">Circulating Biomarker Profiling</h2>
+      <p class="subsection-desc">In our circulating biomarker profiling work we combine sensitive sample handling with a staged computational analysis designed for noisy, confounded blood data. Rather than chasing headline accuracy, we gate sample quality up front, control for confounders, and build calibrated predictive models.</p>
+    </div>
+  </section>
+</ScienceLayout>
+
+<style>
+  .section { padding-block: 1.25rem; }
+  .section--banner { padding-top: 0.75rem; padding-bottom: 0; }
+  .subsection-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-xl);
+    font-weight: 400;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  .subsection-desc {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  @keyframes em-glow-pulse {
+    0%, 100% { filter: drop-shadow(0 0 18px rgba(200, 140, 60, 0.70)) drop-shadow(0 0 40px rgba(196, 163, 90, 0.35)) drop-shadow(0 0 72px rgba(196, 163, 90, 0.15)); }
+    50%      { filter: drop-shadow(0 0 24px rgba(200, 140, 60, 0.85)) drop-shadow(0 0 52px rgba(196, 163, 90, 0.45)) drop-shadow(0 0 88px rgba(196, 163, 90, 0.22)); }
+  }
+
+  @keyframes em-star-drift {
+    0%   { transform: translate(0, 0); }
+    50%  { transform: translate(-6px, 3px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  .em-banner {
+    position: relative;
+    max-width: 720px;
+    margin-inline: auto;
+    background:
+      radial-gradient(ellipse 50% 70% at 50% 30%, rgba(196, 163, 90, 0.10) 0%, transparent 70%),
+      radial-gradient(circle at 50% 40%, rgba(200, 140, 60, 0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 80% 60% at 50% 80%, rgba(80, 120, 200, 0.05) 0%, transparent 60%),
+      linear-gradient(180deg, #00152e 0%, #001a3a 35%, var(--color-navy) 65%, #0a1e3d 100%);
+    border: 1.5px solid rgba(196, 163, 90, 0.50);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 2.75rem 2.5rem 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.20), inset 0 1px 0 rgba(196, 163, 90, 0.08);
+  }
+
+  .em-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 1px; height: 1px;
+    z-index: 0;
+    pointer-events: none;
+    box-shadow:
+      42px 18px 0 0 rgba(255, 255, 255, 0.50),
+      130px 42px 0 0 rgba(255, 245, 220, 0.40),
+      220px 12px 0 0 rgba(255, 255, 255, 0.30),
+      310px 55px 0 0 rgba(255, 255, 255, 0.25),
+      380px 22px 0 0 rgba(255, 245, 220, 0.45),
+      460px 48px 0 0 rgba(255, 255, 255, 0.20),
+      540px 15px 0 0 rgba(255, 255, 255, 0.35),
+      590px 58px 0 0 rgba(255, 245, 220, 0.30),
+      650px 30px 0 0 rgba(255, 255, 255, 0.25),
+      70px 200px 0 0 rgba(255, 255, 255, 0.20),
+      160px 220px 0 0 rgba(255, 245, 220, 0.35),
+      250px 235px 0 0 rgba(255, 255, 255, 0.25),
+      340px 250px 0 0 rgba(255, 255, 255, 0.30),
+      430px 210px 0 0 rgba(255, 245, 220, 0.20),
+      510px 240px 0 0 rgba(255, 255, 255, 0.40),
+      580px 225px 0 0 rgba(255, 255, 255, 0.20),
+      25px 280px 0 0 rgba(255, 245, 220, 0.30),
+      680px 65px 0 0 rgba(255, 255, 255, 0.30),
+      110px 300px 0 0 rgba(255, 255, 255, 0.22),
+      480px 290px 0 0 rgba(255, 245, 220, 0.28);
+  }
+
+  .em-banner::after {
+    content: '';
+    position: absolute;
+    top: 28%; left: 15%;
+    width: 70%; height: 2px;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent 0%, rgba(212, 180, 110, 0.06) 15%, rgba(212, 160, 90, 0.35) 45%, rgba(212, 160, 90, 0.35) 55%, rgba(212, 180, 110, 0.06) 85%, transparent 100%);
+    filter: blur(2px);
+  }
+
+  .em-banner__stars {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1px; height: 1px;
+    z-index: 0;
+    pointer-events: none;
+    animation: em-star-drift 18s ease-in-out infinite;
+    box-shadow:
+      95px 80px 0 0 rgba(255, 245, 220, 0.30),
+      200px 100px 0 0 rgba(255, 255, 255, 0.22),
+      290px 130px 0 0 rgba(255, 255, 255, 0.35),
+      400px 90px 0 0 rgba(255, 245, 220, 0.28),
+      560px 110px 0 0 rgba(255, 255, 255, 0.30),
+      640px 150px 0 0 rgba(255, 245, 220, 0.38),
+      55px 170px 0 0 rgba(255, 255, 255, 0.24),
+      350px 180px 0 0 rgba(255, 255, 255, 0.32),
+      500px 160px 0 0 rgba(255, 245, 220, 0.20),
+      180px 270px 0 0 rgba(255, 255, 255, 0.26),
+      600px 270px 0 0 rgba(255, 245, 220, 0.22),
+      400px 300px 0 0 rgba(255, 255, 255, 0.18);
+  }
+
+  .em-banner__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .em-banner__logo {
+    width: 132px; height: 132px;
+    margin-bottom: 1rem;
+    animation: em-glow-pulse 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 18px rgba(200, 140, 60, 0.70)) drop-shadow(0 0 40px rgba(196, 163, 90, 0.35)) drop-shadow(0 0 72px rgba(196, 163, 90, 0.15));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .em-banner__logo { animation: none; }
+    .em-banner__stars { animation: none; }
+  }
+
+  .em-banner__name {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    text-transform: none;
+    margin: 0 0 0.75rem 0;
+    text-shadow: 0 0 20px rgba(196, 163, 90, 0.20);
+  }
+
+  .em-banner__tagline {
+    font-size: var(--size-sm);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 520px;
+    margin-bottom: 1.25rem;
+  }
+
+  .em-banner__cta {
+    display: inline-block;
+    padding: 0.65rem 2rem;
+    font-size: var(--size-base);
+    font-weight: 600;
+    text-decoration: none;
+    color: #00152e;
+    background: linear-gradient(135deg, #d4a05a 0%, #c4935a 100%);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(200, 140, 60, 0.30), 0 2px 4px rgba(0, 0, 0, 0.20);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    margin-bottom: 0.75rem;
+  }
+
+  .em-banner__cta:hover {
+    background: linear-gradient(135deg, #e0b46a 0%, #d4a35a 100%);
+    box-shadow: 0 0 20px rgba(200, 140, 60, 0.45), 0 3px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .em-banner__location {
+    font-size: var(--size-xs);
+    color: rgba(255, 255, 255, 0.40);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .em-banner__location::before {
+    content: '';
+    display: inline-block;
+    width: 12px; height: 12px;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23d4a05a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+  }
+
+  .em-banner__disclaimer {
+    font-size: 0.6875rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.18);
+    max-width: 400px;
+  }
+
+  @media (max-width: 768px) {
+    .em-banner { padding: 2.25rem 1.5rem 1.5rem; }
+    .em-banner__logo { width: 100px; height: 100px; }
+    .em-banner__name { font-size: 2rem; }
+    .em-banner__tagline { max-width: none; font-size: var(--size-xs); }
+    .em-banner::after { width: 60%; left: 20%; }
+  }
+</style>
