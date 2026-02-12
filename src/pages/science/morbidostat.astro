@@ -12,7 +12,7 @@ import ozFig3 from '../../assets/images/science/oz-2014-fig3.jpeg';
   <section class="section">
     <div class="container">
       <p class="morbidostat-intro">
-        The morbidostat is an automated high-throughput fluidic system for studying bacterial drug resistance in dynamically sustained drug environments. By continuously adjusting antibiotic concentrations in response to bacterial growth, it maintains constant selective pressure — enabling direct, real-time observation of resistance evolution.
+        Antibiotic resistance is easiest to understand when you can watch it happen. The morbidostat is a feedback-controlled continuous culture device that keeps bacteria near a constant level of growth inhibition by automatically adjusting drug concentration in real time. This turns evolution into a quantitative time series: we can measure trajectories, compare replicates, and connect phenotypes to the mutations that drive them.
       </p>
 
       <div class="article-card">
@@ -32,20 +32,20 @@ import ozFig3 from '../../assets/images/science/oz-2014-fig3.jpeg';
     <div class="container">
       <h2 class="subsection-heading">Real-Time Observation of Resistance Evolution</h2>
       <p class="subsection-desc">
-        The foundational morbidostat experiments revealing reproducible genetic trajectories.
+        Even when outcomes look similar, the underlying genetic routes can be surprisingly structured.
       </p>
 
       <figure class="full-figure">
         <Image src={toprakFig2} alt="Resistance trajectories showing parallel populations evolving under chloramphenicol, doxycycline, and trimethoprim — stepwise vs smooth IC50 increases and normalized growth rate heatmaps" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Parallel populations attain high resistance.</strong> Five replicate <em>E. coli</em> populations evolved under chloramphenicol, doxycycline, and trimethoprim show distinct resistance dynamics — trimethoprim resistance increases in discrete steps, while chloramphenicol and doxycycline resistance rises smoothly, reflecting different underlying mutational mechanisms.
+          <strong>Evolution has tempos.</strong> Five replicate <em>E. coli</em> populations evolved under chloramphenicol, doxycycline, and trimethoprim reach high resistance&mdash;but with distinct dynamics. Trimethoprim often rises in discrete steps (few large-effect mutations), while the others can increase more smoothly (many routes with smaller increments).
           <span class="figure-source">Toprak, Veres, Michel et al., <em>Nature Genetics</em> (2012)</span>
         </figcaption>
       </figure>
       <figure class="full-figure">
         <Image src={toprakFig4} alt="DHFR crystal structure with color-coded resistance mutations, temporal pie charts tracking mutation fixation across 5 populations, and statistical reproducibility analysis" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Semi-ordered acquisition of resistance mutations.</strong> Whole-genome sequencing reveals that the same DHFR mutations arise independently across replicate populations in a predictable order. The reproducibility of mutational trajectories is significantly higher than expected by chance, indicating that resistance evolution follows constrained genetic paths.
+          <strong>Semi-ordered genetic paths.</strong> Whole-genome sequencing shows that the same DHFR mutations arise independently across replicate populations and often fix in a similar order. Resistance evolution is not fully predictable&mdash;but it is far from arbitrary.
           <span class="figure-source">Toprak, Veres, Michel et al., <em>Nature Genetics</em> (2012)</span>
         </figcaption>
       </figure>
@@ -56,7 +56,7 @@ import ozFig3 from '../../assets/images/science/oz-2014-fig3.jpeg';
         <p class="article-card__authors">E. Toprak, A. Veres, J.B. Michel, R. Chait, D.L. Hartl, R. Kishony</p>
         <p class="article-card__journal"><em>Nature Genetics</em> <strong>44</strong>, 101–105 (2012)</p>
         <p class="article-card__summary">
-          The first morbidostat experiments tracked <em>E. coli</em> evolving resistance to chloramphenicol, doxycycline, and trimethoprim in real time. Whole-genome sequencing revealed that resistance follows reproducible genetic trajectories — the same mutations arise independently across replicate populations, often in a predictable order.
+          The original morbidostat experiments tracked <em>E. coli</em> evolving resistance to multiple antibiotics under dynamically sustained inhibition. Replicate populations repeatedly discovered similar solutions, and sequencing revealed semi-ordered mutational trajectories&mdash;a foundation for thinking about resistance as a constrained, measurable process.
         </p>
         <div class="article-card__actions">
           <a href="https://www.nature.com/articles/ng.1034" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
@@ -69,20 +69,20 @@ import ozFig3 from '../../assets/images/science/oz-2014-fig3.jpeg';
     <div class="container">
       <h2 class="subsection-heading">Selection Strength Shapes Evolutionary Complexity</h2>
       <p class="subsection-desc">
-        How the intensity of antibiotic pressure determines the genetic routes to resistance.
+        Selection strength is a dial: it changes which routes appear, and what they cost.
       </p>
 
       <figure class="full-figure">
         <Image src={ozFig1} alt="Experimental design comparing strong vs mild antibiotic selection in the morbidostat, with temporal resistance curves for streptomycin, spectinomycin, and doxycycline" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Strong vs mild selection.</strong> Across 88 populations and 22 drugs, both strong and mild selection achieve similar final resistance levels — but the temporal dynamics differ. Strong selection (red) drives faster initial adaptation, while mild selection (black) follows more gradual trajectories.
+          <strong>Same endpoint, different journeys.</strong> Across 88 populations and 22 drugs, strong and mild selection can reach similar final resistance levels&mdash;but the dynamics differ. Strong selection drives faster early adaptation, while mild selection proceeds more gradually, sampling different genetic routes along the way.
           <span class="figure-source">Oz, Guvenek, Yıldız et al., <em>Molecular Biology and Evolution</em> (2014)</span>
         </figcaption>
       </figure>
       <figure class="full-figure">
         <Image src={ozFig3} alt="Cross-resistance network diagrams comparing strong vs mild antibiotic selection — denser network under strong selection indicates more pleiotropic effects" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Cross-resistance networks.</strong> Strong selection produces denser cross-resistance networks than mild selection — strains evolved under intense drug pressure more frequently gain collateral resistance or sensitivity to other antibiotics, reflecting fundamentally different genetic routes to similar resistance endpoints.
+          <strong>Collateral effects proliferate under strong selection.</strong> Strong selection produces denser cross-resistance networks than mild selection: strains evolved under intense pressure more often gain collateral resistance (or sensitivity) to other drugs, revealing broad pleiotropic tradeoffs.
           <span class="figure-source">Oz, Guvenek, Yıldız et al., <em>Molecular Biology and Evolution</em> (2014)</span>
         </figcaption>
       </figure>
@@ -93,7 +93,7 @@ import ozFig3 from '../../assets/images/science/oz-2014-fig3.jpeg';
         <p class="article-card__authors">T. Oz, A. Guvenek, S. Yıldız, E. Karaboga, Y.T. Tamer, N. Mumcuyan, V.B. Ozan, G.H. Senturk, M. Cokol, P. Yeh, E. Toprak</p>
         <p class="article-card__journal"><em>Molecular Biology and Evolution</em> <strong>31</strong>(9), 2387–2401 (2014)</p>
         <p class="article-card__summary">
-          By varying antibiotic concentration regimes across 88 populations and 22 drugs, this study showed that selection pressure strength is a key determinant of evolutionary outcome — strong and mild selection achieve similar final resistance, but through fundamentally different genetic routes with distinct cross-resistance profiles.
+          By systematically varying selection strength across 88 populations and 22 drugs, this work showed that the intensity of pressure is a key determinant of evolutionary complexity. Similar resistance levels can emerge under strong or mild regimens&mdash;but via different genetic routes and with different collateral profiles.
         </p>
         <div class="article-card__actions">
           <a href="https://academic.oup.com/mbe/article/31/9/2387/2925782" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>

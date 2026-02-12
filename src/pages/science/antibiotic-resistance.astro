@@ -1,6 +1,5 @@
 ---
 import ScienceLayout from '../../layouts/ScienceLayout.astro';
-import ResearchTeam from '../../components/ResearchTeam.astro';
 import { Image } from 'astro:assets';
 
 import rodriguesGA from '../../assets/images/science/rodrigues-2024-graphical-abstract.jpg';
@@ -17,7 +16,7 @@ import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
   <section class="section">
     <div class="container">
       <p class="vision-intro">
-        Bacteria acquire resistance through mutation, but the process is neither random nor inevitable. By combining deep mutational scanning, real-time evolution experiments, animal models, and rational drug design, we map the genetic trajectories that lead to resistance — and identify strategies to block them.
+        Antibiotic resistance is evolution in a hurry — and it rarely hinges on a single trick. Pathogens can survive by hiding in the host, by taking a few key mutational steps, or by exploring an enormous combinatorial space of enzyme variants. Our goal is to make that search process measurable, so we can predict the paths most likely to appear and design drugs and treatment strategies that close them.
       </p>
     </div>
   </section>
@@ -26,29 +25,29 @@ import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
     <div class="container">
       <h2 class="subsection-heading">Surviving Without Resistance</h2>
       <p class="subsection-desc">
-        How susceptible bacteria persist during antibiotic treatment through non-genetic mechanisms.
+        Treatment failure can begin with survival&mdash;not mutation. We study how susceptible pathogens persist <em>in vivo</em> under clinically grounded drug exposures.
       </p>
 
       <figure class="paper-figure">
         <Image src={rodriguesGA} alt="Graphical abstract showing experimental workflow: mouse model with barcoded E. coli, cefepime treatment, genomic analyses of 160 isolates, and in vitro phenotyping revealing persister and cell-invasion phenotypes" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Experimental workflow.</strong> A preclinical murine model emulating human cefepime pharmacokinetics is used to study <em>E. coli</em> gut colonization under antibiotic pressure. Barcoded bacteria are tracked through genomic analyses of 160 isolates, revealing persistence and host-cell invasion phenotypes.
+          <strong>A clinically grounded model.</strong> A cefepime regimen tuned to human pharmacokinetics is applied to barcoded, patient-derived <em>E. coli</em> colonizing germ-free mice. Surviving lineages are sequenced and phenotyped to separate classical resistance from host-associated escape and persister-like survival.
         </figcaption>
       </figure>
       <figure class="paper-figure">
         <Image src={rodriguesFig3} alt="Lineage tracking of barcoded E. coli in untreated and cefepime-treated mice showing clonal dynamics, barcode diversity decline, and population bottlenecks" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Clonal dynamics under drug pressure.</strong> Barcode lineage tracking reveals severe population bottlenecks in cefepime-treated mice — individual clones rise to dominance while overall diversity declines, compared with stable heterogeneous populations in untreated controls.
+          <strong>A bottleneck you can count.</strong> Under cefepime, barcode diversity collapses and a few clones dominate. This sharp within-host bottleneck emerges without increased MIC, implicating selection on survival strategies (e.g., invasion and persistence) rather than canonical resistance.
         </figcaption>
       </figure>
 
       <div class="article-card">
         <span class="article-card__label">Cell Host &amp; Microbe 2024</span>
-        <h3 class="article-card__title">Susceptible bacteria survive antibiotic treatment in a murine gut colonization model through host cell invasion and persister formation</h3>
-        <p class="article-card__authors">M.A.B. Rodrigues, D.H. Ayhan, A. Lyon, M.S. Yıldız, A.Y. Koh, E. Toprak</p>
-        <p class="article-card__journal"><em>Cell Host &amp; Microbe</em> <strong>32</strong>, 1–17 (2024)</p>
+        <h3 class="article-card__title">Susceptible bacteria can survive antibiotic treatment in the mammalian gastrointestinal tract without evolving resistance</h3>
+        <p class="article-card__authors">Marinelle Rodrigues, Parastoo Sabaeifard, Muhammed Sadık Yıldız, Adam Lyon, Andrew Y. Koh, Erdal Toprak</p>
+        <p class="article-card__journal"><em>Cell Host &amp; Microbe</em> (2024)</p>
         <p class="article-card__summary">
-          In a murine model that emulates human antibiotic pharmacokinetics, susceptible <em>E. coli</em> persist in intestinal tissue during cefepime treatment — not through resistance mutations, but by invading host cells and adopting a persister phenotype. Barcode lineage tracking reveals severe population bottlenecks and clonal dynamics under drug pressure.
+          In a mouse model that emulates human cefepime pharmacokinetics, a pansusceptible clinical <em>E. coli</em> strain disappears from stool yet remains recoverable from intestinal tissue. Survivors do not evolve higher MIC; instead, mutations increase epithelial invasion and/or enable persister-like survival, revealing a non-canonical route to treatment failure.
         </p>
         <div class="article-card__actions">
           <a href="https://doi.org/10.1016/j.chom.2024.01.010" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
@@ -61,19 +60,19 @@ import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
     <div class="container">
       <h2 class="subsection-heading">Steering Evolution with Drug Design</h2>
       <p class="subsection-desc">
-        Rational inhibitor design informed by the structural basis of resistance mutations.
+        Use molecular mechanism to turn evolution&rsquo;s favorite shortcut into a dead end.
       </p>
 
       <figure class="paper-figure">
         <Image src={mannaFig2} alt="Chemical structures of TMP and 4'-DTMP with dose-response curves showing 30-fold enhanced selective activity of 4'-DTMP against L28R DHFR mutants" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Selective activity against the most common resistance mutation.</strong> 4&rsquo;-DTMP, a trimethoprim derivative, shows ~30-fold enhanced activity against <em>E. coli</em> carrying the L28R DHFR mutation while retaining equivalent potency against wild-type and other mutant strains.
+          <strong>Hitting the usual suspect.</strong> Trimethoprim resistance often begins with a single DHFR mutation (L28R). 4&rsquo;-DTMP retains potency against both wild-type DHFR and L28R, sharply reducing the advantage of that first step.
         </figcaption>
       </figure>
       <figure class="paper-figure">
         <Image src={mannaFig4} alt="Morbidostat IC50 trajectories comparing TMP and 4'-DTMP evolution rates, mutation frequency tracking, and evolutionary pathway Sankey diagrams" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Slowing resistance evolution.</strong> Morbidostat experiments show that 4&rsquo;-DTMP slows resistance evolution by eliminating the most favorable genetic trajectory (L28R). Evolutionary pathway diagrams reveal fundamentally altered mutational routes under the designed drug.
+          <strong>Rerouting trajectories in real time.</strong> In morbidostat evolutions, 4&rsquo;-DTMP suppresses the L28R route and slows the rise of resistance, diverting populations toward alternative DHFR solutions with higher fitness costs.
         </figcaption>
       </figure>
 
@@ -97,10 +96,10 @@ import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
       <div class="article-card">
         <span class="article-card__label">Nature Communications 2021</span>
         <h3 class="article-card__title">A trimethoprim derivative impedes antibiotic resistance evolution</h3>
-        <p class="article-card__authors">M.S. Manna, Y.T. Tamer, I. Gaszek, N. Poulides, A. Ahmed, X. Wang, F.C.R. Toprak, D.R. Woodard, A.Y. Koh, N.S. Williams, D. Borek, A.R. Atilgan, J.D. Hulleman, C. Atilgan, U. Tambar, E. Toprak</p>
+        <p class="article-card__authors">Madhu Sudan Manna, Yusuf Talha Tamer, Ilona Gaszek et al.</p>
         <p class="article-card__journal"><em>Nature Communications</em> <strong>12</strong>, 3853 (2021)</p>
         <p class="article-card__summary">
-          The most common resistance mutation in DHFR (L28R) increases substrate affinity rather than decreasing drug binding. This structural insight enabled the design of 4&rsquo;-DTMP, a trimethoprim derivative with 30-fold enhanced activity against L28R mutants that slows resistance evolution by eliminating the most favorable genetic trajectories.
+          By dissecting the molecular logic of the canonical DHFR resistance mutation (L28R), we designed 4&rsquo;-DTMP&mdash;an inhibitor that stays potent against L28R. In evolution experiments, 4&rsquo;-DTMP selects against the usual shortcut and diverts populations to alternative DHFR mutations with catalytic penalties, slowing resistance emergence.
         </p>
         <div class="article-card__actions">
           <a href="https://www.nature.com/articles/s41467-021-23191-z" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
@@ -113,29 +112,29 @@ import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
     <div class="container">
       <h2 class="subsection-heading">Deep Mutational Scanning</h2>
       <p class="subsection-desc">
-        Systematic mapping of how single and combinatorial mutations reshape the fitness landscape of resistance enzymes.
+        Combinatorially complete fitness landscapes reveal when resistance is predictable&mdash;and when it isn&rsquo;t.
       </p>
 
       <figure class="paper-figure">
         <Image src={gaszekFig1} alt="TEM-1 combinatorial mutant library design and fitness landscape under ampicillin and aztreonam selection" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Combinatorial fitness landscape.</strong> A library of 55,296 TEM-1 &beta;-lactamase variants is systematically assayed under ampicillin and aztreonam selection, mapping how combinations of five key mutations reshape enzyme fitness across drug environments.
+          <strong>A complete map for TEM-1.</strong> We built all 55,296 TEM-1 &beta;-lactamase variants spanning 18 clinically observed mutations (13 residues) and measured fitness across drug environments, generating millions of empirical points on a resistance landscape.
         </figcaption>
       </figure>
       <figure class="paper-figure">
         <Image src={gaszekFig2} alt="Graph-theoretic fitness landscape showing neutral merging and fitness peaks" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Evolutionary unpredictability.</strong> Graph-based visualization of the fitness landscape reveals multiple accessible peaks under aztreonam — higher-order epistasis creates branching evolutionary paths that make resistance outcomes fundamentally hard to predict.
+          <strong>Why prediction breaks.</strong> Under a novel substrate (aztreonam), higher-order epistasis creates many accessible peaks and branching paths. Graph-based views make this ruggedness explicit&mdash;and quantify the inherent unpredictability it produces.
         </figcaption>
       </figure>
 
       <div class="article-card">
         <span class="article-card__label">Preprint 2025</span>
         <h3 class="article-card__title">Higher-order epistasis drives evolutionary unpredictability toward novel antibiotic resistance</h3>
-        <p class="article-card__authors">I.K. Gaszek, M.S. Yıldız, Z. Meng, J.A. de la Paz, S.M. Alvarez, F. Morcos, M.M. Lin, E. Toprak</p>
+        <p class="article-card__authors">Ilona K. Gaszek, Muhammed Sadık Yıldız et al.</p>
         <p class="article-card__journal"><em>bioRxiv</em> (2025)</p>
         <p class="article-card__summary">
-          Comprehensive deep mutational scanning of <strong>55,296 TEM-1 &beta;-lactamase variants</strong> yielding over <strong>8 million fitness measurements</strong>. Reveals that higher-order epistasis — interactions among three or more mutations — drives unpredictable evolutionary trajectories toward novel resistance phenotypes.
+          Ilona Gaszek and colleagues measured the largest resistance fitness landscape to date: <strong>55,296</strong> TEM-1 variants with <strong>&gt;8 million</strong> fitness measurements. Adaptation under a native substrate is comparatively smooth, while selection by a novel drug exposes extensive higher-order epistasis and ruggedness&mdash;the root of unpredictable evolutionary outcomes.
         </p>
         <div class="article-card__actions">
           <a href="https://www.biorxiv.org/content/10.1101/2025.07.08.663783v1.abstract" target="_blank" rel="noopener noreferrer" class="article-card__btn">View on bioRxiv</a>
@@ -148,19 +147,19 @@ import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
     <div class="container">
       <h2 class="subsection-heading">Sequential Treatment Dynamics</h2>
       <p class="subsection-desc">
-        How evolutionary history under one antibiotic shapes adaptation to subsequent treatments.
+        The same drug can select for different solutions depending on what came before.
       </p>
 
       <figure class="paper-figure">
         <Image src={lyonFig1} alt="Evolution protocol scheme and survival outcomes during single antibiotic treatment" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Sequential treatment protocol.</strong> Bacterial populations are evolved under amikacin, levofloxacin, and cefepime in isolation, establishing baseline resistance dynamics and survival outcomes for each drug.
+          <strong>A clinically inspired evolution protocol.</strong> We evolve <em>E. coli</em> under high-dose killing while preserving population diversity, then transition cultures between antibiotics to test how history reshapes the path to sustained survival.
         </figcaption>
       </figure>
       <figure class="paper-figure">
         <Image src={lyonFig3} alt="Survival and phenotypic outcomes of sequential antibiotic treatment" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Context-dependent resistance.</strong> When antibiotics are applied in sequence, the evolutionary history under the first drug fundamentally reshapes adaptation to the second — identical drugs produce different resistance phenotypes depending on treatment order.
+          <strong>History-dependent outcomes.</strong> Sequential therapy can shift evolutionary trajectories from divergent to convergent routes. Phenotypes may look similar, but the underlying mechanisms&mdash;resistance, tolerance, or persistence&mdash;and their genetic routes depend on treatment order.
         </figcaption>
       </figure>
 
@@ -170,19 +169,13 @@ import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
         <p class="article-card__authors">A. Lyon, M.S. Yıldız, E. Toprak</p>
         <p class="article-card__journal"><em>bioRxiv</em> (2025)</p>
         <p class="article-card__summary">
-          Demonstrates that evolutionary outcomes during sequential antibiotic treatment are context-dependent — the order and history of drug exposure fundamentally alters the trajectory of resistance evolution, with implications for clinical treatment sequencing.
+          Sequential antibiotic use can produce reproducible, history-dependent routes to survival. Our protocol exposes antibiotic-specific solutions (resistance, tolerance, persistence) and shows that treatment order can reshape collateral effects and the mutational paths that remain accessible.
         </p>
         <div class="article-card__actions">
           <a href="https://www.biorxiv.org/content/10.1101/2025.04.08.647880v2.abstract" target="_blank" rel="noopener noreferrer" class="article-card__btn">View on bioRxiv</a>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <section class="section section--alt">
-    <div class="container">
-      <ResearchTeam area="antibiotic-resistance" />
     </div>
   </section>
 
@@ -194,6 +187,12 @@ import lyonFig3 from '../../assets/images/science/lyon-2025-fig3.jpg';
           <a href="https://academic.oup.com/mbe/article/38/10/4493/6310175" target="_blank" rel="noopener noreferrer">
             <span class="related-item__title">The antibiotic efflux protein TolC is a highly evolvable target under colicin E1 and TLS phage selection</span>
             <span class="related-item__meta">Tamer, Gaszek, Rodrigues et al. &mdash; <em>MBE</em>, 2021</span>
+          </a>
+        </li>
+        <li class="related-item">
+          <a href="https://www.nature.com/articles/s42003-024-06750-0" target="_blank" rel="noopener noreferrer">
+            <span class="related-item__title">Elucidating TolC protein dynamics: Structural shifts facilitate efflux mediated &beta;-lactam resistance</span>
+            <span class="related-item__meta">Kantarcioglu, Gaszek, Guclu et al. &mdash; <em>Communications Biology</em>, 2024</span>
           </a>
         </li>
         <li class="related-item">

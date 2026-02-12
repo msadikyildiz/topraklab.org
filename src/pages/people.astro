@@ -39,8 +39,7 @@ function resolveImage(filename?: string): ImageMetadata | undefined {
 
 const piImage = resolveImage('erdal-toprak.jpg');
 
-const lastName = (name: string) => name.split(',')[0].trim().split(/\s+/).pop()!;
-const members = [...people.current].sort((a, b) => lastName(a.name).localeCompare(lastName(b.name)));
+const members = people.current;
 
 const photos = [
   { src: lab1, alt: 'Lab photo 1' },

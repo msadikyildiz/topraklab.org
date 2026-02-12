@@ -1,6 +1,5 @@
 ---
 import ScienceLayout from '../../layouts/ScienceLayout.astro';
-import ResearchTeam from '../../components/ResearchTeam.astro';
 import { Image } from 'astro:assets';
 
 import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
@@ -13,7 +12,7 @@ import faridFig4 from '../../assets/images/science/farid-2022-fig4.jpg';
   <section class="section">
     <div class="container">
       <p class="vision-intro">
-        Effective antibiotic therapy depends on knowing what works against a given pathogen — and knowing fast. We develop methods that compress the workflow from blood draw to susceptibility result: rapid pathogen isolation directly from blood, followed by ultrasensitive optical detection that determines minimum inhibitory concentrations in hours rather than days.
+        Fast antibiotic susceptibility testing is the missing feedback loop in antibiotic stewardship. We build workflows that turn a blood sample into a quantitative MIC readout in hours&mdash;without giving the pathogen a two-day head start: isolate the microbe without waiting for culture amplification, then measure growth with optical sensitivity near the single-cell limit.
       </p>
     </div>
   </section>
@@ -22,7 +21,7 @@ import faridFig4 from '../../assets/images/science/farid-2022-fig4.jpg';
     <div class="container">
       <h2 class="subsection-heading">Rapid Pathogen Isolation from Blood</h2>
       <p class="subsection-desc">
-        Removing the culture amplification bottleneck with a simple benchtop protocol.
+        Pull the pathogen out of blood in minutes, not days.
       </p>
 
       <figure class="paper-figure">
@@ -38,7 +37,7 @@ import faridFig4 from '../../assets/images/science/farid-2022-fig4.jpg';
         <p class="article-card__authors">F.S. Coskun, J. Quick, E. Toprak</p>
         <p class="article-card__journal"><em>Frontiers in Microbiology</em> <strong>16</strong>:1637776 (2025)</p>
         <p class="article-card__summary">
-          Conventional blood culture workflows require 18–48 hours before susceptibility testing can begin. This protocol recovers bacteria directly from whole blood in approximately 30 minutes using standard laboratory equipment, removing the culture amplification bottleneck.
+          A simple protocol that recovers viable pathogens directly from whole blood in ~30 minutes using standard lab equipment. In validation experiments it achieved &gt;70% recovery efficiency, remained effective at very low bacterial loads, and preserved growth dynamics&mdash;so susceptibility testing can start immediately instead of after overnight culture.
         </p>
         <div class="article-card__actions">
           <a href="https://doi.org/10.3389/fmicb.2025.1637776" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
@@ -51,32 +50,32 @@ import faridFig4 from '../../assets/images/science/farid-2022-fig4.jpg';
     <div class="container">
       <h2 class="subsection-heading">Ultrasensitive Optical Detection</h2>
       <p class="subsection-desc">
-        A hollow-fiber platform that detects as few as 20 bacterial cells.
+        Read growth from as few as ~20 bacterial cells.
       </p>
 
       <figure class="paper-figure">
         <Image src={cansizogluFig1} alt="RUSD platform schematic showing hollow fiber as optical waveguide and growth chamber, with laser, fiber, and photodiode components, calibration curve, and cell-size sensitivity heatmap" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>RUSD platform.</strong> A hollow fiber serves as both growth chamber and optical waveguide. A laser coupled into the fiber detects cells by measuring light loss from scattering — achieving sensitivity nearly four orders of magnitude beyond standard plate readers, down to ~20 bacterial cells.
+          <strong>RUSD: a fiber that doubles as incubator and sensor.</strong> A hollow fiber acts as both growth chamber and optical waveguide. Light loss from scattering reports cell density with nearly four orders of magnitude higher sensitivity than standard OD reads, down to ~20 bacterial cells.
         </figcaption>
       </figure>
       <figure class="paper-figure">
         <Image src={cansizogluFig3} alt="iFAST time-resolved dose-response heatmaps showing rapid MIC determination for multiple bacterial species and antibiotics" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Rapid MIC determination.</strong> The companion iFAST protocol uses RUSD sensitivity to determine minimum inhibitory concentrations in 1–3 hours across multiple bacterial species and antibiotics — time-resolved heatmaps show clear susceptibility boundaries emerging within the first hour.
+          <strong>MICs as a time series.</strong> iFAST leverages RUSD sensitivity to infer MICs within hours. The time-resolved heatmaps show susceptibility boundaries emerging early, long before a standard culture would reach an OD readable by a plate reader.
         </figcaption>
       </figure>
 
       <div class="article-card">
         <span class="article-card__label">PLOS Biology 2019</span>
-        <h3 class="article-card__title">Rapid ultrasensitive single particle detection for antibiotic susceptibility testing</h3>
-        <p class="article-card__authors">M.F. Cansizoglu, Y.T. Tamer, M. Farid, A.Y. Koh, E. Toprak</p>
-        <p class="article-card__journal"><em>PLOS Biology</em> <strong>17</strong>(2): e3000011 (2019)</p>
+        <h3 class="article-card__title">Rapid ultrasensitive detection platform for antimicrobial susceptibility testing</h3>
+        <p class="article-card__authors">Mehmet F. Cansizoglu, Yusuf Talha Tamer, Michael Farid, Andrew Y. Koh, Erdal Toprak</p>
+        <p class="article-card__journal"><em>PLOS Biology</em> <strong>17</strong>(5): e3000291 (2019)</p>
         <p class="article-card__summary">
-          The RUSD platform uses a hollow fiber as both growth chamber and optical waveguide, detecting as few as 20 bacterial cells — nearly four orders of magnitude more sensitive than standard plate readers. The companion iFAST protocol determines minimum inhibitory concentrations in 2–4 hours.
+          A label-free optical platform that detects extremely low cell densities (down to ~20 bacterial cells) and enables MIC measurements in 2&ndash;4 hours across multiple pathogens and antibiotics. The goal is simple: keep the workflow familiar, but make the readout fast.
         </p>
         <div class="article-card__actions">
-          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000011" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
+          <a href="https://doi.org/10.1371/journal.pbio.3000291" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
         </div>
       </div>
     </div>
@@ -86,7 +85,7 @@ import faridFig4 from '../../assets/images/science/farid-2022-fig4.jpg';
     <div class="container">
       <h2 class="subsection-heading">From Bench Prototype to Rapid AST</h2>
       <p class="subsection-desc">
-        A portable, temperature-stabilized instrument for clinical-speed susceptibility testing.
+        Engineering the optics for robustness, dynamic range, and a clinic-friendly workflow.
       </p>
 
       <figure class="paper-figure">
@@ -97,25 +96,20 @@ import faridFig4 from '../../assets/images/science/farid-2022-fig4.jpg';
       </figure>
 
       <div class="article-card">
-        <span class="article-card__label">Frontiers in Bioengineering 2022</span>
-        <h3 class="article-card__title">A portable device for rapid detection and quantification of bacterial growth directly from clinical specimens for fast antibiotic susceptibility testing</h3>
-        <p class="article-card__authors">M.A. Farid, M.F. Cansizoglu, Y.T. Tamer, E. Toprak</p>
-        <p class="article-card__journal"><em>Frontiers in Bioengineering and Biotechnology</em> <strong>10</strong>:875488 (2022)</p>
+        <span class="article-card__label">Frontiers in Bioengineering and Biotechnology 2022</span>
+        <h3 class="article-card__title">Label-Free Optical Detection of Pathogenic Bacteria and Fungi at Extremely Low Cell Densities for Rapid Antibiotic Susceptibility Testing</h3>
+        <p class="article-card__authors">Michael Farid, Marinelle Rodrigues, Robert England, Erdal Toprak</p>
+        <p class="article-card__journal"><em>Frontiers in Bioengineering and Biotechnology</em> <strong>10</strong>:884200 (2022)</p>
         <p class="article-card__summary">
-          A redesigned, portable RUSD instrument with temperature-stabilized optics extends the platform's dynamic range and achieves MIC determination for cefepime within one hour — compatible with standard clinical workflows, requiring no specialized reagents or labeling.
+          Extends RUSD into a more robust apparatus with a wide dynamic window for bacterial and fungal detection and rapid dose-response measurements. In iFAST assays, growth separation can be visible within ~45 minutes and MIC boundaries can be interpreted on the order of an hour&mdash;without labels or specialized reagents.
         </p>
         <div class="article-card__actions">
-          <a href="https://doi.org/10.3389/fbioe.2022.875488" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
+          <a href="https://doi.org/10.3389/fbioe.2022.884200" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <ResearchTeam area="antibiotic-susceptibility" />
-    </div>
-  </section>
 </ScienceLayout>
 
 <style>
