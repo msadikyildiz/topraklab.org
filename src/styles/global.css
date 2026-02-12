@@ -113,6 +113,14 @@ ol {
   src: url('/fonts/source-sans-3-600.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/libre-baskerville-400.woff2') format('woff2');
+}
+
 /* ===== CUSTOM PROPERTIES ===== */
 :root {
   --color-navy: #002E5D;
@@ -127,6 +135,7 @@ ol {
   --color-accent: #C4A35A;
 
   --font-serif: 'Source Serif 4', 'Times New Roman', serif;
+  --font-title: 'Libre Baskerville', 'Georgia', serif;
   --font-heading: 'DM Sans', 'Helvetica Neue', sans-serif;
   --font-body: 'Source Sans 3', 'Source Sans Pro', sans-serif;
 
