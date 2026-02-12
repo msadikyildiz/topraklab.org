@@ -4,21 +4,21 @@ import PersonAvatar from './PersonAvatar.astro';
 interface Props {
   name: string;
   role: string;
-  bio: string;
+  bio?: string;
   imageSrc?: ImageMetadata;
 }
 
 const { name, role, bio, imageSrc } = Astro.props;
 ---
 
-<div class="person-feature">
+<div class:list={['person-feature', { 'person-feature--compact': !bio }]}>
   <div class="person-feature__avatar">
     <PersonAvatar name={name} imageSrc={imageSrc} size="lg" />
   </div>
   <div class="person-feature__info">
     <h3 class="person-feature__name">{name}</h3>
-    <p class="person-feature__role">{role}</p>
-    <p class="person-feature__bio">{bio}</p>
+    <p class:list={['person-feature__role', { 'person-feature__role--terminal': !bio }]}>{role}</p>
+    {bio && <p class="person-feature__bio">{bio}</p>}
   </div>
 </div>
 
@@ -46,6 +46,16 @@ const { name, role, bio, imageSrc } = Astro.props;
     margin-bottom: 1.25rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--color-gray-100);
+  }
+
+  .person-feature__role--terminal {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .person-feature--compact .person-feature__info {
+    align-self: center;
   }
 
   .person-feature__bio {

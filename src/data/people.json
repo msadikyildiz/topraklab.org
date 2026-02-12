@@ -7,12 +7,25 @@
       "slug": "alan-katz"
     },
     {
+      "name": "Ariq Chowdhury",
+      "role": "Research Technician",
+      "image": "ariq-chowdhury.jpg",
+      "slug": "ariq-chowdhury",
+      "bio": "I am a Research Technician at the Toprak Lab. I earned my bachelor's degree in biology from Texas A&M University in 2023 and am currently applying to medical school. My primary role involves coordinating participant consent and clinical sample collection across multiple UTSW clinics, as well as tracking sample metadata and monitoring collection workflows for our research study. Outside the lab, I enjoy going to the gym, travelling, and listening to any genre of music."
+    },
+    {
+      "name": "Deniz Sezer, Ph.D.",
+      "role": "Instructor",
+      "image": "deniz-sezer.jpg",
+      "slug": "deniz-sezer"
+    },
+    {
       "name": "Fatma Sevde Coskun, Ph.D.",
       "role": "Postdoctoral Fellow",
       "image": "fatma-coskun.jpg",
       "slug": "fatma-coskun",
       "bio": "I am a postdoctoral researcher in the Toprak Lab at UT Southwestern. I received my PhD in Immunology from UT Southwestern, where I trained in the Van Oers Lab, and then worked briefly in industry. I joined the Toprak Lab in 2024 and have since worked on multiple projects while expanding my expertise in next-generation sequencing (NGS) analysis. My research includes building mutagenesis libraries of \u03b2-lactamases to study evolutionary trajectories and developing a highly efficient protocol for isolating bacteria from blood. I am also involved in one of the lab\u2019s most exciting projects focused on blood-based cancer diagnostics. Outside the lab, I enjoy playing with my dog (despite his lack of enthusiasm), cooking, going to the movies, and oil painting.",
-      "researchAreas": ["antibiotic-resistance", "liquid-biopsy"]
+      "researchAreas": ["antibiotic-resistance", "antibiotic-susceptibility", "liquid-biopsy"]
     },
     {
       "name": "Muhammed Sad\u0131k Y\u0131ld\u0131z, Ph.D.",
@@ -22,17 +35,6 @@
       "slug": "sadik-yildiz",
       "bio": "I first joined the Toprak Lab as an undergraduate at Sabancı University, where I helped design and build several iterations of the original morbidostat. During my Ph.D. in Systems Biology at Harvard with Johan Paulsson, I built and ran the longest continuous culture evolution experiment to date and studied the limits of the fastest possible exponential growth. During and after graduate school, I helped Kernal Biologics develop computational tools for mRNA therapeutic payload optimization. I returned to the Toprak Lab in 2022 as a postdoctoral fellow at UT Southwestern. My current research is focused on the design of an end-to-end genomics pipeline from blood draw to diagnosis that powers our liquid biopsy program. This work led us to found Early Marker, a company translating circulating biomarker profiling into blood-based diagnostics for early detection of cancer and neurodegenerative diseases. When I'm not checking out cryptic gene annotations or staring at code, I enjoy history and fiction, in print or on screen, or in the form of real-time strategy games.",
       "researchAreas": ["antibiotic-resistance", "liquid-biopsy"]
-    },
-    {
-      "name": "Ariq Chowdhury",
-      "role": "Research Technician",
-      "slug": "ariq-chowdhury"
-    },
-    {
-      "name": "Deniz Sezer, Ph.D.",
-      "role": "Instructor",
-      "image": "deniz-sezer.jpg",
-      "slug": "deniz-sezer"
     }
   ],
   "utswAlumni": [

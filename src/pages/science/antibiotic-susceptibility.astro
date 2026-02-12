@@ -1,0 +1,267 @@
+---
+import ScienceLayout from '../../layouts/ScienceLayout.astro';
+import ResearchTeam from '../../components/ResearchTeam.astro';
+import { Image } from 'astro:assets';
+
+import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
+import cansizogluFig1 from '../../assets/images/science/cansizoglu-2019-fig1.jpg';
+import cansizogluFig3 from '../../assets/images/science/cansizoglu-2019-fig3.jpg';
+import faridFig4 from '../../assets/images/science/farid-2022-fig4.jpg';
+---
+
+<ScienceLayout title="Antibiotic Susceptibility | Toprak Lab" description="Rapid pathogen isolation and ultrasensitive optical detection for fast antibiotic susceptibility testing.">
+  <section class="section">
+    <div class="container">
+      <p class="vision-intro">
+        Effective antibiotic therapy depends on knowing what works against a given pathogen — and knowing fast. We develop methods that compress the workflow from blood draw to susceptibility result: rapid pathogen isolation directly from blood, followed by ultrasensitive optical detection that determines minimum inhibitory concentrations in hours rather than days.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">Rapid Pathogen Isolation from Blood</h2>
+      <p class="subsection-desc">
+        Removing the culture amplification bottleneck with a simple benchtop protocol.
+      </p>
+
+      <figure class="paper-figure">
+        <Image src={coskunFig1} alt="Comparison of conventional 18–48 hour bacterial isolation versus rapid ~30 minute protocol from blood samples" width={720} quality={95} densities={[1, 2]} />
+        <figcaption>
+          <strong>Rapid bacterial isolation.</strong> Conventional culture-based workflows require 18–48 hours before susceptibility testing can begin (Panel A). A rapid protocol recovers bacteria directly from whole blood in approximately 30 minutes using standard laboratory equipment (Panel B), removing the culture amplification bottleneck.
+        </figcaption>
+      </figure>
+
+      <div class="article-card">
+        <span class="article-card__label">Frontiers in Microbiology 2025</span>
+        <h3 class="article-card__title">A simple, low-cost, and highly efficient protocol for rapid isolation of pathogenic bacteria from human blood</h3>
+        <p class="article-card__authors">F.S. Coskun, J. Quick, E. Toprak</p>
+        <p class="article-card__journal"><em>Frontiers in Microbiology</em> <strong>16</strong>:1637776 (2025)</p>
+        <p class="article-card__summary">
+          Conventional blood culture workflows require 18–48 hours before susceptibility testing can begin. This protocol recovers bacteria directly from whole blood in approximately 30 minutes using standard laboratory equipment, removing the culture amplification bottleneck.
+        </p>
+        <div class="article-card__actions">
+          <a href="https://doi.org/10.3389/fmicb.2025.1637776" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="subsection-heading">Ultrasensitive Optical Detection</h2>
+      <p class="subsection-desc">
+        A hollow-fiber platform that detects as few as 20 bacterial cells.
+      </p>
+
+      <figure class="paper-figure">
+        <Image src={cansizogluFig1} alt="RUSD platform schematic showing hollow fiber as optical waveguide and growth chamber, with laser, fiber, and photodiode components, calibration curve, and cell-size sensitivity heatmap" width={720} quality={95} densities={[1, 2]} />
+        <figcaption>
+          <strong>RUSD platform.</strong> A hollow fiber serves as both growth chamber and optical waveguide. A laser coupled into the fiber detects cells by measuring light loss from scattering — achieving sensitivity nearly four orders of magnitude beyond standard plate readers, down to ~20 bacterial cells.
+        </figcaption>
+      </figure>
+      <figure class="paper-figure">
+        <Image src={cansizogluFig3} alt="iFAST time-resolved dose-response heatmaps showing rapid MIC determination for multiple bacterial species and antibiotics" width={720} quality={95} densities={[1, 2]} />
+        <figcaption>
+          <strong>Rapid MIC determination.</strong> The companion iFAST protocol uses RUSD sensitivity to determine minimum inhibitory concentrations in 1–3 hours across multiple bacterial species and antibiotics — time-resolved heatmaps show clear susceptibility boundaries emerging within the first hour.
+        </figcaption>
+      </figure>
+
+      <div class="article-card">
+        <span class="article-card__label">PLOS Biology 2019</span>
+        <h3 class="article-card__title">Rapid ultrasensitive single particle detection for antibiotic susceptibility testing</h3>
+        <p class="article-card__authors">M.F. Cansizoglu, Y.T. Tamer, M. Farid, A.Y. Koh, E. Toprak</p>
+        <p class="article-card__journal"><em>PLOS Biology</em> <strong>17</strong>(2): e3000011 (2019)</p>
+        <p class="article-card__summary">
+          The RUSD platform uses a hollow fiber as both growth chamber and optical waveguide, detecting as few as 20 bacterial cells — nearly four orders of magnitude more sensitive than standard plate readers. The companion iFAST protocol determines minimum inhibitory concentrations in 2–4 hours.
+        </p>
+        <div class="article-card__actions">
+          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000011" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="subsection-heading">From Bench Prototype to Rapid AST</h2>
+      <p class="subsection-desc">
+        A portable, temperature-stabilized instrument for clinical-speed susceptibility testing.
+      </p>
+
+      <figure class="paper-figure">
+        <Image src={faridFig4} alt="Growth curves and heatmap of E. coli under varying cefepime concentrations in RUSD device, showing MIC determination at 45 minutes" width={720} quality={95} densities={[1, 2]} />
+        <figcaption>
+          <strong>MIC in under one hour.</strong> A redesigned portable RUSD instrument with temperature-stabilized optics achieves definitive cefepime MIC determination within 45 minutes. The growth heatmap shows clear dose-dependent separation, with sub-MIC concentrations producing detectable growth at the earliest time points.
+        </figcaption>
+      </figure>
+
+      <div class="article-card">
+        <span class="article-card__label">Frontiers in Bioengineering 2022</span>
+        <h3 class="article-card__title">A portable device for rapid detection and quantification of bacterial growth directly from clinical specimens for fast antibiotic susceptibility testing</h3>
+        <p class="article-card__authors">M.A. Farid, M.F. Cansizoglu, Y.T. Tamer, E. Toprak</p>
+        <p class="article-card__journal"><em>Frontiers in Bioengineering and Biotechnology</em> <strong>10</strong>:875488 (2022)</p>
+        <p class="article-card__summary">
+          A redesigned, portable RUSD instrument with temperature-stabilized optics extends the platform's dynamic range and achieves MIC determination for cefepime within one hour — compatible with standard clinical workflows, requiring no specialized reagents or labeling.
+        </p>
+        <div class="article-card__actions">
+          <a href="https://doi.org/10.3389/fbioe.2022.875488" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <ResearchTeam area="antibiotic-susceptibility" />
+    </div>
+  </section>
+</ScienceLayout>
+
+<style>
+  .section {
+    padding-block: 1.25rem;
+  }
+
+  .vision-intro {
+    max-width: 720px;
+    margin-inline: auto;
+    font-size: var(--size-md);
+    line-height: 1.7;
+  }
+
+  .subsection-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-xl);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  .subsection-desc {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    max-width: 720px;
+    margin-inline: auto;
+    margin-bottom: 0.75rem;
+  }
+
+  .paper-figure {
+    max-width: 720px;
+    margin-inline: auto;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: var(--color-white);
+  }
+
+  .paper-figure:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+
+  .paper-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .paper-figure figcaption {
+    padding: 0.625rem 1rem;
+    font-size: var(--size-xs);
+    color: var(--color-gray-600);
+    line-height: 1.5;
+    border-top: 1px solid var(--color-gray-100);
+    background: var(--color-white);
+  }
+
+  .paper-figure figcaption strong {
+    color: var(--color-gray-900);
+  }
+
+  .article-card {
+    max-width: 720px;
+    margin-inline: auto;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
+    padding: 1.75rem 2rem;
+    background-color: var(--color-white);
+  }
+
+  .article-card__label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: var(--size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-navy-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .article-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--size-lg);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--color-gray-900);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .article-card__authors {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 0.25rem;
+  }
+
+  .article-card__journal {
+    font-size: var(--size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: 1rem;
+  }
+
+  .article-card__summary {
+    font-size: var(--size-sm);
+    line-height: 1.7;
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .article-card__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .article-card__btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: var(--size-sm);
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--color-navy);
+    color: var(--color-white);
+    background-color: var(--color-navy);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .article-card__btn:hover {
+    background-color: var(--color-navy-light);
+    border-color: var(--color-navy-light);
+  }
+
+  @media (max-width: 768px) {
+    .article-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

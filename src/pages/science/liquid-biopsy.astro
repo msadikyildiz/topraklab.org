@@ -4,7 +4,6 @@ import ResearchTeam from '../../components/ResearchTeam.astro';
 import { Image } from 'astro:assets';
 
 
-import coskunFig1 from '../../assets/images/science/coskun-2025-fig1.png';
 import pipelineSchematic from '../../assets/images/science/early-marker-pipeline.png';
 ---
 
@@ -46,35 +45,8 @@ import pipelineSchematic from '../../assets/images/science/early-marker-pipeline
     </div>
   </section>
 
-  <!-- Section 3: Bloodstream Infection (white) -->
+  <!-- Section 3: Research Team (white) -->
   <section class="section">
-    <div class="container">
-      <h2 class="subsection-heading">Rapid Pathogen Isolation from Blood</h2>
-      <p class="subsection-desc">
-        Conventional blood culture workflows can take days before susceptibility testing begins. We are developing protocols to recover bacteria directly from whole blood in ~30 minutes, removing the culture amplification bottleneck and compressing the time to obtain material for downstream identification and susceptibility testing. Turnaround ultimately depends on pathogen burden and the downstream assay.
-      </p>
-
-      <figure class="paper-figure">
-        <Image src={coskunFig1} alt="Comparison of conventional 18–48 hour bacterial isolation versus rapid ~30 minute protocol from blood samples" width={720} quality={95} densities={[1, 2]} />
-        <figcaption>
-          <strong>Rapid bacterial isolation.</strong> Panel A: conventional culture-based workflow requiring 18–48 hours. Panel B: rapid method recovering bacteria from whole blood in approximately 30 minutes, removing the culture amplification bottleneck. Turnaround for identification and susceptibility testing depends on pathogen burden and the downstream assay.
-        </figcaption>
-      </figure>
-
-      <div class="article-card">
-        <span class="article-card__label">Published Article</span>
-        <h3 class="article-card__title">A simple, low-cost, and highly efficient protocol for rapid isolation of pathogenic bacteria from human blood</h3>
-        <p class="article-card__authors">Coskun FS, Quick J, Toprak E</p>
-        <p class="article-card__journal"><em>Frontiers in Microbiology</em> <strong>16</strong>:1637776 (2025)</p>
-        <div class="article-card__actions">
-          <a href="https://doi.org/10.3389/fmicb.2025.1637776" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 4: Research Team (alt) -->
-  <section class="section section--alt">
     <div class="container">
       <ResearchTeam area="liquid-biopsy" />
     </div>

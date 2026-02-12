@@ -2,9 +2,10 @@
 import ScienceLayout from '../../layouts/ScienceLayout.astro';
 import { Image } from 'astro:assets';
 
-import fitnessLandscape from '../../assets/images/science/palmer-2015-fitness-landscape.jpg';
-import delayedCommitment from '../../assets/images/science/palmer-2015-delayed-commitment.jpg';
-import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evolutionary-dynamics.jpg';
+import toprakFig2 from '../../assets/images/science/toprak-2012-fig2.png';
+import toprakFig4 from '../../assets/images/science/toprak-2012-fig4.png';
+import ozFig1 from '../../assets/images/science/oz-2014-fig1.jpeg';
+import ozFig3 from '../../assets/images/science/oz-2014-fig3.jpeg';
 ---
 
 <ScienceLayout title="Morbidostat | Toprak Lab" description="Build your own morbidostat — an automated high-throughput fluidic system for studying bacterial drug resistance.">
@@ -29,70 +30,75 @@ import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evo
 
   <section class="section section--alt">
     <div class="container">
-      <h2 class="subsection-heading">What It Reveals</h2>
+      <h2 class="subsection-heading">Real-Time Observation of Resistance Evolution</h2>
       <p class="subsection-desc">
-        Morbidostat experiments produce rich datasets that map the full evolutionary trajectory of resistance — from initial mutations through complex epistatic interactions that shape fitness landscapes.
+        The foundational morbidostat experiments revealing reproducible genetic trajectories.
       </p>
 
       <figure class="full-figure">
-        <Image src={fitnessLandscape} alt="DHFR fitness landscape showing mutation combinations and their resistance levels under trimethoprim selection, with a 3D visualization of all 128 combinatorial variants" width={720} quality={95} densities={[1, 2]} />
+        <Image src={toprakFig2} alt="Resistance trajectories showing parallel populations evolving under chloramphenicol, doxycycline, and trimethoprim — stepwise vs smooth IC50 increases and normalized growth rate heatmaps" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Adaptive landscape of trimethoprim resistance.</strong> Fitness measurements across all combinatorial variants of DHFR mutations reveal the complex topography of resistance evolution — some mutation combinations produce high resistance (tall bars), while others are deleterious despite containing individually beneficial mutations.
-          <span class="figure-source">Palmer, Toprak, Baym et al., <em>Nature Communications</em> (2015)</span>
+          <strong>Parallel populations attain high resistance.</strong> Five replicate <em>E. coli</em> populations evolved under chloramphenicol, doxycycline, and trimethoprim show distinct resistance dynamics — trimethoprim resistance increases in discrete steps, while chloramphenicol and doxycycline resistance rises smoothly, reflecting different underlying mutational mechanisms.
+          <span class="figure-source">Toprak, Veres, Michel et al., <em>Nature Genetics</em> (2012)</span>
+        </figcaption>
+      </figure>
+      <figure class="full-figure">
+        <Image src={toprakFig4} alt="DHFR crystal structure with color-coded resistance mutations, temporal pie charts tracking mutation fixation across 5 populations, and statistical reproducibility analysis" width={720} quality={95} densities={[1, 2]} />
+        <figcaption>
+          <strong>Semi-ordered acquisition of resistance mutations.</strong> Whole-genome sequencing reveals that the same DHFR mutations arise independently across replicate populations in a predictable order. The reproducibility of mutational trajectories is significantly higher than expected by chance, indicating that resistance evolution follows constrained genetic paths.
+          <span class="figure-source">Toprak, Veres, Michel et al., <em>Nature Genetics</em> (2012)</span>
         </figcaption>
       </figure>
 
-      <figure class="full-figure">
-        <Image src={delayedCommitment} alt="Delayed commitment to evolutionary fate showing how accessible fitness peaks narrow with successive mutations" width={720} quality={95} densities={[1, 2]} />
-        <figcaption>
-          <strong>Delayed commitment to evolutionary fate.</strong> Evolving populations maintain access to many fitness peaks early on, but higher-order epistasis progressively narrows their options. A pairwise epistasis model (pink) predicts faster commitment than observed (blue), indicating that complex genetic interactions keep evolutionary options open longer than expected.
-          <span class="figure-source">Palmer, Toprak, Baym et al., <em>Nature Communications</em> (2015)</span>
-        </figcaption>
-      </figure>
+      <div class="article-card">
+        <span class="article-card__label">Nature Genetics 2012</span>
+        <h3 class="article-card__title">Evolutionary paths to antibiotic resistance under dynamically sustained drug selection</h3>
+        <p class="article-card__authors">E. Toprak, A. Veres, J.B. Michel, R. Chait, D.L. Hartl, R. Kishony</p>
+        <p class="article-card__journal"><em>Nature Genetics</em> <strong>44</strong>, 101–105 (2012)</p>
+        <p class="article-card__summary">
+          The first morbidostat experiments tracked <em>E. coli</em> evolving resistance to chloramphenicol, doxycycline, and trimethoprim in real time. Whole-genome sequencing revealed that resistance follows reproducible genetic trajectories — the same mutations arise independently across replicate populations, often in a predictable order.
+        </p>
+        <div class="article-card__actions">
+          <a href="https://www.nature.com/articles/ng.1034" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section--alt">
     <div class="container">
-      <h2 class="subsection-heading">Enabled Research</h2>
+      <h2 class="subsection-heading">Selection Strength Shapes Evolutionary Complexity</h2>
       <p class="subsection-desc">
-        The morbidostat has enabled a series of studies quantifying the molecular determinants of resistance evolution under diverse drug selection regimes.
+        How the intensity of antibiotic pressure determines the genetic routes to resistance.
       </p>
 
       <figure class="full-figure">
-        <Image src={evolutionaryDynamics} alt="Evolutionary dynamics under nitrofurantoin and chloramphenicol selection showing IC50 trajectories and mutation diversity across replicate populations" width={720} quality={95} densities={[1, 2]} />
+        <Image src={ozFig1} alt="Experimental design comparing strong vs mild antibiotic selection in the morbidostat, with temporal resistance curves for streptomycin, spectinomycin, and doxycycline" width={720} quality={95} densities={[1, 2]} />
         <figcaption>
-          <strong>Quantifying evolutionary dynamics under drug selection.</strong> Morbidostat evolution of <em>E. coli</em> under nitrofurantoin (NIT) and chloramphenicol (CHL) reveals distinct resistance trajectories and mutational spectra. Whole-genome sequencing identifies the genes and functional categories driving adaptation to each drug.
-          <span class="figure-source">Chevereau, Dravecka, Batur et al., <em>PLOS Biology</em> (2015)</span>
+          <strong>Strong vs mild selection.</strong> Across 88 populations and 22 drugs, both strong and mild selection achieve similar final resistance levels — but the temporal dynamics differ. Strong selection (red) drives faster initial adaptation, while mild selection (black) follows more gradual trajectories.
+          <span class="figure-source">Oz, Guvenek, Yıldız et al., <em>Molecular Biology and Evolution</em> (2014)</span>
+        </figcaption>
+      </figure>
+      <figure class="full-figure">
+        <Image src={ozFig3} alt="Cross-resistance network diagrams comparing strong vs mild antibiotic selection — denser network under strong selection indicates more pleiotropic effects" width={720} quality={95} densities={[1, 2]} />
+        <figcaption>
+          <strong>Cross-resistance networks.</strong> Strong selection produces denser cross-resistance networks than mild selection — strains evolved under intense drug pressure more frequently gain collateral resistance or sensitivity to other antibiotics, reflecting fundamentally different genetic routes to similar resistance endpoints.
+          <span class="figure-source">Oz, Guvenek, Yıldız et al., <em>Molecular Biology and Evolution</em> (2014)</span>
         </figcaption>
       </figure>
 
-      <ul class="enabled-list">
-        <li>
-          <a href="https://www.nature.com/articles/ncomms8385" target="_blank" rel="noopener noreferrer">
-            <span class="enabled-list__title">Delayed commitment to evolutionary fate in antibiotic resistance fitness landscapes</span>
-            <span class="enabled-list__meta">Palmer*, Toprak*, Baym et al. — <em>Nature Communications</em>, 2015</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002299" target="_blank" rel="noopener noreferrer">
-            <span class="enabled-list__title">Quantifying the determinants of evolutionary dynamics leading to drug resistance</span>
-            <span class="enabled-list__meta">Chevereau, Dravecka, Batur et al. — <em>PLOS Biology</em>, 2015</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002552" target="_blank" rel="noopener noreferrer">
-            <span class="enabled-list__title">Sequence-specific targeting of bacterial resistance genes increases antibiotic efficacy</span>
-            <span class="enabled-list__meta">Ayhan, Tamer, Akbar et al. — <em>PLOS Biology</em>, 2016</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.nature.com/articles/s41467-021-23191-z" target="_blank" rel="noopener noreferrer">
-            <span class="enabled-list__title">A trimethoprim derivative impedes antibiotic resistance evolution</span>
-            <span class="enabled-list__meta">Manna, Tamer, Gaszek et al. — <em>Nature Communications</em>, 2021</span>
-          </a>
-        </li>
-      </ul>
+      <div class="article-card">
+        <span class="article-card__label">Molecular Biology and Evolution 2014</span>
+        <h3 class="article-card__title">Strength of selection pressure is an important parameter contributing to the complexity of antibiotic resistance evolution</h3>
+        <p class="article-card__authors">T. Oz, A. Guvenek, S. Yıldız, E. Karaboga, Y.T. Tamer, N. Mumcuyan, V.B. Ozan, G.H. Senturk, M. Cokol, P. Yeh, E. Toprak</p>
+        <p class="article-card__journal"><em>Molecular Biology and Evolution</em> <strong>31</strong>(9), 2387–2401 (2014)</p>
+        <p class="article-card__summary">
+          By varying antibiotic concentration regimes across 88 populations and 22 drugs, this study showed that selection pressure strength is a key determinant of evolutionary outcome — strong and mild selection achieve similar final resistance, but through fundamentally different genetic routes with distinct cross-resistance profiles.
+        </p>
+        <div class="article-card__actions">
+          <a href="https://academic.oup.com/mbe/article/31/9/2387/2925782" target="_blank" rel="noopener noreferrer" class="article-card__btn">View Article</a>
+        </div>
+      </div>
     </div>
   </section>
 </ScienceLayout>
@@ -240,53 +246,6 @@ import evolutionaryDynamics from '../../assets/images/science/chevereau-2015-evo
   .article-card__btn--secondary:hover {
     color: var(--color-white);
     background-color: var(--color-navy);
-  }
-
-  /* Enabled research list */
-  .enabled-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .enabled-list li {
-    border-left: 2px solid transparent;
-    transition: border-color 0.2s;
-  }
-
-  .enabled-list li:hover {
-    border-left-color: var(--color-accent);
-  }
-
-  .enabled-list a {
-    display: block;
-    padding: 0.875rem 0 0.875rem 0.75rem;
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid var(--color-gray-100);
-  }
-
-  .enabled-list li:last-child a {
-    border-bottom: none;
-  }
-
-  .enabled-list__title {
-    display: block;
-    font-weight: 600;
-    font-size: var(--size-sm);
-    color: var(--color-gray-900);
-    line-height: 1.5;
-    margin-bottom: 0.25rem;
-  }
-
-  .enabled-list a:hover .enabled-list__title {
-    color: var(--color-navy-light);
-  }
-
-  .enabled-list__meta {
-    display: block;
-    font-size: var(--size-xs);
-    color: var(--color-gray-300);
   }
 
   @media (max-width: 768px) {
