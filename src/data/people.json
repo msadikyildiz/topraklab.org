@@ -10,7 +10,8 @@
       "name": "Deniz Sezer, Ph.D.",
       "role": "Instructor",
       "image": "deniz-sezer.jpg",
-      "slug": "deniz-sezer"
+      "slug": "deniz-sezer",
+      "bio": "Deniz Sezer received his Ph.D. in Physics in 2008 from Cornell. In his doctoral work he calculated electron spin resonance spectra of a protein from atomistic trajectories generated through molecular dynamics simulations. As a postdoctoral researcher, he used molecular dynamics simulations to rationalize dynamic nuclear polarization experiments. In 2010, he became a faculty member at Sabanci University in Istanbul, where he investigated the kinetics of drug-membrane permeation. In the Toprak Lab, he focuses on the statistical inference of fitness landscapes, specifically establishing the quantitative framework for the massive-scale mutant competition experiments."
     },
     {
       "name": "Fatma Sevde Coskun, Ph.D.",
@@ -26,7 +27,7 @@
       "role": "Postdoctoral Fellow",
       "image": "sadik-yildiz.jpg",
       "slug": "sadik-yildiz",
-      "bio": "I first joined the Toprak Lab as an undergraduate at Sabancı University, where I helped design and build several iterations of the original morbidostat. During my Ph.D. in Systems Biology at Harvard with Johan Paulsson, I built and ran the longest continuous culture evolution experiment to date and studied the limits of the fastest possible exponential growth. During and after graduate school, I helped Kernal Biologics develop computational tools for mRNA therapeutic payload optimization. I returned to the Toprak Lab in 2022 as a postdoctoral fellow at UT Southwestern. My current research is focused on the design of an end-to-end genomics pipeline from blood draw to diagnosis that powers our liquid biopsy program. This work led us to found Early Marker, a company translating circulating biomarker profiling into blood-based diagnostics for early detection of cancer and neurodegenerative diseases. When I'm not checking out cryptic gene annotations or staring at code, I enjoy history and fiction, in print or on screen, or in the form of real-time strategy games.",
+      "bio": "I first joined the Toprak Lab as an undergraduate at Sabancı University, where I helped design and build several iterations of the original morbidostat. During my Ph.D. in Systems Biology at Harvard with Johan Paulsson, I built and ran the longest continuous culture evolution experiment to date and studied the limits of the fastest possible exponential growth. During and after graduate school, I helped Kernal Biologics develop computational tools for mRNA therapeutic payload optimization. I returned to the Toprak Lab in 2022. My current research is focused on the design of an end-to-end genomics pipeline from blood draw to diagnosis that powers our liquid biopsy program. This work led us to found Early Marker, a company translating circulating biomarker profiling into blood-based diagnostics for early detection of cancer and neurodegenerative diseases. When I'm not checking out cryptic gene annotations or staring at code, I enjoy history and fiction, in print or on screen, or in the form of real-time strategy games.",
       "researchAreas": ["antibiotic-resistance", "liquid-biopsy"]
     },
     {
