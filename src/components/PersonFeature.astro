@@ -64,6 +64,11 @@ const { name, role, bio, imageSrc } = Astro.props;
     color: var(--color-gray-600);
   }
 
+  .person-feature__bio :global(a) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
   @media (max-width: 600px) {
     .person-feature {
       grid-template-columns: 1fr;
