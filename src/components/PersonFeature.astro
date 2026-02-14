@@ -18,7 +18,7 @@ const { name, role, bio, imageSrc } = Astro.props;
   <div class="person-feature__info">
     <h3 class="person-feature__name">{name}</h3>
     <p class:list={['person-feature__role', { 'person-feature__role--terminal': !bio }]}>{role}</p>
-    {bio && <p class="person-feature__bio">{bio}</p>}
+    {bio && <p class="person-feature__bio" set:html={bio} />}
   </div>
 </div>
 
